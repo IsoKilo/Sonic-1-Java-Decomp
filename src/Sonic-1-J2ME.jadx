@@ -1,0 +1,1350 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "Sonic.class",
+    "a.class",
+    "b.class",
+    "c.class",
+    "d.class"
+  ],
+  "treeExpansions": [
+    [
+      "Resources",
+      "5 files"
+    ],
+    [
+      "p000",
+      "Source code",
+      "5 files"
+    ]
+  ],
+  "codeData": {
+    "comments": [
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "D()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 247
+        },
+        "comment": "Fill the screen with white"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 6
+        },
+        "comment": "Try and create an Image class via the provided path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 9
+        },
+        "comment": "If the path is invalid, just return a null image to prevent errors."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 285
+        },
+        "comment": "Check if current tile we\u0027re drawing has high priority"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 316
+        },
+        "comment": "Check if the level is Marble Zone"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 324
+        },
+        "comment": "Check if the tile we\u0027re drawing is a lava tiles"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 354
+        },
+        "comment": "Change the tile every 4 frames for animated purposes."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 386
+        },
+        "comment": "And revert our changes afterwards."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "c(Z)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 122
+        },
+        "comment": "Cap player lives."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 31
+        },
+        "comment": "Do nothing if you\u0027re invincible or have the invincibility cheat."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 36
+        },
+        "comment": "Does the player have a shield?"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 41
+        },
+        "comment": "Remove the shield"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 47
+        },
+        "comment": "Set invulnerability time"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 65
+        },
+        "comment": "Is Player facing left?"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 68
+        },
+        "comment": "Attempt to apply X velocity, but fails because it never moves this array back into player\u0027s info"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 93
+        },
+        "comment": "Bounce player in the air"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 109
+        },
+        "comment": "Flip the player around"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 149
+        },
+        "comment": "Set invulnerability time"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 204
+        },
+        "comment": "Bounce player in the air"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 220
+        },
+        "comment": "Flip the plauer around"
+      }
+    ],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a"
+        },
+        "newName": "Background_Renderer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b"
+        },
+        "newName": "Actor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "c"
+        },
+        "newName": "Game"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "d"
+        },
+        "newName": "Audio_Player"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "Sonic",
+          "shortId": "a:Lc;"
+        },
+        "newName": "app_Instance"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "Sonic",
+          "shortId": "a:Ljavax/microedition/lcdui/Display;"
+        },
+        "newName": "app_Display"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a",
+          "shortId": "a:[I"
+        },
+        "newName": "BG_FallbackColor"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a",
+          "shortId": "a:[Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "BG_CurLayout"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a",
+          "shortId": "a:[[[[I"
+        },
+        "newName": "BG_PreCalcdLayouts"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a",
+          "shortId": "d:I"
+        },
+        "newName": "BG_ActID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "a",
+          "shortId": "e:I"
+        },
+        "newName": "BG_ZoneID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "A:I"
+        },
+        "newName": "Player_Lives"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "C:[I"
+        },
+        "newName": "HighScore_DefaultScores"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "D:[I"
+        },
+        "newName": "HighScore_DefaultDifficulties"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "W:I"
+        },
+        "newName": "Boss_XPos"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "X:I"
+        },
+        "newName": "Boss_YPos"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:B"
+        },
+        "newName": "Menu_ID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:Ld;"
+        },
+        "newName": "Music_MainPlayer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:Ljavax/microedition/lcdui/Graphics;"
+        },
+        "newName": "GFX_Painter"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "GFX_ZoneTiles"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:[C"
+        },
+        "newName": "HighScore_ValidChars"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:[Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "GFX_HUDArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:[Z"
+        },
+        "newName": "Input_Array"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "aY:I"
+        },
+        "newName": "Continue_Timer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "aj:I"
+        },
+        "newName": "Game_ZoneID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "ak:I"
+        },
+        "newName": "Game_ActID"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "b:I"
+        },
+        "newName": "GFX_MenuHeight"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "b:[B"
+        },
+        "newName": "Level_Collisions"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "b:[Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "GFX_GameArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "bi:I"
+        },
+        "newName": "Player_Deceleration"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "bk:I"
+        },
+        "newName": "Player_JumpForce"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "bl:I"
+        },
+        "newName": "Player_WaterJumpForce"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "c:[I"
+        },
+        "newName": "Player_Info"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "c:[Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "GFX_MenuArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "c:[[B"
+        },
+        "newName": "Level_ActorLayout"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "d:I"
+        },
+        "newName": "GFX_MenuWidth"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "d:[Ljava/lang/String;"
+        },
+        "newName": "HighScore_DefaultNames"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "e:[Ljava/lang/String;"
+        },
+        "newName": "Music_Paths"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "f:[Z"
+        },
+        "newName": "Cheats_Active"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "h:[B"
+        },
+        "newName": "Level_Chunks"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "i:[B"
+        },
+        "newName": "Level_BlockPriorities"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "l:I"
+        },
+        "newName": "Player_Emeralds"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "m:[B"
+        },
+        "newName": "Game_Settings"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "n:I"
+        },
+        "newName": "Player_TopSpeed"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "o:I"
+        },
+        "newName": "Player_Acceleration"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "q:I"
+        },
+        "newName": "Player_InvincTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "r:I"
+        },
+        "newName": "Player_InvulnTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "s:I"
+        },
+        "newName": "Player_SpeedShoeTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "t:I"
+        },
+        "newName": "Player_ShieldFlag"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "u:I"
+        },
+        "newName": "Player_PrevRings"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "v:I"
+        },
+        "newName": "Player_Rings"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "w:I"
+        },
+        "newName": "Player_Score"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "w:[I"
+        },
+        "newName": "Object_Info"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "z:[I"
+        },
+        "newName": "Camera_Pos"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "d",
+          "shortId": "a:I"
+        },
+        "newName": "Music_CurTrack"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "d",
+          "shortId": "a:Ljavax/microedition/media/Player;"
+        },
+        "newName": "Music_Player"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "d",
+          "shortId": "a:Ljavax/microedition/media/PlayerListener;"
+        },
+        "newName": "Music_Listener"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "a()V"
+        },
+        "newName": "BG_Clear"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "a(II)V"
+        },
+        "newName": "BG_Initialize"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "a(II)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "zoneID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "a(II)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "actID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "b()V"
+        },
+        "newName": "BG_Paint"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "tileY"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "tileX"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "N()V"
+        },
+        "newName": "Boss_Unload"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "Y()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65558
+        },
+        "newName": "enternametext"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(I)I"
+        },
+        "newName": "Math_CalcSine"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(II)V"
+        },
+        "newName": "GFX_LoadZoneTiles"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(II)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "zoneID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(II)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "actID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 786432
+        },
+        "newName": "gfxID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 917504
+        },
+        "newName": "worldposX"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 983040
+        },
+        "newName": "worldposY"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IZ)V"
+        },
+        "newName": "Score_Add"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "scorevalue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "play1upmusic"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljava/io/DataInputStream;"
+        },
+        "newName": "Level_DataReader"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;"
+        },
+        "newName": "GFX_Load"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a([BLjava/lang/String;)V"
+        },
+        "newName": "Record_Save"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a([BLjava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "savedata"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a([BLjava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "saveentry"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a([Ljavax/microedition/lcdui/Image;)V"
+        },
+        "newName": "GFX_UnloadArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "newName": "Text_LoadLang"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aB()V"
+        },
+        "newName": "GFX_LoadHUD"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aD()V"
+        },
+        "newName": "GFX_LoadGame"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aE()V"
+        },
+        "newName": "GFX_UnloadGame"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aG()V"
+        },
+        "newName": "Boss_Load"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "ae()V"
+        },
+        "newName": "HighScore_ResetValues"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "ae()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "entriesarray"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "am()V"
+        },
+        "newName": "Level_LoadData"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljava/lang/String;)[B"
+        },
+        "newName": "Record_Load"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljava/lang/String;)[B"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "saveentry"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "newName": "Level_UpdateTiles"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 4
+        },
+        "newName": "coarsecamX"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 7
+        },
+        "newName": "coarsecamY"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 786432
+        },
+        "newName": "tiledrawer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 851968
+        },
+        "newName": "dontdrawtiles"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1048577
+        },
+        "newName": "curtileID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(Ljavax/microedition/lcdui/Graphics;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1114112
+        },
+        "newName": "curchunkID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "c(I)V"
+        },
+        "newName": "PowerUp_Apply"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "c(I)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "type"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "c(Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131081
+        },
+        "newName": "lifecount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "i()V"
+        },
+        "newName": "Game_Pause"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "u()V"
+        },
+        "newName": "Player_Hurt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "v()V"
+        },
+        "newName": "Player_Kill"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(IIZ)V"
+        },
+        "newName": "Music_Play"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(IIZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "trackID"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(IIZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "loopcount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "extension"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(Ljavax/microedition/media/Player;)V"
+        },
+        "newName": "Audio_DestroyPlayer"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "a",
+      "subPath": "java",
+      "caret": 172,
+      "view": {
+        "x": 0,
+        "y": 114
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "Sonic",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "c",
+      "subPath": "java",
+      "caret": 44872,
+      "view": {
+        "x": 0,
+        "y": 23886
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "d",
+      "subPath": "java",
+      "caret": 3368,
+      "view": {
+        "x": 0,
+        "y": 1330
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "b",
+      "subPath": "java",
+      "caret": 151752,
+      "view": {
+        "x": 0,
+        "y": 58082
+      }
+    }
+  ],
+  "activeTab": 4,
+  "cacheDir": "Sonic.class.cache",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "Game_ZoneID",
+    "28, 40",
+    "fram",
+    "32, 40",
+    "boss",
+    "Level_",
+    "Player_Info",
+    "Score_Add",
+    "1664",
+    "Player_Info[5]",
+    "player_info",
+    "landscape",
+    "Cheats_Active[1] \u003d",
+    "GFX_GameArray[",
+    "+\u003d 10",
+    "m39o",
+    ".act",
+    ".png"
+  ]
+}

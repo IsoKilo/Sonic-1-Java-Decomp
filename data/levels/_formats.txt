@@ -1,0 +1,12 @@
+zoneX.png - Block graphics. Must use a 256 colour indexed palette for transparency to work, must be 16 blocks wide (256 pixels), unknown if there is a vertical limit.
+zoneX.bmd - Chunk data. Format is identical to Mega Drive Sonic 1, but is uncompressed.
+MapLzoneX.blt - Block priority. Each nybble represents a block. 0 is low priority, 1 is high priority.
+zoneX.blt - Block collision mapping. Same format as Mega Drive Sonic 1.
+
+mc_XX_map_data.bin - Level layout data.
+	- Padded out with 3 bytes of '0', use tools/Depadder.py to get rid of this padding
+	- Header starts with either 3 or 4, purpose of this byte is seemingly unknown.
+
+	- Rest of the level data is identical to the Mega Drive version.
+
+ZONEXACT.act - Object layout data. Starts with an 8 byte header, it is 2 bytes denoting the act's object data length. After the object data is a 6 byte footer carried over from Mega Drive Sonic 1. Object data itself is the same as Mega Drive Sonic 1.

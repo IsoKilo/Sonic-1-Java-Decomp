@@ -1,0 +1,5 @@
+depadded_mc_gh_map_data.bin
+depadded_mc_ma_map_data.bin
+depadded_mc_sy_map_data.bin
+depadded_mc_obj_size_table.bin
+depadded_framedata.bin

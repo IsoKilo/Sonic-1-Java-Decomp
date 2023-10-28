@@ -1,0 +1,5 @@
+mc_gh_map_data.bin
+mc_ma_map_data.bin
+mc_sy_map_data.bin
+mc_obj_size_table.bin
+framedata.bin
