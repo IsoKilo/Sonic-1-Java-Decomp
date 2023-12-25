@@ -19,12 +19,12 @@ public final class Actor extends Game {
     /* renamed from: f */
     private void m279f(boolean z) {
         int i = 0;
-        for (int length = ((Game) this).f198e.length - 1; length >= 0 && i < this.f199af; length--) {
-            if (((Game) this).f198e[length][24] == 1) {
+        for (int length = ((Game) this).f264e.length - 1; length >= 0 && i < this.f112af; length--) {
+            if (((Game) this).f264e[length][24] == 1) {
                 i++;
-                int i2 = ((Game) this).f198e[length][1];
-                if (z == (i2 == 45 || i2 == 26 || i2 == 53 || i2 == 10 || (i2 == 88 && ((Game) this).f198e[length][4] == 127))) {
-                    ((Game) this).Object_Info = ((Game) this).f198e[length];
+                int i2 = ((Game) this).f264e[length][1];
+                if (z == (i2 == 45 || i2 == 26 || i2 == 53 || i2 == 10 || (i2 == 88 && ((Game) this).f264e[length][4] == 127))) {
+                    ((Game) this).Object_Info = ((Game) this).f264e[length];
                     m281e(((Game) this).Object_Info[1]);
                 }
             }
@@ -33,28 +33,28 @@ public final class Actor extends Game {
 
     /* renamed from: ab */
     private void m357ab() {
-        if (Game.f24g < Game.f20c) {
-            Game.GFX_Painter.translate((Game.f20c - Game.f24g) >> 1, 0);
+        if (Game.f174g < Game.f171c) {
+            Game.GFX_Painter.translate((Game.f171c - Game.f174g) >> 1, 0);
         }
-        Game.GFX_Painter.setClip(0, Game.f26i, Game.f24g, Game.f25h);
+        Game.GFX_Painter.setClip(0, Game.f13i, Game.f174g, Game.f175h);
         Background_Renderer.m388a(Game.GFX_Painter, Game.Camera_Pos[0], Game.Camera_Pos[1], true);
         Level_UpdateTiles(Game.GFX_Painter, this.Game_ZoneID == 1 || this.Game_ZoneID == 5);
         m279f(false);
         m249M();
-        if (!Game.f128j) {
+        if (!Game.f75j) {
             m15w();
         }
         m11y();
         m194a(Game.GFX_Painter, this.Game_ZoneID == 1 || this.Game_ZoneID == 5);
         m279f(true);
-        if (Game.f128j) {
+        if (Game.f75j) {
             m15w();
         }
-        if (Game.f24g < Game.f20c) {
-            Game.GFX_Painter.translate(-((Game.f20c - Game.f24g) >> 1), 0);
+        if (Game.f174g < Game.f171c) {
+            Game.GFX_Painter.translate(-((Game.f171c - Game.f174g) >> 1), 0);
         }
         m51l();
-        Game.GFX_Painter.setClip(0, 0, Game.f20c, Game.GFX_MenuHeight);
+        Game.GFX_Painter.setClip(0, 0, Game.f171c, Game.GFX_MenuHeight);
     }
 
     /* renamed from: ac */
@@ -69,80 +69,80 @@ public final class Actor extends Game {
         int i6;
         int i7;
         int i8;
-        switch (this.f223ai) {
+        switch (this.f121ai) {
             case 1:
                 m265D();
                 break;
             case 2:
-                if (((Game) this).f204q || this.f158p) {
-                    Game.m137b(0, 0, Game.f20c, Game.GFX_MenuHeight);
+                if (((Game) this).f267q || this.f262p) {
+                    Game.UI_DrawBorderLines(0, 0, Game.f171c, Game.GFX_MenuHeight);
                     Game.m263E();
-                    Game.f258z = true;
-                    Game.f260B = true;
-                    Game.f259A = true;
-                    ((Game) this).f204q = false;
-                } else if (((Game) this).f35j % 10 == 0) {
-                    Game.m137b(0, 0, Game.GFX_MenuWidth, Game.f26i);
-                    Game.m137b(0, Game.f26i + Game.f25h, Game.GFX_MenuWidth, Game.f26i);
+                    Game.f217z = true;
+                    Game.f219B = true;
+                    Game.f218A = true;
+                    ((Game) this).f267q = false;
+                } else if (((Game) this).f226j % 10 == 0) {
+                    Game.UI_DrawBorderLines(0, 0, Game.GFX_MenuWidth, Game.f13i);
+                    Game.UI_DrawBorderLines(0, Game.f13i + Game.f175h, Game.GFX_MenuWidth, Game.f13i);
                     m113c(true);
                     m129b(true);
                 }
                 m357ab();
-                ((Game) this).f35j++;
+                ((Game) this).f226j++;
                 break;
             case 3:
                 m261F();
                 Game.GFX_Painter.setColor(0);
-                Game.GFX_Painter.fillRect(0, Game.f26i, Game.GFX_MenuWidth, Game.f25h);
-                ((Game) this).f82m = (Game.GFX_MenuWidth + Game.f84a[Game.f218x[this.f226al]][2]) >> 1;
+                Game.GFX_Painter.fillRect(0, Game.f13i, Game.GFX_MenuWidth, Game.f175h);
+                ((Game) this).f43m = (Game.GFX_MenuWidth + Game.f183a[Game.f211x[this.f277al]][2]) >> 1;
                 int[] iArr = {82, 100, 108, 116, 100, 84};
-                Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f84a[10][0], Game.f84a[10][1], Game.f84a[10][2], Game.f84a[10][3], Game.f38a[0], (((Game) this).f82m - Game.f84a[10][2]) - 1, iArr[0], 20, false);
-                if (this.f226al == 6) {
+                Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f183a[10][0], Game.f183a[10][1], Game.f183a[10][2], Game.f183a[10][3], Game.f179a[0], (((Game) this).f43m - Game.f183a[10][2]) - 1, iArr[0], 20, false);
+                if (this.f277al == 6) {
                     graphics = Game.GFX_Painter;
                     image = Game.GFX_HUDArray[10];
-                    i = Game.f84a[3][0];
-                    i2 = Game.f84a[3][1];
-                    i3 = Game.f84a[3][2];
-                    i4 = Game.f84a[3][3];
-                    i5 = Game.f38a[0];
-                    i6 = ((Game) this).f82m - 48;
+                    i = Game.f183a[3][0];
+                    i2 = Game.f183a[3][1];
+                    i3 = Game.f183a[3][2];
+                    i4 = Game.f183a[3][3];
+                    i5 = Game.f179a[0];
+                    i6 = ((Game) this).f43m - 48;
                     i7 = iArr[1];
                     i8 = 20;
                 } else {
-                    Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f84a[4 + this.f227am][0], Game.f84a[4 + this.f227am][1], Game.f84a[4 + this.f227am][2], Game.f84a[4 + this.f227am][3], Game.f38a[0], (((Game) this).f82m - Game.f84a[10][2]) + 25, iArr[2], 20, false);
-                    Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f84a[8][0], Game.f84a[8][1], Game.f84a[8][2], Game.f84a[8][3], Game.f38a[0], (((Game) this).f82m - Game.f84a[10][2]) + 1, iArr[3], 20, false);
+                    Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f183a[4 + this.f278am][0], Game.f183a[4 + this.f278am][1], Game.f183a[4 + this.f278am][2], Game.f183a[4 + this.f278am][3], Game.f179a[0], (((Game) this).f43m - Game.f183a[10][2]) + 25, iArr[2], 20, false);
+                    Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f183a[8][0], Game.f183a[8][1], Game.f183a[8][2], Game.f183a[8][3], Game.f179a[0], (((Game) this).f43m - Game.f183a[10][2]) + 1, iArr[3], 20, false);
                     graphics = Game.GFX_Painter;
                     image = Game.GFX_HUDArray[10];
-                    i = Game.f84a[3][0];
-                    i2 = Game.f84a[3][1];
-                    i3 = Game.f84a[3][2];
-                    i4 = Game.f84a[3][3];
-                    i5 = Game.f38a[0];
-                    i6 = ((Game) this).f82m - (Game.f84a[10][2] >> 1);
+                    i = Game.f183a[3][0];
+                    i2 = Game.f183a[3][1];
+                    i3 = Game.f183a[3][2];
+                    i4 = Game.f183a[3][3];
+                    i5 = Game.f179a[0];
+                    i6 = ((Game) this).f43m - (Game.f183a[10][2] >> 1);
                     i7 = iArr[4];
                     i8 = 24;
                 }
                 Game.m195a(graphics, image, i, i2, i3, i4, i5, i6, i7, i8, false);
-                Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f84a[Game.f218x[this.f226al]][0], Game.f84a[Game.f218x[this.f226al]][1], Game.f84a[Game.f218x[this.f226al]][2], Game.f84a[Game.f218x[this.f226al]][3], Game.f38a[0], ((Game) this).f82m, iArr[5], 24, false);
-                Game.GFX_Painter.drawImage(Game.GFX_HUDArray[4], Game.GFX_MenuWidth - 10, Game.f23f + (Game.f22e >> 1), 20);
-                Game.GFX_Painter.drawImage(Game.GFX_HUDArray[5], 10, Game.f23f + (Game.f22e >> 1), 24);
+                Game.m195a(Game.GFX_Painter, Game.GFX_HUDArray[10], Game.f183a[Game.f211x[this.f277al]][0], Game.f183a[Game.f211x[this.f277al]][1], Game.f183a[Game.f211x[this.f277al]][2], Game.f183a[Game.f211x[this.f277al]][3], Game.f179a[0], ((Game) this).f43m, iArr[5], 24, false);
+                Game.GFX_Painter.drawImage(Game.GFX_HUDArray[4], Game.GFX_MenuWidth - 10, Game.f12f + (Game.f173e >> 1), 20);
+                Game.GFX_Painter.drawImage(Game.GFX_HUDArray[5], 10, Game.f12f + (Game.f173e >> 1), 24);
                 break;
             case 4:
                 m261F();
                 Game.m263E();
-                ((Game) this).f204q = false;
-                Game.f260B = true;
+                ((Game) this).f267q = false;
+                Game.f219B = true;
                 Game.GFX_Painter.setColor(0);
-                Game.GFX_Painter.fillRect(0, Game.f26i, Game.GFX_MenuWidth, Game.f25h);
+                Game.GFX_Painter.fillRect(0, Game.f13i, Game.GFX_MenuWidth, Game.f175h);
                 break;
             case 6:
-                ((Game) this).f34a[0] = "";
+                ((Game) this).f225a[0] = "";
                 m261F();
-                ((Game) this).f35j++;
+                ((Game) this).f226j++;
                 m243S();
                 break;
             case 7:
-                ((Game) this).f35j++;
+                ((Game) this).f226j++;
                 m241U();
                 break;
             case 8:
@@ -153,42 +153,42 @@ public final class Actor extends Game {
                 break;
             case 10:
             case 11:
-                Game.m137b(0, 0, Game.f20c, Game.GFX_MenuHeight);
+                Game.UI_DrawBorderLines(0, 0, Game.f171c, Game.GFX_MenuHeight);
                 m357ab();
                 Game.GFX_Painter.setColor(0);
-                for (int i9 = 0; i9 < Game.f25h; i9 += 2) {
-                    Game.GFX_Painter.fillRect(0, i9 + Game.f26i, Game.GFX_MenuWidth, 1);
+                for (int i9 = 0; i9 < Game.f175h; i9 += 2) {
+                    Game.GFX_Painter.fillRect(0, i9 + Game.f13i, Game.GFX_MenuWidth, 1);
                 }
-                if (this.f223ai == 11) {
-                    m196a(((Game) this).f66b[85], false);
-                    m197a(((Game) this).f66b[24], 2, 0, this.f250an == 0);
-                    m197a(((Game) this).f66b[25], 2, 1, this.f250an == 1);
+                if (this.f121ai == 11) {
+                    m196a(((Game) this).Text_Main[85], false);
+                    m197a(((Game) this).Text_Main[24], 2, 0, this.f289an == 0);
+                    m197a(((Game) this).Text_Main[25], 2, 1, this.f289an == 1);
                 } else {
-                    m196a(((Game) this).f66b[60], false);
-                    m197a(((Game) this).f66b[70], 2, 0, this.f250an == 0);
-                    m197a(((Game) this).f66b[71], 2, 1, this.f250an == 1);
+                    m196a(((Game) this).Text_Main[60], false);
+                    m197a(((Game) this).Text_Main[70], 2, 0, this.f289an == 0);
+                    m197a(((Game) this).Text_Main[71], 2, 1, this.f289an == 1);
                 }
-                ((Game) this).f204q = true;
+                ((Game) this).f267q = true;
                 break;
         }
-        if (this.f223ai == 4 || this.f223ai == 2) {
+        if (this.f121ai == 4 || this.f121ai == 2) {
             m355ad();
         }
-        if (((Game) this).f257y) {
+        if (((Game) this).f291y) {
             Game.m263E();
-            ((Game) this).f257y = false;
+            ((Game) this).f291y = false;
         }
-        if (this.f223ai != 2 || ((Game) this).f35j % 5 == 0) {
+        if (this.f121ai != 2 || ((Game) this).f226j % 5 == 0) {
             m56k();
         }
     }
 
     /* renamed from: ad */
     private void m355ad() {
-        if (((Game) this).f255w) {
+        if (((Game) this).f134w) {
             Game.GFX_Painter.setColor(0);
             for (int i = 0; i < 10; i++) {
-                int i2 = 24 - ((this.f254ap - i) * 4);
+                int i2 = 24 - ((this.f133ap - i) * 4);
                 int i3 = i2;
                 if (i2 >= 0) {
                     if (i3 > 24) {
@@ -197,33 +197,33 @@ public final class Actor extends Game {
                     Game.GFX_Painter.fillRect((i * 24) + (24 - i3), 0, i3, 240);
                 }
             }
-            if (22 < this.f254ap) {
-                this.f254ap = 0;
-                ((Game) this).f255w = false;
+            if (22 < this.f133ap) {
+                this.f133ap = 0;
+                ((Game) this).f134w = false;
             }
-            this.f254ap++;
+            this.f133ap++;
         }
         m253J();
-        if (((Game) this).f256x) {
+        if (((Game) this).f135x) {
             Game.GFX_Painter.setColor(0);
             for (int i4 = 0; i4 < 10; i4++) {
-                if (this.f254ap - i4 > 0) {
-                    int i5 = (this.f254ap - i4) << 2;
+                if (this.f133ap - i4 > 0) {
+                    int i5 = (this.f133ap - i4) << 2;
                     int i6 = i5;
                     if (i5 > 24) {
                         i6 = 24;
                     }
-                    Game.GFX_Painter.fillRect(i4 * 24, Game.f23f, i6, Game.f22e);
+                    Game.GFX_Painter.fillRect(i4 * 24, Game.f12f, i6, Game.f173e);
                 }
             }
-            if (22 < this.f254ap) {
-                this.f254ap = 0;
-                ((Game) this).f256x = false;
+            if (22 < this.f133ap) {
+                this.f133ap = 0;
+                ((Game) this).f135x = false;
             }
-            this.f254ap++;
+            this.f133ap++;
         }
-        if (((Game) this).f41a) {
-            m200a(((Game) this).f66b[49], Game.GFX_MenuWidth >> 1, ((Game.f26i + Game.f25h) - Game.f18a) - 2, 16777215, 658170);
+        if (((Game) this).f228a) {
+            m200a(((Game) this).Text_Main[49], Game.GFX_MenuWidth >> 1, ((Game.f13i + Game.f175h) - Game.f169a) - 2, 16777215, 658170);
         }
     }
 
@@ -232,13 +232,13 @@ public final class Actor extends Game {
         try {
             Game.GFX_Painter = graphics;
             m356ac();
-            if (((Game) this).f302G) {
+            if (((Game) this).f316G) {
                 Font font = graphics.getFont();
                 if (((Game) this).Cheats_Active[1]) {
-                    int i = ((Game) this).f317B[this.f318aD];
+                    int i = ((Game) this).f323B[this.f324aD];
                     String stringBuffer = new StringBuffer().append(i != 0 ? String.valueOf(1000 / i) : "??").append(" fps").toString();
                     graphics.setColor(0);
-                    graphics.fillRect(0, 0, font.stringWidth("XXXXXX"), Game.f18a);
+                    graphics.fillRect(0, 0, font.stringWidth("XXXXXX"), Game.f169a);
                     graphics.setColor(16777215);
                     graphics.drawString(stringBuffer, 0, 0, 20);
                 }
@@ -246,7 +246,7 @@ public final class Actor extends Game {
                     String stringBuffer2 = new StringBuffer().append(Integer.toHexString(Game.Camera_Pos[0]).toUpperCase()).append(", ").append(Integer.toHexString(Game.Camera_Pos[1]).toUpperCase()).toString();
                     int stringWidth = font.stringWidth(stringBuffer2);
                     graphics.setColor(0);
-                    graphics.fillRect(Game.GFX_MenuWidth - stringWidth, 0, stringWidth, Game.f18a);
+                    graphics.fillRect(Game.GFX_MenuWidth - stringWidth, 0, stringWidth, Game.f169a);
                     graphics.setColor(16777215);
                     graphics.drawString(stringBuffer2, Game.GFX_MenuWidth, 0, 24);
                 }
@@ -261,27 +261,27 @@ public final class Actor extends Game {
         boolean[] zArr;
         int[] iArr;
         char c;
-        ((Game) this).f139G = 0;
+        ((Game) this).f256G = 0;
         int i = 0;
-        for (int i2 = 0; i2 < ((Game) this).f198e.length && i < this.f199af; i2++) {
-            if (((Game) this).f198e[i2][24] == 1) {
+        for (int i2 = 0; i2 < ((Game) this).f264e.length && i < this.f112af; i2++) {
+            if (((Game) this).f264e[i2][24] == 1) {
                 i++;
-                ((Game) this).Object_Info = ((Game) this).f198e[i2];
+                ((Game) this).Object_Info = ((Game) this).f264e[i2];
                 m352ag();
                 if (((Game) this).Object_Info[1] != 17 || ((Game) this).Object_Info[4] != 55) {
                     if (((Game) this).Object_Info[0] > 0 || ((Game) this).Object_Info[21] != 0) {
-                        if (((Game) this).f200c[((Game) this).Object_Info[20]] || ((Game) this).Object_Info[1] >= 120 || ((Game) this).Object_Info[1] == 42 || ((Game) this).Object_Info[1] == 43 || ((Game) this).Object_Info[1] == 36) {
+                        if (((Game) this).f113c[((Game) this).Object_Info[20]] || ((Game) this).Object_Info[1] >= 120 || ((Game) this).Object_Info[1] == 42 || ((Game) this).Object_Info[1] == 43 || ((Game) this).Object_Info[1] == 36) {
                             if (m188a(((Game) this).Object_Info) && ((Game) this).Object_Info[21] == 0 && ((Game) this).Object_Info[1] < 120 && ((Game) this).Object_Info[1] != 42 && ((Game) this).Object_Info[1] != 43 && ((Game) this).Object_Info[1] != 36) {
-                                ((Game) this).f200c[((Game) this).Object_Info[20]] = false;
-                                zArr = ((Game) this).f200c;
+                                ((Game) this).f113c[((Game) this).Object_Info[20]] = false;
+                                zArr = ((Game) this).f113c;
                                 iArr = ((Game) this).Object_Info;
                                 c = 22;
                             }
                         }
                         m142b(i2);
                     } else {
-                        ((Game) this).f201d[((Game) this).Object_Info[20]] = true;
-                        zArr = ((Game) this).f200c;
+                        ((Game) this).f114d[((Game) this).Object_Info[20]] = true;
+                        zArr = ((Game) this).f113c;
                         iArr = ((Game) this).Object_Info;
                         c = 20;
                     }
@@ -290,7 +290,7 @@ public final class Actor extends Game {
                 }
             }
         }
-        this.f199af += ((Game) this).f139G;
+        this.f112af += ((Game) this).f256G;
     }
 
     /* renamed from: af */
@@ -303,35 +303,35 @@ public final class Actor extends Game {
             m97e();
             return;
         }
-        switch (this.f223ai) {
+        switch (this.f121ai) {
             case 1:
                 m267C();
                 break;
             case 2:
                 ((Game) this).Player_PrevRings = ((Game) this).Player_Rings;
-                if (this.f158p) {
-                    ((Game) this).f252v = true;
-                    this.f253ao = 10;
-                    Game.f134o = true;
+                if (this.f262p) {
+                    ((Game) this).f131v = true;
+                    this.f132ao = 10;
+                    Game.f81o = true;
                 }
-                Game.f98b[0] = Game.m235a();
-                Game.f98b[1] = Game.m146b() - 1;
-                this.f287as = 0;
-                this.f288at = 0;
-                ((Game) this).f285F = false;
-                ((Game) this).f280E = false;
-                ((Game) this).f276D = false;
+                Game.f184b[0] = Game.Player_RoughXPos();
+                Game.f184b[1] = Game.Player_RoughYPos() - 1;
+                this.f305as = 0;
+                this.f306at = 0;
+                ((Game) this).f147F = false;
+                ((Game) this).f304E = false;
+                ((Game) this).f141D = false;
                 m29r();
-                if (!Game.f128j) {
+                if (!Game.f75j) {
                     m9z();
                     m354ae();
                 }
-                if (Game.f128j) {
+                if (Game.f75j) {
                     m251K();
                 } else {
                     m250L();
                 }
-                if (((Game) this).f276D) {
+                if (((Game) this).f141D) {
                     Player_Hurt();
                 }
                 m13x();
@@ -347,31 +347,31 @@ public final class Actor extends Game {
                 }
                 m23t();
                 m257H();
-                ((Game) this).f36k++;
-                if (((Game) this).f36k % 55 == 0 && !Game.f134o) {
-                    ((Game) this).f111x = (((Game) this).f111x + 1) % 60;
-                    if (((Game) this).f111x == 0) {
-                        if (((Game) this).f112y == 9) {
-                            ((Game) this).f111x = 59;
+                ((Game) this).f227k++;
+                if (((Game) this).f227k % 55 == 0 && !Game.f81o) {
+                    ((Game) this).f59x = (((Game) this).f59x + 1) % 60;
+                    if (((Game) this).f59x == 0) {
+                        if (((Game) this).f60y == 9) {
+                            ((Game) this).f59x = 59;
                             Player_Kill();
                         } else {
-                            ((Game) this).f112y++;
+                            ((Game) this).f60y++;
                         }
                     }
                 }
-                if (Game.f133n) {
-                    ((Game) this).f111x = 0;
-                    ((Game) this).f112y = 0;
+                if (Game.f80n) {
+                    ((Game) this).f59x = 0;
+                    ((Game) this).f60y = 0;
                 }
-                if (!Game.f121d && ((Game) this).Player_Rings >= 100 && ((Game) this).Player_PrevRings < 100) {
+                if (!Game.f68d && ((Game) this).Player_Rings >= 100 && ((Game) this).Player_PrevRings < 100) {
                     ((Game) this).Music_MainPlayer.Music_Play(7, 1, false);
                     this.Player_Lives++;
                 }
-                if (!Game.f121d && ((Game) this).Player_Rings >= 200 && ((Game) this).Player_PrevRings < 200) {
+                if (!Game.f68d && ((Game) this).Player_Rings >= 200 && ((Game) this).Player_PrevRings < 200) {
                     ((Game) this).Music_MainPlayer.Music_Play(7, 1, false);
                     this.Player_Lives++;
                 }
-                if (!Game.f121d && ((Game) this).Player_Rings >= 300 && ((Game) this).Player_PrevRings < 300) {
+                if (!Game.f68d && ((Game) this).Player_Rings >= 300 && ((Game) this).Player_PrevRings < 300) {
                     ((Game) this).Music_MainPlayer.Music_Play(7, 1, false);
                     this.Player_Lives++;
                     break;
@@ -379,44 +379,44 @@ public final class Actor extends Game {
                 break;
             case 3:
                 if (((Game) this).Input_Array[0]) {
-                    this.Game_ZoneID = Game.f219f[this.f226al][this.f227am];
-                    this.Game_ActID = Game.f220g[this.f226al][this.f227am];
+                    this.Game_ZoneID = Game.f212f[this.f277al][this.f278am];
+                    this.Game_ActID = Game.f213g[this.f277al][this.f278am];
                     this.Player_Lives = 3;
-                    if (((Game) this).f302G) {
+                    if (((Game) this).f316G) {
                         actor2 = this;
-                        i = this.f304ay;
+                        i = this.f318ay;
                     } else {
                         actor2 = this;
                         i = 0;
                     }
                     ((Game) actor2).Player_Emeralds = i;
                     ((Game) this).Player_Score = 0;
-                    ((Game) this).f205r = true;
+                    ((Game) this).f268r = true;
                     m35p();
                 } else if (((Game) this).Input_Array[4]) {
                     m97e();
-                    this.f227am = (this.f227am + 1) % 3;
-                    if (this.f227am == 0) {
+                    this.f278am = (this.f278am + 1) % 3;
+                    if (this.f278am == 0) {
                         actor = this;
                         z = true;
                         actor.m192a(z);
                     }
                 } else if (((Game) this).Input_Array[3]) {
                     m97e();
-                    this.f227am = (this.f227am + 2) % 3;
-                    if (this.f227am == 2) {
+                    this.f278am = (this.f278am + 2) % 3;
+                    if (this.f278am == 2) {
                         actor = this;
                         z = false;
                         actor.m192a(z);
                     }
                 }
-                if (this.f226al == 6) {
-                    this.f227am = 0;
+                if (this.f277al == 6) {
+                    this.f278am = 0;
                     break;
                 }
                 break;
             case 6:
-                ((Game) this).f36k++;
+                ((Game) this).f227k++;
                 m244R();
                 break;
             case 7:
@@ -426,55 +426,55 @@ public final class Actor extends Game {
                 m240V();
                 break;
             case 9:
-                if (((Game) this).f316I && System.currentTimeMillis() - this.f11a > 250) {
+                if (((Game) this).f159I && System.currentTimeMillis() - this.f11a > 250) {
                     this.f11a = System.currentTimeMillis();
                     m238X();
                     break;
                 }
                 break;
             case 10:
-                this.f289au = 0;
-                ((Game) this).f71b = (byte) ((((Game) this).f71b + 1) % 24);
+                this.f307au = 0;
+                ((Game) this).f35b = (byte) ((((Game) this).f35b + 1) % 24);
                 if (((Game) this).Input_Array[0]) {
-                    m73h();
-                    if (this.f250an == 0) {
-                        this.f223ai = 2;
-                        ((Game) this).f204q = true;
-                        ((Game) this).f252v = true;
-                        this.f253ao = 10;
-                        ((Game) this).f257y = true;
-                        Game.f260B = true;
+                    Record_Save_Settings();
+                    if (this.f289an == 0) {
+                        this.f121ai = 2;
+                        ((Game) this).f267q = true;
+                        ((Game) this).f131v = true;
+                        this.f132ao = 10;
+                        ((Game) this).f291y = true;
+                        Game.f219B = true;
                         m90e(false);
                         m79g();
                     } else {
-                        this.f223ai = 11;
+                        this.f121ai = 11;
                     }
                 } else if (((Game) this).Input_Array[1] || ((Game) this).Input_Array[2]) {
-                    this.f250an = (this.f250an + 1) & 1;
+                    this.f289an = (this.f289an + 1) & 1;
                 }
                 m97e();
                 break;
             case 11:
-                this.f289au = 0;
-                ((Game) this).f71b = (byte) ((((Game) this).f71b + 1) % 24);
+                this.f307au = 0;
+                ((Game) this).f35b = (byte) ((((Game) this).f35b + 1) % 24);
                 if (!((Game) this).Input_Array[0]) {
                     if (!((Game) this).Input_Array[1]) {
                         if (((Game) this).Input_Array[2]) {
                             m97e();
-                            this.f250an = (this.f250an + 1) & 1;
+                            this.f289an = (this.f289an + 1) & 1;
                             break;
                         }
                     } else {
                         m97e();
-                        this.f250an = (this.f250an + 1) & 1;
+                        this.f289an = (this.f289an + 1) & 1;
                         break;
                     }
-                } else if (this.f250an != 0) {
+                } else if (this.f289an != 0) {
                     m97e();
-                    this.f223ai = 10;
-                    ((Game) this).f252v = true;
-                    this.f253ao = 10;
-                    ((Game) this).f257y = true;
+                    this.f121ai = 10;
+                    ((Game) this).f131v = true;
+                    this.f132ao = 10;
+                    ((Game) this).f291y = true;
                     break;
                 } else {
                     m106d(3);
@@ -488,46 +488,46 @@ public final class Actor extends Game {
     @Override // p000.Game, java.lang.Runnable
     public final void run() {
         try {
-            ((Game) this).f311b = System.currentTimeMillis();
+            ((Game) this).f155b = System.currentTimeMillis();
             m86f();
             int i = 0;
             while (true) {
-                ((Game) this).f312c = System.currentTimeMillis();
+                ((Game) this).f156c = System.currentTimeMillis();
                 m353af();
-                this.f309aA++;
-                ((Game) this).f313d = this.f309aA * 18;
-                ((Game) this).f314e = System.currentTimeMillis() - ((Game) this).f311b;
-                if (this.f315aC < ((Game) this).f313d - ((Game) this).f314e || i > 7) {
+                this.f320aA++;
+                ((Game) this).f157d = this.f320aA * 18;
+                ((Game) this).f158e = System.currentTimeMillis() - ((Game) this).f155b;
+                if (this.f322aC < ((Game) this).f157d - ((Game) this).f158e || i > 7) {
                     long currentTimeMillis = System.currentTimeMillis();
                     i = 0;
                     m61j();
                     repaint();
                     serviceRepaints();
-                    this.f310aB++;
-                    int[] iArr = ((Game) this).f317B;
-                    int i2 = this.f318aD;
-                    this.f318aD = i2 + 1;
+                    this.f321aB++;
+                    int[] iArr = ((Game) this).f323B;
+                    int i2 = this.f324aD;
+                    this.f324aD = i2 + 1;
                     iArr[i2] = (int) (System.currentTimeMillis() - currentTimeMillis);
-                    if (this.f318aD == ((Game) this).f317B.length) {
-                        this.f318aD = 0;
+                    if (this.f324aD == ((Game) this).f323B.length) {
+                        this.f324aD = 0;
                     }
-                    this.f315aC = 0;
-                    for (int i3 = 0; i3 < ((Game) this).f317B.length; i3++) {
-                        this.f315aC += ((Game) this).f317B[i3];
+                    this.f322aC = 0;
+                    for (int i3 = 0; i3 < ((Game) this).f323B.length; i3++) {
+                        this.f322aC += ((Game) this).f323B[i3];
                     }
-                    this.f315aC /= ((Game) this).f317B.length;
+                    this.f322aC /= ((Game) this).f323B.length;
                     Thread.yield();
                     long currentTimeMillis2 = System.currentTimeMillis();
-                    if (currentTimeMillis2 - ((Game) this).f312c < 18) {
+                    if (currentTimeMillis2 - ((Game) this).f156c < 18) {
                         try {
-                            Thread.sleep(18 - (currentTimeMillis2 - ((Game) this).f312c));
+                            Thread.sleep(18 - (currentTimeMillis2 - ((Game) this).f156c));
                         } catch (Exception unused) {
                         }
                     }
-                    ((Game) this).f316I = true;
+                    ((Game) this).f159I = true;
                 } else {
                     i++;
-                    ((Game) this).f316I = false;
+                    ((Game) this).f159I = false;
                 }
             }
         } catch (Throwable unused2) {
@@ -1113,16 +1113,16 @@ public final class Actor extends Game {
         short s;
         short s2;
         for (int i = 0; i < 10; i++) {
-            if (((Game) this).f146a[i][2] == 0) {
-                if (((Game) this).f146a[i][3] == 0) {
-                    s = ((Game) this).f146a[i][0];
-                    s2 = ((Game) this).f146a[i][1];
+            if (((Game) this).f258a[i][2] == 0) {
+                if (((Game) this).f258a[i][3] == 0) {
+                    s = ((Game) this).f258a[i][0];
+                    s2 = ((Game) this).f258a[i][1];
                 } else {
-                    s = (this.f177S + ((Game) this).f179U) / 100;
-                    s2 = ((((Game) this).f178T + ((Game) this).f180V) / 100) + 24;
+                    s = (this.f94S + ((Game) this).f96U) / 100;
+                    s2 = ((((Game) this).f95T + ((Game) this).f97V) / 100) + 24;
                 }
                 short s3 = s2;
-                if (!z || Math.abs(((Game) this).f146a[i][0] - ((this.f177S + ((Game) this).f179U) / 100)) <= 32) {
+                if (!z || Math.abs(((Game) this).f258a[i][0] - ((this.f94S + ((Game) this).f96U) / 100)) <= 32) {
                     Game.m133b(102, 0, 0, 32, 32, 0, s + this.Boss_XPos, s3 + this.Boss_YPos);
                 }
             }
@@ -1131,7 +1131,7 @@ public final class Actor extends Game {
 
     /* renamed from: c */
     private void m285c(int i, int i2, int i3, int i4, int i5) {
-        m384a(i, i2, i3, i4, Game.f210a[i][i5]);
+        m384a(i, i2, i3, i4, Game.f117a[i][i5]);
     }
 
     /* renamed from: a */
@@ -1141,15 +1141,15 @@ public final class Actor extends Game {
         int i7 = iArr[5];
         switch (i4) {
             case 1:
-                i5 = Game.f38a[4];
+                i5 = Game.f179a[4];
                 i6 = -i6;
                 break;
             case 2:
-                i5 = Game.f38a[6];
+                i5 = Game.f179a[6];
                 i7 = -i7;
                 break;
             case 3:
-                i5 = Game.f38a[2];
+                i5 = Game.f179a[2];
                 i6 = -i6;
                 i7 = -i7;
                 break;
@@ -1273,10 +1273,10 @@ public final class Actor extends Game {
 
     /* renamed from: d */
     private void m284d(int i, int i2, int i3, int i4) {
-        int i5 = Game.f210a[120][15][4];
-        int i6 = Game.f210a[120][15][5];
-        int i7 = this.f175Q;
-        int i8 = ((Game) this).f173O / 100;
+        int i5 = Game.f117a[120][15][4];
+        int i6 = Game.f117a[120][15][5];
+        int i7 = this.f92Q;
+        int i8 = ((Game) this).f90O / 100;
         if (i3 == 1) {
             i5 = -i5;
         }
@@ -1285,30 +1285,30 @@ public final class Actor extends Game {
         }
         int Math_CalcSine = 180 + ((Game.Math_CalcSine(i8) * 90) / 100);
         if (i7 > 16) {
-            m285c(120, i, i2, i3, 15 + ((((Game) this).f35j >> 2) & 1));
+            m285c(120, i, i2, i3, 15 + ((((Game) this).f226j >> 2) & 1));
         }
         for (int i9 = 0; i9 < 4; i9++) {
             int i10 = (i9 + 1) * 16;
             int Math_CalcSine2 = i + ((Game.Math_CalcSine(Math_CalcSine) * i10) / 100) + i5;
-            int m143b = i2 + ((Game.m143b(Math_CalcSine) * i10) / 100) + i6;
+            int Math_CalcCosine = i2 + ((Game.Math_CalcCosine(Math_CalcSine) * i10) / 100) + i6;
             if (i7 > 16 + i10) {
-                m285c(120, Math_CalcSine2, m143b, 0, 17);
+                m285c(120, Math_CalcSine2, Math_CalcCosine, 0, 17);
             }
             if (i4 == 2 && Math.abs(i7 - (16 + i10)) < 4) {
-                m216a(1, Math_CalcSine2, m143b, 0, 0, 0, 0);
+                m216a(1, Math_CalcSine2, Math_CalcCosine, 0, 0, 0, 0);
             }
         }
         int Math_CalcSine3 = i + i5 + ((Game.Math_CalcSine(Math_CalcSine) * i7) / 100);
-        int m143b2 = i2 + i6 + ((Game.m143b(Math_CalcSine) * i7) / 100);
+        int Math_CalcCosine2 = i2 + i6 + ((Game.Math_CalcCosine(Math_CalcSine) * i7) / 100);
         if (i4 != 2) {
-            m285c(121, Math_CalcSine3, m143b2, 0, 0);
+            m285c(121, Math_CalcSine3, Math_CalcCosine2, 0, 0);
             return;
         }
         int Math_CalcSine4 = i + i5 + ((Game.Math_CalcSine(Math_CalcSine) * 96) / 100);
-        int m143b3 = i2 + i6 + ((Game.m143b(Math_CalcSine) * 96) / 100);
-        m285c(121, Math_CalcSine4, m143b3, 0, 0);
-        if ((((Game) this).f35j & 7) == 4) {
-            m216a(1, (Math_CalcSine4 + Game.m123c(48)) - 24, (m143b3 + Game.m123c(48)) - 24, 0, 0, 0, 0);
+        int Math_CalcCosine3 = i2 + i6 + ((Game.Math_CalcCosine(Math_CalcSine) * 96) / 100);
+        m285c(121, Math_CalcSine4, Math_CalcCosine3, 0, 0);
+        if ((((Game) this).f226j & 7) == 4) {
+            m216a(1, (Math_CalcSine4 + Game.m123c(48)) - 24, (Math_CalcCosine3 + Game.m123c(48)) - 24, 0, 0, 0, 0);
         }
     }
 
@@ -1324,12 +1324,12 @@ public final class Actor extends Game {
 
     /* renamed from: k */
     private void m275k(int i, int i2, int i3) {
-        m285c(120, i, ((i2 + 8) - 32) + this.f175Q, i3, 20);
+        m285c(120, i, ((i2 + 8) - 32) + this.f92Q, i3, 20);
     }
 
     /* renamed from: l */
     private void m274l(int i, int i2, int i3) {
-        switch (((Game) this).f169K) {
+        switch (((Game) this).f86K) {
             case 0:
                 m284d(i, i2, i3, 0);
                 return;
@@ -1352,7 +1352,7 @@ public final class Actor extends Game {
 
     /* renamed from: m */
     private void m273m(int i, int i2, int i3) {
-        switch (((Game) this).f169K) {
+        switch (((Game) this).f86K) {
             case 0:
                 m284d(i, i2, i3, 2);
                 return;
@@ -1383,23 +1383,23 @@ public final class Actor extends Game {
         int i5;
         int i6;
         int i7;
-        int i8 = (((Game) this).f35j >> 3) & 1;
-        int i9 = (((Game) this).f35j >> 2) & 1;
-        int i10 = (((Game) this).f35j >> 1) & 1;
-        int i11 = ((Game) this).f35j & 1;
-        if (((Game) this).f170L < 2) {
+        int i8 = (((Game) this).f226j >> 3) & 1;
+        int i9 = (((Game) this).f226j >> 2) & 1;
+        int i10 = (((Game) this).f226j >> 1) & 1;
+        int i11 = ((Game) this).f226j & 1;
+        if (((Game) this).f87L < 2) {
             return;
         }
         m112c(iArr);
         int i12 = iArr[2];
         int i13 = iArr[3];
-        int i14 = ((Game) this).f171M;
-        int i15 = ((Game) this).f172N;
-        int i16 = ((((Game) this).f35j & 1) != 0 || ((Game) this).f185aa <= 0) ? 0 : 1;
+        int i14 = ((Game) this).f88M;
+        int i15 = ((Game) this).f89N;
+        int i16 = ((((Game) this).f226j & 1) != 0 || ((Game) this).f102aa <= 0) ? 0 : 1;
         switch (i14) {
             case 0:
                 m274l(i12, i13, i15);
-                m283d(this.f187ac, i12, i13, i15, i9);
+                m283d(this.f104ac, i12, i13, i15, i9);
                 actor = this;
                 i = 120;
                 i2 = i12;
@@ -1421,7 +1421,7 @@ public final class Actor extends Game {
                 break;
             case 2:
                 m274l(i12, i13, i15);
-                m283d(this.f187ac, i12, i13, i15, i9);
+                m283d(this.f104ac, i12, i13, i15, i9);
                 m285c(120, i12, i13, i15, 11 + i11);
                 actor = this;
                 i = 120;
@@ -1489,9 +1489,9 @@ public final class Actor extends Game {
 
     /* renamed from: a */
     private static boolean m385a(int i, int i2, int i3, int i4) {
-        if (i3 == -1 || (0 <= (i - Game.f228y[0]) + i3 && Game.GFX_MenuWidth >= (i - Game.f228y[0]) - i3)) {
+        if (i3 == -1 || (0 <= (i - Game.f214y[0]) + i3 && Game.GFX_MenuWidth >= (i - Game.f214y[0]) - i3)) {
             if (i4 != -1) {
-                return 0 <= (i2 - Game.f228y[1]) + i4 && 240 >= (i2 - Game.f228y[1]) - i4;
+                return 0 <= (i2 - Game.f214y[1]) + i4 && 240 >= (i2 - Game.f214y[1]) - i4;
             }
             return true;
         }
@@ -1504,10 +1504,10 @@ public final class Actor extends Game {
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         if (Game.m135b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 8, 8) <= 0 ? !(((Game) this).Object_Info[12] == 0 || Game.m135b(((Game) this).Object_Info[2], ((Game) this).Object_Info[12], ((Game) this).Object_Info[6], ((Game) this).Object_Info[12], 8, 8) < 0 || ((Game) this).Object_Info[5] != 0 || ((Game) this).Object_Info[0] == -1) : !(((Game) this).Object_Info[5] != 0 || ((Game) this).Object_Info[0] == -1)) {
             ((Game) this).Object_Info[5] = 1;
-            ((Game) this).Object_Info[10] = ((Game) this).f36k;
+            ((Game) this).Object_Info[10] = ((Game) this).f227k;
             ((Game) this).Player_Rings++;
         }
-        if (((Game) this).Object_Info[5] != 1 || ((Game) this).f36k - ((Game) this).Object_Info[10] < 20) {
+        if (((Game) this).Object_Info[5] != 1 || ((Game) this).f227k - ((Game) this).Object_Info[10] < 20) {
             return;
         }
         ((Game) this).Object_Info[0] = -1;
@@ -1517,9 +1517,9 @@ public final class Actor extends Game {
     /* renamed from: aj */
     private void m349aj() {
         int i;
-        int Math_CalcSine = Game.Math_CalcSine(((Game) this).f35j * 3) * 87;
+        int Math_CalcSine = Game.Math_CalcSine(((Game) this).f226j * 3) * 87;
         int Math_CalcSine2 = Game.Math_CalcSine(((Game) this).Object_Info[6] * 3) * 87;
-        ((Game) this).Object_Info[6] = ((Game) this).f35j;
+        ((Game) this).Object_Info[6] = ((Game) this).f226j;
         int i2 = ((Game) this).Object_Info[4] + 1;
         if (((Game) this).Object_Info[4] == 5 || ((Game) this).Object_Info[19] == 1) {
             Math_CalcSine = -Math_CalcSine;
@@ -1538,21 +1538,21 @@ public final class Actor extends Game {
         } else {
             i = (i2 << 4) - 8;
         }
-        int m218a = Game.m218a(((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine2 / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine2 / 100)) * i) / 100), i3, i4);
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine2 / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine2 / 100)) * i) / 100), i3, i4);
         if (this.Game_ZoneID != 3 && this.Game_ZoneID != 5) {
-            if (m218a != 0) {
-                m218a = Game.m218a(((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine / 100)) * i) / 100) + 5, ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine2 / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine2 / 100)) * i) / 100) + 5, i3, i4);
+            if (Actor_CheckPlayerCollide != 0) {
+                Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine / 100)) * i) / 100) + 5, ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine2 / 100)) * i) / 100), ((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine2 / 100)) * i) / 100) + 5, i3, i4);
             }
-            if (m218a == 0) {
-                Game.Player_Info[1] = ((((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine / 100)) * i) / 100)) - i4) << 8;
+            if (Actor_CheckPlayerCollide == 0) {
+                Game.Player_Info[1] = ((((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine / 100)) * i) / 100)) - i4) << 8;
                 int[] iArr = Game.Player_Info;
                 iArr[0] = iArr[0] + ((((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) - (Game.Math_CalcSine(180 + (Math_CalcSine2 / 100)) * i)) << 8) / 100);
                 m140b(((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i) / 100), i3);
                 m230a(((Game) this).Object_Info[22]);
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -1563,24 +1563,24 @@ public final class Actor extends Game {
         boolean z = false;
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
-        int i2 = ((Game) this).f36k - ((Game) this).Object_Info[14];
-        ((Game) this).Object_Info[14] = ((Game) this).f36k;
+        int i2 = ((Game) this).f227k - ((Game) this).Object_Info[14];
+        ((Game) this).Object_Info[14] = ((Game) this).f227k;
         int i3 = 99;
         int i4 = 0;
         while (true) {
             if (i4 >= 12) {
                 break;
             }
-            int m213a = Game.m213a(Game.m235a(), Game.m146b() - 12, Game.f98b[0], Game.f98b[1] - 12, 4, 12, (((Game) this).Object_Info[2] - 96) + (i4 << 4), ((Game) this).Object_Info[3] + ((Game) this).Object_Info[10], (((Game) this).Object_Info[6] - 96) + (i4 << 4), ((Game) this).Object_Info[7] + ((Game) this).Object_Info[10], 8, 8);
-            i = m213a;
-            if (m213a < 0 || i == 3) {
+            int Actor_CheckCollision = Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 12, Game.f184b[0], Game.f184b[1] - 12, 4, 12, (((Game) this).Object_Info[2] - 96) + (i4 << 4), ((Game) this).Object_Info[3] + ((Game) this).Object_Info[10], (((Game) this).Object_Info[6] - 96) + (i4 << 4), ((Game) this).Object_Info[7] + ((Game) this).Object_Info[10], 8, 8);
+            i = Actor_CheckCollision;
+            if (Actor_CheckCollision < 0 || i == 3) {
                 i4++;
             } else {
                 z = true;
                 Game.Player_Info[1] = (((Game) this).Object_Info[3] - 8) << 8;
-                if (Math.abs(Game.m235a() - (((Game) this).Object_Info[2] - 8)) < 999) {
+                if (Math.abs(Game.Player_RoughXPos() - (((Game) this).Object_Info[2] - 8)) < 999) {
                     i3 = i4;
-                    Math.abs(Game.m235a() - ((Game) this).Object_Info[2]);
+                    Math.abs(Game.Player_RoughXPos() - ((Game) this).Object_Info[2]);
                 }
             }
         }
@@ -1610,15 +1610,15 @@ public final class Actor extends Game {
         if (z) {
             i = 0;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
     /* renamed from: al */
     private void m347al() {
         for (int i = 0; i < 12; i++) {
-            if (((((Game) this).f35j / 10) + (12 - i)) % 7 == 2 && Game.m218a((((Game) this).Object_Info[2] - 96) + (i << 4), ((Game) this).Object_Info[3], (((Game) this).Object_Info[2] - 96) + (i << 4), ((Game) this).Object_Info[3], 8, 12) >= 0) {
+            if (((((Game) this).f226j / 10) + (12 - i)) % 7 == 2 && Game.Actor_CheckPlayerCollide((((Game) this).Object_Info[2] - 96) + (i << 4), ((Game) this).Object_Info[3], (((Game) this).Object_Info[2] - 96) + (i << 4), ((Game) this).Object_Info[3], 8, 12) >= 0) {
                 Player_Hurt();
                 return;
             }
@@ -1637,11 +1637,11 @@ public final class Actor extends Game {
         }
         int i5 = ((Game) this).Object_Info[2];
         if (((Game) this).Object_Info[5] == 0) {
-            int length = !z ? Game.f148e.length : -Game.f148e.length;
-            int m213a = Game.m213a(Game.m235a(), Game.m146b() - 12, Game.f98b[0], Game.f98b[1] - 12, 2, 12, ((Game) this).Object_Info[2] - length, (((Game) this).Object_Info[3] - Game.f148e[0]) + 8, ((Game) this).Object_Info[2] - length, (((Game) this).Object_Info[3] - Game.f148e[0]) + 8, 8, 8);
-            i2 = m213a;
-            if (m213a >= 0) {
-                Game.Player_Info[1] = (((((Game) this).Object_Info[3] - Game.f148e[0]) + 8) - 8) << 8;
+            int length = !z ? Game.f189e.length : -Game.f189e.length;
+            int Actor_CheckCollision = Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 12, Game.f184b[0], Game.f184b[1] - 12, 2, 12, ((Game) this).Object_Info[2] - length, (((Game) this).Object_Info[3] - Game.f189e[0]) + 8, ((Game) this).Object_Info[2] - length, (((Game) this).Object_Info[3] - Game.f189e[0]) + 8, 8, 8);
+            i2 = Actor_CheckCollision;
+            if (Actor_CheckCollision >= 0) {
+                Game.Player_Info[1] = (((((Game) this).Object_Info[3] - Game.f189e[0]) + 8) - 8) << 8;
             }
         }
         if (((Game) this).Object_Info[5] != 0) {
@@ -1649,7 +1649,7 @@ public final class Actor extends Game {
             while (true) {
                 if (i6 >= 36) {
                     break;
-                } else if (((((Game) this).f36k / 2) - ((Game) this).Object_Info[10]) - ((i6 << 1) + i6) < 0) {
+                } else if (((((Game) this).f227k / 2) - ((Game) this).Object_Info[10]) - ((i6 << 1) + i6) < 0) {
                     i = (i6 / 6) << 3;
                     break;
                 } else {
@@ -1665,8 +1665,8 @@ public final class Actor extends Game {
             i5 = ((Game) this).Object_Info[4] != 0 ? ((Game) this).Object_Info[2] - i : ((Game) this).Object_Info[2] + i;
         }
         if (((Game) this).Object_Info[5] != 2) {
-            int length2 = Game.f148e.length;
-            if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 128, 128) >= 0) {
+            int length2 = Game.f189e.length;
+            if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 128, 128) >= 0) {
                 int i7 = 0;
                 while (true) {
                     if (i7 >= length2) {
@@ -1674,12 +1674,12 @@ public final class Actor extends Game {
                     }
                     int i8 = !z ? i7 : (length2 - i7) - 1;
                     if ((!z && i <= i7) || (z && length2 - i >= i7)) {
-                        if (Game.m213a(Game.m235a(), Game.m146b() - 12, Game.f98b[0], Game.f98b[1] - 12, 2, 12, (((Game) this).Object_Info[2] - length2) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f148e[i8], (((Game) this).Object_Info[2] - length2) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f148e[i8], 1, 1) == 0 && i4 > Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)))) {
-                            i4 = Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)));
+                        if (Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 12, Game.f184b[0], Game.f184b[1] - 12, 2, 12, (((Game) this).Object_Info[2] - length2) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f189e[i8], (((Game) this).Object_Info[2] - length2) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f189e[i8], 1, 1) == 0 && i4 > Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)))) {
+                            i4 = Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)));
                             i3 = i8;
                         }
-                        if (i3 != -99 && 8 > Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1))) && Game.m146b() - (((Game) this).Object_Info[3] - Game.f148e[i8]) > 0 && Game.m146b() - (((Game) this).Object_Info[3] - Game.f148e[i8]) <= 64 && i4 > Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)))) {
-                            i4 = Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)));
+                        if (i3 != -99 && 8 > Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1))) && Game.Player_RoughYPos() - (((Game) this).Object_Info[3] - Game.f189e[i8]) > 0 && Game.Player_RoughYPos() - (((Game) this).Object_Info[3] - Game.f189e[i8]) <= 64 && i4 > Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)))) {
+                            i4 = Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length2) + (i7 << 1)));
                             i3 = i8;
                             break;
                         }
@@ -1690,9 +1690,9 @@ public final class Actor extends Game {
             i2 = -1;
             if (i4 != 999) {
                 ((Game) this).Object_Info[17] = i3;
-                Game.Player_Info[1] = ((((Game) this).Object_Info[3] - Game.f148e[i3]) - 1) << 8;
+                Game.Player_Info[1] = ((((Game) this).Object_Info[3] - Game.f189e[i3]) - 1) << 8;
                 if (((Game) this).Object_Info[5] == 0) {
-                    ((Game) this).Object_Info[10] = ((Game) this).f36k / 2;
+                    ((Game) this).Object_Info[10] = ((Game) this).f227k / 2;
                 }
                 ((Game) this).Object_Info[5] = 1;
                 m140b(i5, !z ? i : length2 - i);
@@ -1700,8 +1700,8 @@ public final class Actor extends Game {
                 i2 = 0;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i2 != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i2 != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -1784,35 +1784,35 @@ public final class Actor extends Game {
         }
         ((Game) this).Object_Info[13] = 0;
         int i5 = 999;
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[17], ((Game) this).Object_Info[18], ((Game) this).f149f[c2], Game.f168d[c2][0]);
-        if (m218a >= 0) {
-            if (m218a == 1) {
-                Game.Player_Info[0] = ((((Game) this).Object_Info[2] - ((Game) this).f149f[c2]) - 12) << 8;
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[17], ((Game) this).Object_Info[18], ((Game) this).f260f[c2], Game.f206d[c2][0]);
+        if (Actor_CheckPlayerCollide >= 0) {
+            if (Actor_CheckPlayerCollide == 1) {
+                Game.Player_Info[0] = ((((Game) this).Object_Info[2] - ((Game) this).f260f[c2]) - 12) << 8;
                 Game.Player_Info[10] = 0;
                 i3 = -99;
-            } else if (m218a == 2) {
-                Game.Player_Info[0] = (((((Game) this).Object_Info[2] + ((Game) this).f149f[c2]) + 12) + 1) << 8;
+            } else if (Actor_CheckPlayerCollide == 2) {
+                Game.Player_Info[0] = (((((Game) this).Object_Info[2] + ((Game) this).f260f[c2]) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
                 i3 = -99;
             }
         }
-        int length = Game.f168d[c2].length;
-        int i6 = Game.f168d[c2][0];
+        int length = Game.f206d[c2].length;
+        int i6 = Game.f206d[c2][0];
         if (c2 == 2) {
             i6 = 96;
         }
-        if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[17], ((Game) this).Object_Info[18], length, i6) >= 0) {
+        if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[17], ((Game) this).Object_Info[18], length, i6) >= 0) {
             int i7 = 0;
             while (true) {
                 if (i7 >= length) {
                     break;
                 }
-                if (Game.m213a(Game.m235a(), Game.m146b() - 12, Game.f98b[0], Game.f98b[1] - 12, 2, 13, (((Game) this).Object_Info[2] - length) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f168d[c2][i7], (((Game) this).Object_Info[17] - length) + (i7 << 1), ((Game) this).Object_Info[18] - Game.f168d[c2][i7], 1, 1) == 0 && i5 > Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)))) {
-                    i5 = Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)));
+                if (Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 12, Game.f184b[0], Game.f184b[1] - 12, 2, 13, (((Game) this).Object_Info[2] - length) + (i7 << 1), ((Game) this).Object_Info[3] - Game.f206d[c2][i7], (((Game) this).Object_Info[17] - length) + (i7 << 1), ((Game) this).Object_Info[18] - Game.f206d[c2][i7], 1, 1) == 0 && i5 > Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)))) {
+                    i5 = Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)));
                     i3 = i7;
                 }
-                if (i3 != -99 && 8 >= Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length) + (i7 << 1))) && Game.m146b() - (((Game) this).Object_Info[3] - Game.f168d[c2][i7]) >= -1 && Game.m146b() - (((Game) this).Object_Info[3] - Game.f168d[c2][i7]) <= 64 && i5 > Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)))) {
-                    i5 = Math.abs(Game.m235a() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)));
+                if (i3 != -99 && 8 >= Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length) + (i7 << 1))) && Game.Player_RoughYPos() - (((Game) this).Object_Info[3] - Game.f206d[c2][i7]) >= -1 && Game.Player_RoughYPos() - (((Game) this).Object_Info[3] - Game.f206d[c2][i7]) <= 64 && i5 > Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)))) {
+                    i5 = Math.abs(Game.Player_RoughXPos() - ((((Game) this).Object_Info[2] - length) + (i7 << 1)));
                     i3 = i7;
                     break;
                 }
@@ -1821,26 +1821,26 @@ public final class Actor extends Game {
         }
         boolean z = true;
         if (i5 != 999) {
-            Game.Player_Info[1] = ((((Game) this).Object_Info[3] - Game.f168d[c2][i3]) + 4) << 8;
-            m140b(((Game) this).Object_Info[2], Game.f168d[c2].length);
+            Game.Player_Info[1] = ((((Game) this).Object_Info[3] - Game.f206d[c2][i3]) + 4) << 8;
+            m140b(((Game) this).Object_Info[2], Game.f206d[c2].length);
             m230a(((Game) this).Object_Info[22]);
             z = false;
             if (c2 == 2) {
                 ((Game) this).Object_Info[13] = 1;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && z) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && z) {
+            ((Game) this).f115s = false;
         }
         if (((Game) this).Object_Info[16] != 0) {
             int[] iArr3 = ((Game) this).Object_Info;
             iArr3[16] = iArr3[16] + 1;
             if (((Game) this).Object_Info[16] == 60) {
-                ((Game) this).Object_Info[15] = ((Game) this).f35j - 1;
+                ((Game) this).Object_Info[15] = ((Game) this).f226j - 1;
             }
             if (((Game) this).Object_Info[16] >= 60) {
                 for (int i8 = 0; i8 < 8; i8++) {
-                    int i9 = ((Game) this).f35j - ((Game) this).Object_Info[15];
+                    int i9 = ((Game) this).f226j - ((Game) this).Object_Info[15];
                     int i10 = i9;
                     int i11 = i9 - 1;
                     int i12 = i11;
@@ -1852,7 +1852,7 @@ public final class Actor extends Game {
                         i10 = i13;
                         i12 = i13;
                     }
-                    if (Game.m218a((((Game) this).Object_Info[2] + (i10 << 1)) - 56, ((Game) this).Object_Info[3] - Game.f168d[c2][i10], (((Game) this).Object_Info[17] + (i12 << 1)) - 56, ((Game) this).Object_Info[18] - Game.f168d[c2][i12], 6, 6) >= 0) {
+                    if (Game.Actor_CheckPlayerCollide((((Game) this).Object_Info[2] + (i10 << 1)) - 56, ((Game) this).Object_Info[3] - Game.f206d[c2][i10], (((Game) this).Object_Info[17] + (i12 << 1)) - 56, ((Game) this).Object_Info[18] - Game.f206d[c2][i12], 6, 6) >= 0) {
                         Player_Hurt();
                         return;
                     }
@@ -1885,7 +1885,7 @@ public final class Actor extends Game {
                 ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + 112;
             }
             ((Game) this).Object_Info[18] = 1;
-            if (((Game) this).f207e[128] || ((Game) this).f207e[129]) {
+            if (((Game) this).f269e[128] || ((Game) this).f269e[129]) {
                 if (((Game) this).Object_Info[3] > ((Game) this).Object_Info[9]) {
                     iArr2 = ((Game) this).Object_Info;
                     c2 = 3;
@@ -1894,7 +1894,7 @@ public final class Actor extends Game {
                 }
                 m225a = m225a(10, 0);
                 for (i5 = 0; i5 < m225a.length; i5++) {
-                    if ((((Game) this).Object_Info[2] - 56) - (m225a[i5][2] - 16) <= 32 && (((Game) this).Object_Info[2] - 56) - (m225a[i5][2] - 16) >= -112 && ((Game) this).f207e[128] && ((Game) this).Object_Info[3] < ((Game) this).Object_Info[9] + 16) {
+                    if ((((Game) this).Object_Info[2] - 56) - (m225a[i5][2] - 16) <= 32 && (((Game) this).Object_Info[2] - 56) - (m225a[i5][2] - 16) >= -112 && ((Game) this).f269e[128] && ((Game) this).Object_Info[3] < ((Game) this).Object_Info[9] + 16) {
                         ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + 16;
                     }
                 }
@@ -1958,36 +1958,36 @@ public final class Actor extends Game {
                 }
             }
         }
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[7], i6, 12);
-        if (m218a >= 0) {
-            if (m218a == 0) {
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[7], i6, 12);
+        if (Actor_CheckPlayerCollide >= 0) {
+            if (Actor_CheckPlayerCollide == 0) {
                 Game.Player_Info[1] = (((Game) this).Object_Info[3] - 12) << 8;
                 m140b(((Game) this).Object_Info[2], i6);
                 m230a(((Game) this).Object_Info[22]);
                 if (((Game) this).Object_Info[3] - 24 < ((Game) this).Object_Info[9]) {
                     m269B();
                 }
-            } else if (m218a == 1) {
+            } else if (Actor_CheckPlayerCollide == 1) {
                 Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i6) - 12) << 8;
                 Game.Player_Info[10] = 0;
                 if (((Game) this).Input_Array[4]) {
                     m26s();
                 }
-            } else if (m218a == 2) {
+            } else if (Actor_CheckPlayerCollide == 2) {
                 Game.Player_Info[0] = (((((Game) this).Object_Info[2] + i6) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
                 if (((Game) this).Input_Array[3]) {
                     m26s();
                 }
-            } else if (m218a == 3) {
+            } else if (Actor_CheckPlayerCollide == 3) {
                 m269B();
                 Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 12) + 12) + 12) + 1) << 8;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
-        if (((Game) this).Object_Info[4] == 35 || Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + 32, ((Game) this).Object_Info[2], ((Game) this).Object_Info[7] + 32, 40, 14) < 0) {
+        if (((Game) this).Object_Info[4] == 35 || Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + 32, ((Game) this).Object_Info[2], ((Game) this).Object_Info[7] + 32, 40, 14) < 0) {
             return;
         }
         Player_Hurt();
@@ -2154,19 +2154,19 @@ public final class Actor extends Game {
             iArr2[c2] = (iArr3[c3] - (((Game) this).Object_Info[5] << 2)) + 32;
         }
         boolean z = false;
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[7], i5, i6);
-        if (m218a >= 0) {
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[7], i5, i6);
+        if (Actor_CheckPlayerCollide >= 0) {
             if (((Game) this).Object_Info[4] == 82 || ((Game) this).Object_Info[4] == 18 || ((Game) this).Object_Info[4] == 16) {
-                if (m218a == 1 || m218a == 2) {
+                if (Actor_CheckPlayerCollide == 1 || Actor_CheckPlayerCollide == 2) {
                     actor = this;
                     actor.Player_Hurt();
                     z = true;
                 }
-                if (m218a != 0) {
+                if (Actor_CheckPlayerCollide != 0) {
                     Game.Player_Info[1] = (((Game) this).Object_Info[3] - i6) << 8;
                     m140b(((Game) this).Object_Info[2], i5);
                     m230a(((Game) this).Object_Info[22]);
-                    if (m226a(Game.m235a(), Game.m146b() - 32)) {
+                    if (m226a(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 32)) {
                         if (Game.Player_Info[12] == 0) {
                             iArr6 = Game.Player_Info;
                             c6 = 0;
@@ -2178,19 +2178,19 @@ public final class Actor extends Game {
                         }
                         iArr6[c6] = i4;
                     }
-                } else if (m218a == 1) {
+                } else if (Actor_CheckPlayerCollide == 1) {
                     Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i5) - 12) << 8;
                     Game.Player_Info[10] = 0;
                     if (!z && ((Game) this).Input_Array[4]) {
                         m26s();
                     }
-                } else if (m218a == 2) {
+                } else if (Actor_CheckPlayerCollide == 2) {
                     Game.Player_Info[0] = (((((Game) this).Object_Info[2] + i5) + 12) + 1) << 8;
                     Game.Player_Info[10] = 0;
                     if (z && ((Game) this).Input_Array[3]) {
                         m26s();
                     }
-                } else if (m218a == 3) {
+                } else if (Actor_CheckPlayerCollide == 3) {
                     Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + i6) + 12) + 12) + 1) << 8;
                     if (Game.Player_Info[5] < 0) {
                         Game.Player_Info[5] = 0;
@@ -2203,17 +2203,17 @@ public final class Actor extends Game {
                     }
                 }
             } else {
-                if ((m218a == 0 && ((Game) this).Object_Info[19] == 0) || (m218a == 3 && ((Game) this).Object_Info[19] != 0)) {
+                if ((Actor_CheckPlayerCollide == 0 && ((Game) this).Object_Info[19] == 0) || (Actor_CheckPlayerCollide == 3 && ((Game) this).Object_Info[19] != 0)) {
                     actor = this;
                     actor.Player_Hurt();
                     z = true;
                 }
-                if (m218a != 0) {
+                if (Actor_CheckPlayerCollide != 0) {
                 }
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -2236,7 +2236,7 @@ public final class Actor extends Game {
         char c;
         int i;
         int i2;
-        int m218a;
+        int Actor_CheckPlayerCollide;
         int[] iArr2;
         char c2;
         int i3;
@@ -2265,20 +2265,20 @@ public final class Actor extends Game {
             if (i9 >= 4) {
                 break;
             }
-            if (((Game) this).Object_Info[8] == Game.f150g[i9] && ((Game) this).Object_Info[9] == Game.f151h[i9]) {
+            if (((Game) this).Object_Info[8] == Game.f190g[i9] && ((Game) this).Object_Info[9] == Game.f191h[i9]) {
                 i6 = i9;
                 break;
             }
             i9++;
         }
-        if (((Game) this).Object_Info[5] == 0 && i6 != -1 && ((Game) this).Object_Info[10] == 0 && Math.abs(((Game) this).Object_Info[2] - Game.f152i[i6]) <= 16 && Math.abs(((Game) this).Object_Info[3] - Game.f153j[i6]) <= 16) {
+        if (((Game) this).Object_Info[5] == 0 && i6 != -1 && ((Game) this).Object_Info[10] == 0 && Math.abs(((Game) this).Object_Info[2] - Game.f192i[i6]) <= 16 && Math.abs(((Game) this).Object_Info[3] - Game.f193j[i6]) <= 16) {
             ((Game) this).Object_Info[10] = 1;
         }
-        if (((Game) this).Object_Info[17] == 0 && ((Game) this).Object_Info[10] > 0 && ((Game) this).Object_Info[3] < Game.f153j[i6]) {
+        if (((Game) this).Object_Info[17] == 0 && ((Game) this).Object_Info[10] > 0 && ((Game) this).Object_Info[3] < Game.f193j[i6]) {
             int[] iArr4 = ((Game) this).Object_Info;
             iArr4[3] = iArr4[3] + 2;
-            if (((Game) this).Object_Info[3] > Game.f153j[i6]) {
-                ((Game) this).Object_Info[3] = Game.f153j[i6];
+            if (((Game) this).Object_Info[3] > Game.f193j[i6]) {
+                ((Game) this).Object_Info[3] = Game.f193j[i6];
             }
         }
         if (((Game) this).Object_Info[17] == 0) {
@@ -2304,11 +2304,11 @@ public final class Actor extends Game {
                                 }
                             }
                             m225a2 = m225a(15, 128);
-                            ((Game) this).f207e[129] = false;
+                            ((Game) this).f269e[129] = false;
                             for (i5 = 0; i5 < m225a2.length; i5++) {
                                 if ((m225a2[i5][2] - 8) - (((Game) this).Object_Info[2] - 16) <= 32 && (m225a2[i5][2] - 8) - (((Game) this).Object_Info[2] - 16) >= -32 && (m225a2[i5][3] - 8) - (((Game) this).Object_Info[3] - 16) <= 32 && (m225a2[i5][3] - 8) - (((Game) this).Object_Info[3] - 16) >= -32) {
-                                    ((Game) this).f207e[129] = true;
-                                    ((Game) this).f155b[129] = true;
+                                    ((Game) this).f269e[129] = true;
+                                    ((Game) this).f261b[129] = true;
                                 }
                             }
                         }
@@ -2338,11 +2338,11 @@ public final class Actor extends Game {
                         }
                     }
                     int i12 = i8 - ((Game) this).Object_Info[2];
-                    m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
-                    if (m218a >= 0) {
-                        if (m218a == 0) {
-                            int m218a2 = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, ((Game) this).Object_Info[15], ((Game) this).Object_Info[16] - 16, i7, 2);
-                            if (m218a2 == 1) {
+                    Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
+                    if (Actor_CheckPlayerCollide >= 0) {
+                        if (Actor_CheckPlayerCollide == 0) {
+                            int Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, ((Game) this).Object_Info[15], ((Game) this).Object_Info[16] - 16, i7, 2);
+                            if (Actor_CheckPlayerCollide2 == 1) {
                                 if (((((Game) this).Input_Array[4] && ((Game) this).Object_Info[5] == 0) || ((Game) this).Object_Info[4] == 129 || ((Game) this).Object_Info[4] == 0) && ((Game) this).Object_Info[10] == 0) {
                                     int[] iArr6 = ((Game) this).Object_Info;
                                     iArr6[2] = iArr6[2] + 1;
@@ -2360,7 +2360,7 @@ public final class Actor extends Game {
                                 int[] iArr7 = Game.Player_Info;
                                 iArr7[0] = iArr7[0] - (i12 << 8);
                             } else {
-                                if (m218a2 == 2 && (((((Game) this).Input_Array[3] && ((Game) this).Object_Info[5] == 0) || ((Game) this).Object_Info[4] == 129 || ((Game) this).Object_Info[4] == 0) && ((Game) this).Object_Info[10] == 0)) {
+                                if (Actor_CheckPlayerCollide2 == 2 && (((((Game) this).Input_Array[3] && ((Game) this).Object_Info[5] == 0) || ((Game) this).Object_Info[4] == 129 || ((Game) this).Object_Info[4] == 0) && ((Game) this).Object_Info[10] == 0)) {
                                     int[] iArr8 = ((Game) this).Object_Info;
                                     iArr8[2] = iArr8[2] - 1;
                                     if (m139b(((Game) this).Object_Info[2] - i7, ((Game) this).Object_Info[3] - 16)) {
@@ -2378,7 +2378,7 @@ public final class Actor extends Game {
                                 iArr72[0] = iArr72[0] - (i12 << 8);
                             }
                         }
-                        if (m218a == 1) {
+                        if (Actor_CheckPlayerCollide == 1) {
                             if (((Game) this).Input_Array[4] && (((Game) this).Object_Info[5] == 0 || ((Game) this).Object_Info[4] == 129 || ((Game) this).Object_Info[4] == 0)) {
                                 if (((Game) this).Object_Info[10] == 0) {
                                     int[] iArr9 = ((Game) this).Object_Info;
@@ -2397,7 +2397,7 @@ public final class Actor extends Game {
                             Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i7) - 12) << 8;
                             Game.Player_Info[10] = 0;
                         }
-                        if (m218a == 2) {
+                        if (Actor_CheckPlayerCollide == 2) {
                             if (((Game) this).Input_Array[3] && (((Game) this).Object_Info[5] == 0 || ((Game) this).Object_Info[4] == 129 || ((Game) this).Object_Info[4] == 0)) {
                                 if (((Game) this).Object_Info[10] == 0) {
                                     int[] iArr11 = ((Game) this).Object_Info;
@@ -2413,7 +2413,7 @@ public final class Actor extends Game {
                             Game.Player_Info[0] = (((((Game) this).Object_Info[2] + i7) + 12) + 1) << 8;
                             Game.Player_Info[10] = 0;
                         }
-                        if (m218a == 3) {
+                        if (Actor_CheckPlayerCollide == 3) {
                             Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 16) + 12) + 12) + 1) << 8;
                             m269B();
                         }
@@ -2422,8 +2422,8 @@ public final class Actor extends Game {
                         int[] iArr13 = ((Game) this).Object_Info;
                         iArr13[5] = iArr13[5] + 1;
                     }
-                    if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-                        ((Game) this).f206s = false;
+                    if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+                        ((Game) this).f115s = false;
                     }
                     if (z) {
                         m82f(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[4]);
@@ -2436,14 +2436,14 @@ public final class Actor extends Game {
                 iArr = ((Game) this).Object_Info;
                 c = 2;
                 i = iArr[2];
-                i2 = Game.f154k[i6];
+                i2 = Game.f194k[i6];
             } else {
                 iArr = ((Game) this).Object_Info;
                 c = '\n';
                 i = iArr[10];
                 i2 = 1;
             }
-        } else if (Game.f154k[i6] >= 0) {
+        } else if (Game.f194k[i6] >= 0) {
             ((Game) this).Object_Info[17] = 0;
             if (((Game) this).Object_Info[4] != 129) {
                 if (this.Game_ZoneID == 2) {
@@ -2451,7 +2451,7 @@ public final class Actor extends Game {
                     while (i4 < m225a.length) {
                     }
                     m225a2 = m225a(15, 128);
-                    ((Game) this).f207e[129] = false;
+                    ((Game) this).f269e[129] = false;
                     while (i5 < m225a2.length) {
                     }
                 }
@@ -2461,15 +2461,15 @@ public final class Actor extends Game {
                 }
             }
             int i122 = i8 - ((Game) this).Object_Info[2];
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
-            if (m218a >= 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
+            if (Actor_CheckPlayerCollide >= 0) {
             }
             if (!m139b((((Game) this).Object_Info[2] - i7) + 1, ((Game) this).Object_Info[3] + 16)) {
                 int[] iArr132 = ((Game) this).Object_Info;
                 iArr132[5] = iArr132[5] + 1;
             }
-            if (((Game) this).f206s) {
-                ((Game) this).f206s = false;
+            if (((Game) this).f115s) {
+                ((Game) this).f115s = false;
             }
             if (z) {
             }
@@ -2478,12 +2478,12 @@ public final class Actor extends Game {
             if (((Game) this).Object_Info[4] != 129) {
             }
             int i1222 = i8 - ((Game) this).Object_Info[2];
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
-            if (m218a >= 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
+            if (Actor_CheckPlayerCollide >= 0) {
             }
             if (!m139b((((Game) this).Object_Info[2] - i7) + 1, ((Game) this).Object_Info[3] + 16)) {
             }
-            if (((Game) this).f206s) {
+            if (((Game) this).f115s) {
             }
             if (z) {
             }
@@ -2493,12 +2493,12 @@ public final class Actor extends Game {
         if (((Game) this).Object_Info[4] != 129) {
         }
         int i12222 = i8 - ((Game) this).Object_Info[2];
-        m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[15], ((Game) this).Object_Info[16], i7, 16);
+        if (Actor_CheckPlayerCollide >= 0) {
         }
         if (!m139b((((Game) this).Object_Info[2] - i7) + 1, ((Game) this).Object_Info[3] + 16)) {
         }
-        if (((Game) this).f206s) {
+        if (((Game) this).f115s) {
         }
         if (z) {
         }
@@ -2534,7 +2534,7 @@ public final class Actor extends Game {
         char c2;
         int i2;
         int Math_CalcSine;
-        int m218a;
+        int Actor_CheckPlayerCollide;
         m138b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[4]);
         if (((Game) this).Object_Info[4] != 2 && ((Game) this).Object_Info[4] != 10) {
             if (((Game) this).Object_Info[4] == 1) {
@@ -2544,10 +2544,10 @@ public final class Actor extends Game {
                 Math_CalcSine = iArr[5];
                 i = Math_CalcSine + 6;
             }
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
-            if (m218a >= 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
+            if (Actor_CheckPlayerCollide >= 0) {
             }
-            if (((Game) this).f206s) {
+            if (((Game) this).f115s) {
                 return;
             }
             return;
@@ -2574,29 +2574,29 @@ public final class Actor extends Game {
                     c = 11;
                     i = ((Game) this).Object_Info[3];
                 }
-            } else if (((Game) this).Object_Info[3] < Game.m146b() && ((Game) this).Object_Info[2] - 100 < Game.m235a()) {
+            } else if (((Game) this).Object_Info[3] < Game.Player_RoughYPos() && ((Game) this).Object_Info[2] - 100 < Game.Player_RoughXPos()) {
                 ((Game) this).Object_Info[10] = 1;
                 iArr = ((Game) this).Object_Info;
                 c = 5;
                 i = 1;
             }
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
-            if (m218a >= 0) {
-                if (m218a == 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
+            if (Actor_CheckPlayerCollide >= 0) {
+                if (Actor_CheckPlayerCollide == 0) {
                     Game.Player_Info[1] = (((Game) this).Object_Info[3] - 16) << 8;
                     m140b(((Game) this).Object_Info[2], 16);
                     m230a(((Game) this).Object_Info[22]);
-                } else if (m218a == 1) {
+                } else if (Actor_CheckPlayerCollide == 1) {
                     Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 16) - 12) << 8;
                     Game.Player_Info[10] = 0;
-                } else if (m218a == 2) {
+                } else if (Actor_CheckPlayerCollide == 2) {
                     Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 16) + 12) + 1) << 8;
                     Game.Player_Info[10] = 0;
-                } else if (m218a == 3) {
+                } else if (Actor_CheckPlayerCollide == 3) {
                     Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 16) + 12) + 12) + 1) << 8;
                     m269B();
-                } else if (m218a == 4 && this.f208ag != ((Game) this).Object_Info[20]) {
-                    if (Game.m235a() < ((Game) this).Object_Info[2]) {
+                } else if (Actor_CheckPlayerCollide == 4 && this.f116ag != ((Game) this).Object_Info[20]) {
+                    if (Game.Player_RoughXPos() < ((Game) this).Object_Info[2]) {
                         Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 16) - 12) << 8;
                         Game.Player_Info[10] = 0;
                     } else {
@@ -2605,22 +2605,22 @@ public final class Actor extends Game {
                     }
                 }
             }
-            if (((Game) this).f206s || this.f208ag != ((Game) this).Object_Info[20] || m218a == 0) {
+            if (((Game) this).f115s || this.f116ag != ((Game) this).Object_Info[20] || Actor_CheckPlayerCollide == 0) {
                 return;
             }
-            ((Game) this).f206s = false;
+            ((Game) this).f115s = false;
             return;
         } else {
             iArr = ((Game) this).Object_Info;
             c = 3;
-            Math_CalcSine = ((Game) this).Object_Info[11] + ((Game.Math_CalcSine(((Game) this).f36k) * 6) / 100);
+            Math_CalcSine = ((Game) this).Object_Info[11] + ((Game.Math_CalcSine(((Game) this).f227k) * 6) / 100);
             i = Math_CalcSine + 6;
         }
         iArr[c] = i;
-        m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
+        if (Actor_CheckPlayerCollide >= 0) {
         }
-        if (((Game) this).f206s) {
+        if (((Game) this).f115s) {
         }
     }
 
@@ -2654,7 +2654,7 @@ public final class Actor extends Game {
         int i6;
         int i7;
         int i8;
-        int m218a;
+        int Actor_CheckPlayerCollide;
         int[] iArr4;
         char c4;
         int i9;
@@ -2710,17 +2710,17 @@ public final class Actor extends Game {
                 i12 = 16;
                 i13 = 16;
                 int i17 = ((Game) this).Object_Info[2];
-                if (((Game) this).f36k % 384 <= 144) {
+                if (((Game) this).f227k % 384 <= 144) {
                     iArr4 = ((Game) this).Object_Info;
                     c4 = 2;
                     i9 = ((Game) this).Object_Info[8];
-                    i10 = (((Game) this).f36k % 384) / 3;
+                    i10 = (((Game) this).f227k % 384) / 3;
                 } else {
-                    if (((Game) this).f36k % 384 > 240) {
+                    if (((Game) this).f227k % 384 > 240) {
                         iArr4 = ((Game) this).Object_Info;
                         c4 = 2;
                         i9 = ((Game) this).Object_Info[8];
-                        i10 = 48 - (((((Game) this).f36k % 384) / 3) - 80);
+                        i10 = 48 - (((((Game) this).f227k % 384) / 3) - 80);
                     }
                     i15 = i17 - ((Game) this).Object_Info[2];
                 }
@@ -2742,7 +2742,7 @@ public final class Actor extends Game {
                 }
             } else if (((Game) this).Object_Info[4] == 65) {
                 int i19 = ((Game) this).Object_Info[2];
-                ((Game) this).Object_Info[2] = ((((Game) this).Object_Info[8] + ((Game.Math_CalcSine(((Game) this).f36k) * 48) / 100)) - 32) - 48;
+                ((Game) this).Object_Info[2] = ((((Game) this).Object_Info[8] + ((Game.Math_CalcSine(((Game) this).f227k) * 48) / 100)) - 32) - 48;
                 ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + 8;
                 i14 = 32;
                 i12 = 47;
@@ -2755,17 +2755,17 @@ public final class Actor extends Game {
                 if (((Game) this).Object_Info[10] > 5) {
                     int i20 = ((Game) this).Object_Info[2];
                     if (((Game) this).Object_Info[19] == 0) {
-                        if (((Game) this).f36k - ((Game) this).Object_Info[11] <= 32) {
+                        if (((Game) this).f227k - ((Game) this).Object_Info[11] <= 32) {
                             iArr3 = ((Game) this).Object_Info;
                             c3 = 2;
-                            i7 = ((Game) this).Object_Info[8] + ((((Game) this).f36k - ((Game) this).Object_Info[11]) << 2);
+                            i7 = ((Game) this).Object_Info[8] + ((((Game) this).f227k - ((Game) this).Object_Info[11]) << 2);
                         } else {
-                            if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 500 && ((Game) this).f36k - ((Game) this).Object_Info[11] < 532) {
+                            if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 500 && ((Game) this).f227k - ((Game) this).Object_Info[11] < 532) {
                                 iArr3 = ((Game) this).Object_Info;
                                 c3 = 2;
-                                i7 = ((Game) this).Object_Info[8] + (128 - (((((Game) this).f36k - ((Game) this).Object_Info[11]) - 500) << 2));
+                                i7 = ((Game) this).Object_Info[8] + (128 - (((((Game) this).f227k - ((Game) this).Object_Info[11]) - 500) << 2));
                             }
-                            if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 532) {
+                            if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 532) {
                                 ((Game) this).Object_Info[10] = 0;
                                 ((Game) this).Object_Info[11] = 0;
                                 ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8];
@@ -2773,29 +2773,29 @@ public final class Actor extends Game {
                             i15 = i20 - ((Game) this).Object_Info[2];
                         }
                         iArr3[c3] = i7;
-                        if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 532) {
+                        if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 532) {
                         }
                         i15 = i20 - ((Game) this).Object_Info[2];
                     } else {
-                        if (((Game) this).f36k - ((Game) this).Object_Info[11] <= 32) {
+                        if (((Game) this).f227k - ((Game) this).Object_Info[11] <= 32) {
                             iArr3 = ((Game) this).Object_Info;
                             c3 = 2;
                             i5 = ((Game) this).Object_Info[8];
-                            i6 = (((Game) this).f36k - ((Game) this).Object_Info[11]) << 2;
+                            i6 = (((Game) this).f227k - ((Game) this).Object_Info[11]) << 2;
                         } else {
-                            if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 500 && ((Game) this).f36k - ((Game) this).Object_Info[11] < 532) {
+                            if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 500 && ((Game) this).f227k - ((Game) this).Object_Info[11] < 532) {
                                 iArr3 = ((Game) this).Object_Info;
                                 c3 = 2;
                                 i5 = ((Game) this).Object_Info[8];
-                                i6 = 128 - (((((Game) this).f36k - ((Game) this).Object_Info[11]) - 500) << 2);
+                                i6 = 128 - (((((Game) this).f227k - ((Game) this).Object_Info[11]) - 500) << 2);
                             }
-                            if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 532) {
+                            if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 532) {
                             }
                             i15 = i20 - ((Game) this).Object_Info[2];
                         }
                         i7 = i5 - i6;
                         iArr3[c3] = i7;
-                        if (((Game) this).f36k - ((Game) this).Object_Info[11] >= 532) {
+                        if (((Game) this).f227k - ((Game) this).Object_Info[11] >= 532) {
                         }
                         i15 = i20 - ((Game) this).Object_Info[2];
                     }
@@ -2806,38 +2806,38 @@ public final class Actor extends Game {
                     iArr2[c2] = i4;
                 }
             } else if (((Game) this).Object_Info[4] == 40) {
-                if ((((Game) this).f36k >> 1) % 256 < 128) {
+                if ((((Game) this).f227k >> 1) % 256 < 128) {
                     iArr2 = ((Game) this).Object_Info;
                     c2 = 3;
                     i2 = ((Game) this).Object_Info[9];
-                    i3 = (((Game) this).f36k >> 1) % 256;
+                    i3 = (((Game) this).f227k >> 1) % 256;
                 } else {
                     iArr2 = ((Game) this).Object_Info;
                     c2 = 3;
                     i2 = ((Game) this).Object_Info[9];
-                    i3 = 128 - (((((Game) this).f36k >>> 1) % 256) - 128);
+                    i3 = 128 - (((((Game) this).f227k >>> 1) % 256) - 128);
                 }
                 i4 = i2 - i3;
                 iArr2[c2] = i4;
             }
             i8 = -1;
             if ((((Game) this).Object_Info[4] != 7 && ((Game) this).Object_Info[4] != 4) || ((Game) this).Object_Info[5] != 0) {
-                m218a = Game.m218a(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
-                i8 = m218a;
-                if (m218a >= 0 && i8 == 0) {
+                Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
+                i8 = Actor_CheckPlayerCollide;
+                if (Actor_CheckPlayerCollide >= 0 && i8 == 0) {
                     Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i13) + 0) << 8;
                     if (((Game) this).Object_Info[4] != 2 || ((Game) this).Object_Info[4] == 1 || ((Game) this).Object_Info[4] == 65) {
                         if (((Game) this).Object_Info[10] == 0) {
                             ((Game) this).Object_Info[10] = 1;
-                            ((Game) this).Object_Info[11] = ((Game) this).f36k;
+                            ((Game) this).Object_Info[11] = ((Game) this).f227k;
                         }
                         int[] iArr11 = Game.Player_Info;
                         iArr11[0] = iArr11[0] - (i15 << 8);
                     }
                     if (((Game) this).Object_Info[4] == 57) {
-                        if ((((Game) this).Object_Info[2] + i14) - i12 <= Game.m235a() && Game.m235a() <= ((Game) this).Object_Info[2] + i14 + i12 && ((Game) this).Object_Info[10] == 0) {
+                        if ((((Game) this).Object_Info[2] + i14) - i12 <= Game.Player_RoughXPos() && Game.Player_RoughXPos() <= ((Game) this).Object_Info[2] + i14 + i12 && ((Game) this).Object_Info[10] == 0) {
                             ((Game) this).Object_Info[10] = 1;
-                            ((Game) this).Object_Info[11] = ((Game) this).f36k;
+                            ((Game) this).Object_Info[11] = ((Game) this).f227k;
                         }
                         int[] iArr12 = Game.Player_Info;
                         iArr12[0] = iArr12[0] - (i15 << 8);
@@ -2854,8 +2854,8 @@ public final class Actor extends Game {
                     z = true;
                 }
             }
-            if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i8 != 0) {
-                ((Game) this).f206s = false;
+            if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i8 != 0) {
+                ((Game) this).f115s = false;
             }
             if (z) {
                 m118c(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[4]);
@@ -2880,9 +2880,9 @@ public final class Actor extends Game {
         }
         i8 = -1;
         if (((Game) this).Object_Info[4] != 7) {
-            m218a = Game.m218a(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
-            i8 = m218a;
-            if (m218a >= 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
+            i8 = Actor_CheckPlayerCollide;
+            if (Actor_CheckPlayerCollide >= 0) {
                 Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i13) + 0) << 8;
                 if (((Game) this).Object_Info[4] != 2) {
                 }
@@ -2903,17 +2903,17 @@ public final class Actor extends Game {
                 m230a(((Game) this).Object_Info[22]);
                 z = true;
             }
-            if (((Game) this).f206s) {
-                ((Game) this).f206s = false;
+            if (((Game) this).f115s) {
+                ((Game) this).f115s = false;
             }
             if (z) {
             }
         }
-        m218a = Game.m218a(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
-        i8 = m218a;
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] + i14, ((Game) this).Object_Info[3] + 0, ((Game) this).Object_Info[6] + i14, ((Game) this).Object_Info[7] + 0, i12, i13);
+        i8 = Actor_CheckPlayerCollide;
+        if (Actor_CheckPlayerCollide >= 0) {
         }
-        if (((Game) this).f206s) {
+        if (((Game) this).f115s) {
         }
         if (z) {
         }
@@ -2925,30 +2925,30 @@ public final class Actor extends Game {
         char c;
         int i;
         int i2;
-        int m218a;
+        int Actor_CheckPlayerCollide;
         int i3 = ((Game) this).Object_Info[2];
         if (((Game) this).Object_Info[5] == 0) {
-            if (((Game) this).Object_Info[2] + 160 < Game.m235a() && Math.abs((((Game) this).Object_Info[3] - Game.m146b()) + 12) < 43) {
+            if (((Game) this).Object_Info[2] + 160 < Game.Player_RoughXPos() && Math.abs((((Game) this).Object_Info[3] - Game.Player_RoughYPos()) + 12) < 43) {
                 iArr = ((Game) this).Object_Info;
                 c = 5;
                 i = iArr[5];
                 i2 = 1;
             }
-            if (((Game) this).Object_Info[2] + 96 > Game.m235a() && Math.abs((((Game) this).Object_Info[3] - Game.m146b()) + 12) < 43) {
+            if (((Game) this).Object_Info[2] + 96 > Game.Player_RoughXPos() && Math.abs((((Game) this).Object_Info[3] - Game.Player_RoughYPos()) + 12) < 43) {
                 Player_Hurt();
-                if (((Game) this).Object_Info[5] > 0 && Game.m235a() + 300 < ((Game) this).Object_Info[2]) {
-                    ((Game) this).Object_Info[2] = Game.m235a() + 300;
+                if (((Game) this).Object_Info[5] > 0 && Game.Player_RoughXPos() + 300 < ((Game) this).Object_Info[2]) {
+                    ((Game) this).Object_Info[2] = Game.Player_RoughXPos() + 300;
                 }
             }
-            m218a = Game.m218a(((Game) this).Object_Info[2] - 96, ((Game) this).Object_Info[3], i3 - 96, ((Game) this).Object_Info[3], 120, 32);
-            if (m218a >= 0 || m218a == 0 || m218a == 1) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] - 96, ((Game) this).Object_Info[3], i3 - 96, ((Game) this).Object_Info[3], 120, 32);
+            if (Actor_CheckPlayerCollide >= 0 || Actor_CheckPlayerCollide == 0 || Actor_CheckPlayerCollide == 1) {
                 return;
             }
-            if (m218a == 2) {
+            if (Actor_CheckPlayerCollide == 2) {
                 Game.Player_Info[0] = ((((((Game) this).Object_Info[2] + 120) - 96) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
                 return;
-            } else if (m218a == 3) {
+            } else if (Actor_CheckPlayerCollide == 3) {
                 Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 32) + 12) + 12) + 1) << 8;
                 Game.Player_Info[5] = 0;
                 m269B();
@@ -2967,14 +2967,14 @@ public final class Actor extends Game {
         i = ((Game) this).Object_Info[5];
         i2 = ((Game) this).Object_Info[8];
         iArr[c] = i + i2;
-        if (((Game) this).Object_Info[2] + 96 > Game.m235a()) {
+        if (((Game) this).Object_Info[2] + 96 > Game.Player_RoughXPos()) {
             Player_Hurt();
             if (((Game) this).Object_Info[5] > 0) {
-                ((Game) this).Object_Info[2] = Game.m235a() + 300;
+                ((Game) this).Object_Info[2] = Game.Player_RoughXPos() + 300;
             }
         }
-        m218a = Game.m218a(((Game) this).Object_Info[2] - 96, ((Game) this).Object_Info[3], i3 - 96, ((Game) this).Object_Info[3], 120, 32);
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2] - 96, ((Game) this).Object_Info[3], i3 - 96, ((Game) this).Object_Info[3], 120, 32);
+        if (Actor_CheckPlayerCollide >= 0) {
         }
     }
 
@@ -2983,13 +2983,13 @@ public final class Actor extends Game {
         int[] iArr;
         char c;
         int i;
-        ((Game) this).Object_Info[5] = (((Game) this).f36k / 2) % 180;
+        ((Game) this).Object_Info[5] = (((Game) this).f227k / 2) % 180;
         if (((Game) this).Object_Info[5] == 0) {
             ((Game) this).Object_Info[10] = 0;
         }
         ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8];
         ((Game) this).Object_Info[3] = (((Game) this).Object_Info[9] - 356) + (((Game) this).Object_Info[5] << 3);
-        if (Math.abs(Game.m235a() - ((Game) this).Object_Info[2]) < 44 && (((Game) this).Object_Info[3] >= ((Game) this).Object_Info[9] ? !(((Game) this).Object_Info[3] - 240 >= Game.m146b() || ((Game) this).Object_Info[9] <= Game.m146b() - 12) : !(((Game) this).Object_Info[3] - 240 >= Game.m146b() || ((Game) this).Object_Info[3] <= Game.m146b() - 12))) {
+        if (Math.abs(Game.Player_RoughXPos() - ((Game) this).Object_Info[2]) < 44 && (((Game) this).Object_Info[3] >= ((Game) this).Object_Info[9] ? !(((Game) this).Object_Info[3] - 240 >= Game.Player_RoughYPos() || ((Game) this).Object_Info[9] <= Game.Player_RoughYPos() - 12) : !(((Game) this).Object_Info[3] - 240 >= Game.Player_RoughYPos() || ((Game) this).Object_Info[3] <= Game.Player_RoughYPos() - 12))) {
             Player_Hurt();
         }
         if (((Game) this).Object_Info[10] != 0) {
@@ -3021,28 +3021,28 @@ public final class Actor extends Game {
     */
     private void m337av() {
         int i = 7;
-        if (((Game) this).f207e[((Game) this).Object_Info[4]]) {
+        if (((Game) this).f269e[((Game) this).Object_Info[4]]) {
             i = 0;
         }
-        ((Game) this).f207e[((Game) this).Object_Info[4]] = false;
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 14, i);
-        if (m218a >= 0) {
-            if (m218a == 0) {
+        ((Game) this).f269e[((Game) this).Object_Info[4]] = false;
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 14, i);
+        if (Actor_CheckPlayerCollide >= 0) {
+            if (Actor_CheckPlayerCollide == 0) {
                 Game.Player_Info[1] = (((Game) this).Object_Info[3] - i) << 8;
-                ((Game) this).f207e[((Game) this).Object_Info[4]] = true;
-                ((Game) this).f155b[((Game) this).Object_Info[4]] = true;
+                ((Game) this).f269e[((Game) this).Object_Info[4]] = true;
+                ((Game) this).f261b[((Game) this).Object_Info[4]] = true;
                 m140b(((Game) this).Object_Info[2], 14);
                 m230a(((Game) this).Object_Info[22]);
-            } else if (m218a == 1) {
+            } else if (Actor_CheckPlayerCollide == 1) {
                 Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 14) - 12) << 8;
                 Game.Player_Info[10] = 0;
-            } else if (m218a == 2) {
+            } else if (Actor_CheckPlayerCollide == 2) {
                 Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 14) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3071,8 +3071,8 @@ public final class Actor extends Game {
         int i3;
         int i4;
         int i5;
-        int m218a;
-        int m218a2;
+        int Actor_CheckPlayerCollide;
+        int Actor_CheckPlayerCollide2;
         int i6 = 8;
         int i7 = 0;
         int i8 = 0;
@@ -3084,34 +3084,34 @@ public final class Actor extends Game {
             i6 = 16;
         }
         if (((Game) this).Object_Info[4] == 5) {
-            ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+            ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
             i7 = ((Game) this).Object_Info[5];
             i = 64;
         } else {
             if (((Game) this).Object_Info[4] == 1) {
-                ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                 i7 = ((Game) this).Object_Info[5];
                 i = -64;
             }
             if (((Game) this).Object_Info[4] != 12) {
-                ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                 i7 = ((Game) this).Object_Info[5];
                 i2 = 48;
             } else if (((Game) this).Object_Info[4] == 11) {
-                ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                 i7 = ((Game) this).Object_Info[5];
                 i2 = -48;
             } else if (((Game) this).Object_Info[4] == 6) {
-                ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                 i7 = ((Game) this).Object_Info[5];
                 i2 = 64;
             } else if (((Game) this).Object_Info[4] == 2) {
-                ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                 i7 = ((Game) this).Object_Info[5];
                 i2 = -64;
             } else {
                 if (((Game) this).Object_Info[4] == 16) {
-                    ((Game) this).Object_Info[5] = ((((Game) this).f36k * 15) / 10) % 360;
+                    ((Game) this).Object_Info[5] = ((((Game) this).f227k * 15) / 10) % 360;
                     i7 = ((Game) this).Object_Info[5];
                     i2 = -32;
                 }
@@ -3142,9 +3142,9 @@ public final class Actor extends Game {
                         }
                         ((Game) this).Object_Info[13] = 0;
                         i5 = i10 - ((Game) this).Object_Info[2];
-                        m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
-                        if (m218a >= 0 && m218a == 0) {
-                            Game.Player_Info[0] = (Game.m235a() - i5) << 8;
+                        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
+                        if (Actor_CheckPlayerCollide >= 0 && Actor_CheckPlayerCollide == 0) {
+                            Game.Player_Info[0] = (Game.Player_RoughXPos() - i5) << 8;
                             Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i6) + ((Game) this).Object_Info[14]) << 8;
                             if (((Game) this).Object_Info[4] == 3 && i7 == 0) {
                                 ((Game) this).Object_Info[5] = 1;
@@ -3153,12 +3153,12 @@ public final class Actor extends Game {
                             m230a(((Game) this).Object_Info[22]);
                             ((Game) this).Object_Info[13] = 1;
                         }
-                        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-                            ((Game) this).f206s = false;
+                        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+                            ((Game) this).f115s = false;
                         }
-                        m218a2 = Game.m218a(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
-                        if (m218a2 >= 0 && m218a2 != 3) {
-                            Game.Player_Info[0] = (Game.m235a() - i5) << 8;
+                        Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
+                        if (Actor_CheckPlayerCollide2 >= 0 && Actor_CheckPlayerCollide2 != 3) {
+                            Game.Player_Info[0] = (Game.Player_RoughXPos() - i5) << 8;
                             Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i6) + ((Game) this).Object_Info[14]) << 8;
                             if (((Game) this).Object_Info[4] == 3 && i7 == 0) {
                                 ((Game) this).Object_Info[5] = 1;
@@ -3167,8 +3167,8 @@ public final class Actor extends Game {
                             m230a(((Game) this).Object_Info[22]);
                             ((Game) this).Object_Info[13] = 1;
                         }
-                        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a2 != 0) {
-                            ((Game) this).f206s = false;
+                        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide2 != 0) {
+                            ((Game) this).f115s = false;
                             return;
                         }
                         return;
@@ -3184,9 +3184,9 @@ public final class Actor extends Game {
                     }
                     ((Game) this).Object_Info[13] = 0;
                     i5 = i10 - ((Game) this).Object_Info[2];
-                    m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
-                    if (m218a >= 0) {
-                        Game.Player_Info[0] = (Game.m235a() - i5) << 8;
+                    Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
+                    if (Actor_CheckPlayerCollide >= 0) {
+                        Game.Player_Info[0] = (Game.Player_RoughXPos() - i5) << 8;
                         Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i6) + ((Game) this).Object_Info[14]) << 8;
                         if (((Game) this).Object_Info[4] == 3) {
                             ((Game) this).Object_Info[5] = 1;
@@ -3195,12 +3195,12 @@ public final class Actor extends Game {
                         m230a(((Game) this).Object_Info[22]);
                         ((Game) this).Object_Info[13] = 1;
                     }
-                    if (((Game) this).f206s) {
-                        ((Game) this).f206s = false;
+                    if (((Game) this).f115s) {
+                        ((Game) this).f115s = false;
                     }
-                    m218a2 = Game.m218a(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
-                    if (m218a2 >= 0) {
-                        Game.Player_Info[0] = (Game.m235a() - i5) << 8;
+                    Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
+                    if (Actor_CheckPlayerCollide2 >= 0) {
+                        Game.Player_Info[0] = (Game.Player_RoughXPos() - i5) << 8;
                         Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i6) + ((Game) this).Object_Info[14]) << 8;
                         if (((Game) this).Object_Info[4] == 3) {
                             ((Game) this).Object_Info[5] = 1;
@@ -3209,12 +3209,12 @@ public final class Actor extends Game {
                         m230a(((Game) this).Object_Info[22]);
                         ((Game) this).Object_Info[13] = 1;
                     }
-                    if (((Game) this).f206s) {
+                    if (((Game) this).f115s) {
                         return;
                     }
                     return;
                 }
-                if (((Game) this).f207e[128] && ((Game) this).Object_Info[5] <= 0) {
+                if (((Game) this).f269e[128] && ((Game) this).Object_Info[5] <= 0) {
                     int[] iArr5 = ((Game) this).Object_Info;
                     iArr5[5] = iArr5[5] + 1;
                 }
@@ -3239,15 +3239,15 @@ public final class Actor extends Game {
                 }
                 ((Game) this).Object_Info[13] = 0;
                 i5 = i10 - ((Game) this).Object_Info[2];
-                m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
-                if (m218a >= 0) {
+                Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
+                if (Actor_CheckPlayerCollide >= 0) {
                 }
-                if (((Game) this).f206s) {
+                if (((Game) this).f115s) {
                 }
-                m218a2 = Game.m218a(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
-                if (m218a2 >= 0) {
+                Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
+                if (Actor_CheckPlayerCollide2 >= 0) {
                 }
-                if (((Game) this).f206s) {
+                if (((Game) this).f115s) {
                 }
             }
             i9 = i2;
@@ -3262,15 +3262,15 @@ public final class Actor extends Game {
             }
             ((Game) this).Object_Info[13] = 0;
             i5 = i10 - ((Game) this).Object_Info[2];
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
-            if (m218a >= 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
+            if (Actor_CheckPlayerCollide >= 0) {
             }
-            if (((Game) this).f206s) {
+            if (((Game) this).f115s) {
             }
-            m218a2 = Game.m218a(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
-            if (m218a2 >= 0) {
+            Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
+            if (Actor_CheckPlayerCollide2 >= 0) {
             }
-            if (((Game) this).f206s) {
+            if (((Game) this).f115s) {
             }
         }
         i8 = i;
@@ -3288,15 +3288,15 @@ public final class Actor extends Game {
         }
         ((Game) this).Object_Info[13] = 0;
         i5 = i10 - ((Game) this).Object_Info[2];
-        m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + ((Game) this).Object_Info[14] + 32, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] + 32, 32, 8);
+        if (Actor_CheckPlayerCollide >= 0) {
         }
-        if (((Game) this).f206s) {
+        if (((Game) this).f115s) {
         }
-        m218a2 = Game.m218a(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
-        if (m218a2 >= 0) {
+        Actor_CheckPlayerCollide2 = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], (((Game) this).Object_Info[3] + ((Game) this).Object_Info[14]) - 4, ((Game) this).Object_Info[11], ((Game) this).Object_Info[7] - 4, 32, 4);
+        if (Actor_CheckPlayerCollide2 >= 0) {
         }
-        if (((Game) this).f206s) {
+        if (((Game) this).f115s) {
         }
     }
 
@@ -3315,12 +3315,12 @@ public final class Actor extends Game {
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         for (int i3 = 0; i3 < 2; i3++) {
             if (((Game) this).Object_Info[10 + i3] != 1) {
-                int m218a = Game.m218a((((Game) this).Object_Info[2] - 8) + (i3 << 4), ((Game) this).Object_Info[3], (((Game) this).Object_Info[6] - 8) + (i3 << 4), ((Game) this).Object_Info[7], 8, 32);
-                i2 = m218a;
-                if (m218a >= 0) {
+                int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide((((Game) this).Object_Info[2] - 8) + (i3 << 4), ((Game) this).Object_Info[3], (((Game) this).Object_Info[6] - 8) + (i3 << 4), ((Game) this).Object_Info[7], 8, 32);
+                i2 = Actor_CheckPlayerCollide;
+                if (Actor_CheckPlayerCollide >= 0) {
                     int i4 = i2 == 1 ? 1 : -1;
                     if (i2 == 1 || i2 == 2) {
-                        if (Math.abs(Game.Player_Info[10]) < 300 || Game.f125g || !Game.f127i) {
+                        if (Math.abs(Game.Player_Info[10]) < 300 || Game.f72g || !Game.f74i) {
                             Game.Player_Info[10] = 0;
                         } else {
                             int[] iArr2 = Game.Player_Info;
@@ -3366,8 +3366,8 @@ public final class Actor extends Game {
         if (((Game) this).Object_Info[10] == 1 && ((Game) this).Object_Info[11] == 1) {
             ((Game) this).Object_Info[0] = 0;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i2 != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i2 != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3376,28 +3376,28 @@ public final class Actor extends Game {
         int i = 0;
         int i2 = 0;
         boolean z = false;
-        ((Game) this).Object_Info[10] = ((Game) this).f36k;
+        ((Game) this).Object_Info[10] = ((Game) this).f227k;
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         for (int i3 = 0; i3 < 8; i3++) {
             if (((Game) this).Object_Info[15] != 0) {
-                int i4 = (((Game) this).f36k - ((Game) this).Object_Info[16]) - Game.f157m[i3];
+                int i4 = (((Game) this).f227k - ((Game) this).Object_Info[16]) - Game.f196m[i3];
                 i = i4;
                 if (i4 < 0) {
                     i = 0;
                 }
             }
-            int i5 = Game.f156l[i3];
-            int m213a = i != 0 ? -1 : Game.m213a(Game.m235a(), Game.m146b() - 12, Game.f98b[0], Game.f98b[1] - 12, 12, 12, ((Game) this).Object_Info[2] + ((((i5 % 4) << 4) - 16) - 8), ((Game) this).Object_Info[3] + ((i5 >> 2) << 4), ((Game) this).Object_Info[6] + ((((i5 % 4) << 4) - 16) - 8), ((Game) this).Object_Info[7] + ((i5 >> 2) << 4), 8, 8);
-            i2 = m213a;
-            if (m213a >= 0) {
+            int i5 = Game.f195l[i3];
+            int Actor_CheckCollision = i != 0 ? -1 : Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - 12, Game.f184b[0], Game.f184b[1] - 12, 12, 12, ((Game) this).Object_Info[2] + ((((i5 % 4) << 4) - 16) - 8), ((Game) this).Object_Info[3] + ((i5 >> 2) << 4), ((Game) this).Object_Info[6] + ((((i5 % 4) << 4) - 16) - 8), ((Game) this).Object_Info[7] + ((i5 >> 2) << 4), 8, 8);
+            i2 = Actor_CheckCollision;
+            if (Actor_CheckCollision >= 0) {
                 if (i2 == 0) {
                     z = true;
                     Game.Player_Info[1] = ((((Game) this).Object_Info[3] + (((i5 >> 2) << 4) + (i * 5))) - 8) << 8;
                     m140b(((Game) this).Object_Info[2] + ((((i5 % 4) << 4) - 16) - 8), 8);
                     m230a(((Game) this).Object_Info[22]);
                     if (((Game) this).Object_Info[15] == 0) {
-                        ((Game) this).Object_Info[16] = ((Game) this).f36k;
+                        ((Game) this).Object_Info[16] = ((Game) this).f227k;
                     }
                     ((Game) this).Object_Info[15] = 1;
                 } else if (i2 == 1) {
@@ -3418,8 +3418,8 @@ public final class Actor extends Game {
         if (z) {
             i2 = 0;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i2 != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i2 != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3427,40 +3427,40 @@ public final class Actor extends Game {
     private void m383aA() {
         Actor actor;
         int i;
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 14, 14);
-        if (m218a >= 0) {
-            if (m218a == 0) {
-                if (Game.f127i) {
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 14, 14);
+        if (Actor_CheckPlayerCollide >= 0) {
+            if (Actor_CheckPlayerCollide == 0) {
+                if (Game.f74i) {
                     ((Game) this).Object_Info[0] = 0;
-                    Game.f125g = true;
-                    Game.f121d = false;
-                    Game.f127i = true;
+                    Game.f72g = true;
+                    Game.f68d = false;
+                    Game.f74i = true;
                     Game.Player_Info[5] = -1280;
-                    if (this.f300aw == 0) {
+                    if (this.f314aw == 0) {
                         actor = this;
                         i = 100;
-                    } else if (this.f300aw == 100) {
+                    } else if (this.f314aw == 100) {
                         actor = this;
                         i = 200;
-                    } else if (this.f300aw == 200) {
+                    } else if (this.f314aw == 200) {
                         actor = this;
                         i = 500;
                     } else {
-                        if (this.f300aw == 500) {
+                        if (this.f314aw == 500) {
                             actor = this;
                             i = 1000;
                         }
-                        Score_Add(this.f300aw, true);
-                        m69h(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], this.f300aw);
+                        Score_Add(this.f314aw, true);
+                        m69h(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], this.f314aw);
                         m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 330, 400, 0);
                         m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 300, 400, 1);
                         m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 390, 400, 2);
                         m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 420, 400, 3);
                         Game.Player_Info[1] = (((Game) this).Object_Info[3] - 14) << 8;
                     }
-                    actor.f300aw = i;
-                    Score_Add(this.f300aw, true);
-                    m69h(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], this.f300aw);
+                    actor.f314aw = i;
+                    Score_Add(this.f314aw, true);
+                    m69h(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], this.f314aw);
                     m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 330, 400, 0);
                     m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 300, 400, 1);
                     m134b(22, ((Game) this).Object_Info[2] - 8, ((Game) this).Object_Info[3] - 16, 390, 400, 2);
@@ -3468,38 +3468,38 @@ public final class Actor extends Game {
                     Game.Player_Info[1] = (((Game) this).Object_Info[3] - 14) << 8;
                 } else {
                     Game.Player_Info[1] = (((Game) this).Object_Info[3] - 14) << 8;
-                    if (Game.f103p != 0) {
-                        Game.Player_Info[0] = (Game.m235a() + ((Game.Math_CalcSine(Game.f103p + 90) * 24) / 100)) << 8;
-                        Game.f103p = 0;
+                    if (Game.f51p != 0) {
+                        Game.Player_Info[0] = (Game.Player_RoughXPos() + ((Game.Math_CalcSine(Game.f51p + 90) * 24) / 100)) << 8;
+                        Game.f51p = 0;
                     }
                     m140b(((Game) this).Object_Info[2], 14);
                     m230a(((Game) this).Object_Info[22]);
                 }
-            } else if (m218a == 1) {
+            } else if (Actor_CheckPlayerCollide == 1) {
                 Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 14) - 12) << 8;
                 Game.Player_Info[10] = 0;
                 if (((Game) this).Input_Array[4]) {
                     m26s();
                 }
-            } else if (m218a == 2) {
+            } else if (Actor_CheckPlayerCollide == 2) {
                 Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 14) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
                 if (((Game) this).Input_Array[3]) {
                     m26s();
                 }
-            } else if (m218a == 3) {
+            } else if (Actor_CheckPlayerCollide == 3) {
                 Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 14) + 12) + 12) + 1) << 8;
                 m269B();
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
     /* renamed from: aB */
     private void m382aB() {
-        if (((Game) this).Object_Info[5] == 0 && ((Game) this).f115B == ((Game) this).Object_Info[2] && ((Game) this).f116C == ((Game) this).Object_Info[3]) {
+        if (((Game) this).Object_Info[5] == 0 && ((Game) this).f63B == ((Game) this).Object_Info[2] && ((Game) this).f64C == ((Game) this).Object_Info[3]) {
             ((Game) this).Object_Info[5] = 32;
         }
         if (((Game) this).Object_Info[5] > 0) {
@@ -3509,40 +3509,40 @@ public final class Actor extends Game {
                 ((Game) this).Object_Info[5] = 32;
             }
         }
-        if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 12, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 12, 8, 32) < 0 || ((Game) this).Object_Info[5] != 0) {
+        if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 12, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 12, 8, 32) < 0 || ((Game) this).Object_Info[5] != 0) {
             return;
         }
         ((Game) this).Object_Info[5] = 1;
-        ((Game) this).f115B = Game.m235a();
-        ((Game) this).f116C = Game.m146b();
-        ((Game) this).f117D = ((Game) this).f111x;
-        ((Game) this).f118E = ((Game) this).f112y;
+        ((Game) this).f63B = Game.Player_RoughXPos();
+        ((Game) this).f64C = Game.Player_RoughYPos();
+        ((Game) this).f65D = ((Game) this).f59x;
+        ((Game) this).f66E = ((Game) this).f60y;
     }
 
     /* renamed from: aC */
     private void m381aC() {
         if (((Game) this).Object_Info[4] < 16) {
-            int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 8, 32);
-            if (m218a >= 0) {
-                if (m218a == 1) {
+            int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 8, 32);
+            if (Actor_CheckPlayerCollide >= 0) {
+                if (Actor_CheckPlayerCollide == 1) {
                     Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 8) - 12) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[4]) {
                         m26s();
                     }
-                } else if (m218a == 2) {
+                } else if (Actor_CheckPlayerCollide == 2) {
                     Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 8) + 12) + 1) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[3]) {
                         m26s();
                     }
-                } else if (m218a == 3) {
+                } else if (Actor_CheckPlayerCollide == 3) {
                     Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 32) + 12) + 12) + 1) << 8;
                     m269B();
                 }
             }
-            if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-                ((Game) this).f206s = false;
+            if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+                ((Game) this).f115s = false;
             }
         }
     }
@@ -3551,13 +3551,13 @@ public final class Actor extends Game {
     private void m380aD() {
         int[] iArr;
         char c;
-        int m235a;
+        int Player_RoughXPos;
         int i;
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         if (((Game) this).Object_Info[12] == 1) {
-            int i2 = (((Game) this).f35j - ((Game) this).Object_Info[14]) * 4;
-            ((Game) this).Object_Info[14] = ((Game) this).f35j;
+            int i2 = (((Game) this).f226j - ((Game) this).Object_Info[14]) * 4;
+            ((Game) this).Object_Info[14] = ((Game) this).f226j;
             if (i2 > 0) {
                 int i3 = i2;
                 while (true) {
@@ -3587,17 +3587,17 @@ public final class Actor extends Game {
         }
         int m135b = Game.m135b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 16, 16);
         if (((Game) this).Object_Info[5] != 0) {
-            ((Game) this).Object_Info[7] = (((Game) this).f35j - ((Game) this).Object_Info[13]) * 2;
+            ((Game) this).Object_Info[7] = (((Game) this).f226j - ((Game) this).Object_Info[13]) * 2;
             if (((Game) this).Object_Info[7] > 60) {
                 ((Game) this).Object_Info[7] = 60;
             }
         }
         if (m135b >= 0) {
-            if ((Game.f127i && m135b != 3) || (!Game.f125g && Game.f127i && m135b == 3)) {
+            if ((Game.f74i && m135b != 3) || (!Game.f72g && Game.f74i && m135b == 3)) {
                 Game.Player_Info[5] = -768;
                 m216a(1, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 0, 0, 0, 0);
                 ((Game) this).Object_Info[5] = ((Game) this).Object_Info[4];
-                ((Game) this).Object_Info[13] = ((Game) this).f35j;
+                ((Game) this).Object_Info[13] = ((Game) this).f226j;
                 PowerUp_Apply(((Game) this).Object_Info[4]);
                 iArr = ((Game) this).Object_Info;
                 c = 4;
@@ -3627,26 +3627,26 @@ public final class Actor extends Game {
                 if (((Game) this).Object_Info[12] == 0) {
                     int[] iArr5 = ((Game) this).Object_Info;
                     iArr5[3] = iArr5[3] - 5;
-                    ((Game) this).Object_Info[14] = ((Game) this).f35j;
+                    ((Game) this).Object_Info[14] = ((Game) this).f226j;
                 }
                 ((Game) this).Object_Info[12] = 1;
-                if (!Game.f125g) {
-                    if (Game.m235a() < ((Game) this).Object_Info[2]) {
+                if (!Game.f72g) {
+                    if (Game.Player_RoughXPos() < ((Game) this).Object_Info[2]) {
                         iArr = Game.Player_Info;
                         c = 0;
-                        m235a = Game.m235a() - 5;
+                        Player_RoughXPos = Game.Player_RoughXPos() - 5;
                     } else {
                         iArr = Game.Player_Info;
                         c = 0;
-                        m235a = Game.m235a() + 5;
+                        Player_RoughXPos = Game.Player_RoughXPos() + 5;
                     }
-                    i = m235a << 8;
+                    i = Player_RoughXPos << 8;
                 }
             }
             iArr[c] = i;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m135b != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && m135b != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3662,11 +3662,11 @@ public final class Actor extends Game {
                 ((Game) this).Object_Info[5] = 2;
                 m39o();
             }
-        } else if (((Game) this).Object_Info[5] != 0 || Game.m235a() <= ((Game) this).Object_Info[2] - 3 || ((Game) this).Object_Info[3] + 48 <= Game.m146b()) {
+        } else if (((Game) this).Object_Info[5] != 0 || Game.Player_RoughXPos() <= ((Game) this).Object_Info[2] - 3 || ((Game) this).Object_Info[3] + 48 <= Game.Player_RoughYPos()) {
         } else {
             ((Game) this).Object_Info[5] = 1;
             ((Game) this).Object_Info[10] = 0;
-            this.f158p = true;
+            this.f262p = true;
         }
     }
 
@@ -3674,11 +3674,11 @@ public final class Actor extends Game {
     private void m378aF() {
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
-        if (((Game) this).Object_Info[5] == 0) {
-            if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 12, 12) >= 0) {
-                ((Game) this).Object_Info[5] = 1;
+        if (((Game) this).Object_Info[5] == 0) { // Check if the hidden bonus has been collected.
+            if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 12, 12) >= 0) { // Check if Sonic has collided with this object.
+                ((Game) this).Object_Info[5] = 1; // Set bonus as collected.
                 ((Game) this).Object_Info[11] = 0;
-                Score_Add(Game.f159n[((Game) this).Object_Info[4]], true);
+                Score_Add(Game.Score_HiddenBonuses[((Game) this).Object_Info[4]], true); // Apply score bonus.
             }
         } else if (((Game) this).Object_Info[5] == 1) {
             int[] iArr = ((Game) this).Object_Info;
@@ -3696,21 +3696,21 @@ public final class Actor extends Game {
 
     /* renamed from: aH */
     private void m376aH() {
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
-        if (m218a >= 0 && m218a != 0) {
-            if (m218a == 1) {
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 16, 16);
+        if (Actor_CheckPlayerCollide >= 0 && Actor_CheckPlayerCollide != 0) {
+            if (Actor_CheckPlayerCollide == 1) {
                 Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 16) - 12) << 8;
                 Game.Player_Info[10] = 0;
-            } else if (m218a == 2) {
+            } else if (Actor_CheckPlayerCollide == 2) {
                 Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 16) + 12) + 1) << 8;
                 Game.Player_Info[10] = 0;
-            } else if (m218a == 3) {
+            } else if (Actor_CheckPlayerCollide == 3) {
                 Game.Player_Info[1] = ((((((Game) this).Object_Info[3] + 16) + 12) + 12) + 1) << 8;
                 m269B();
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3726,54 +3726,54 @@ public final class Actor extends Game {
         }
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
-        int m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i3, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7] + i3, i, i2);
-        if (m218a >= 0) {
-            if (m218a == 0) {
+        int Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i3, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7] + i3, i, i2);
+        if (Actor_CheckPlayerCollide >= 0) {
+            if (Actor_CheckPlayerCollide == 0) {
                 Game.Player_Info[1] = ((((Game) this).Object_Info[3] - i2) + i3) << 8;
                 m140b(((Game) this).Object_Info[2], i);
                 m230a(((Game) this).Object_Info[22]);
                 if (((Game) this).Object_Info[4] == 1 && ((Game) this).Object_Info[5] == 0) {
-                    this.f158p = true;
+                    this.f262p = true;
                     ((Game) this).Object_Info[5] = 1;
                     int[] iArr = ((Game) this).Object_Info;
                     iArr[3] = iArr[3] + 8;
-                    ((Game) this).Object_Info[10] = ((Game) this).f36k;
-                    ((Game) this).f277c = (byte) 2;
+                    ((Game) this).Object_Info[10] = ((Game) this).f227k;
+                    ((Game) this).f142c = (byte) 2;
                 }
-            } else if (!((Game) this).f270C) {
-                if (m218a == 1) {
+            } else if (!((Game) this).f298C) {
+                if (Actor_CheckPlayerCollide == 1) {
                     Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i) - 12) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[4]) {
                         m26s();
                     }
-                } else if (m218a == 2) {
+                } else if (Actor_CheckPlayerCollide == 2) {
                     Game.Player_Info[0] = (((((Game) this).Object_Info[2] + i) + 12) + 1) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[3]) {
                         m26s();
                     }
-                } else if (m218a == 3) {
+                } else if (Actor_CheckPlayerCollide == 3) {
                     Game.Player_Info[1] = (((((((Game) this).Object_Info[3] + i2) + 12) + 12) + 1) + i3) << 8;
                 }
             }
         }
         if (((Game) this).Object_Info[5] == 1) {
-            if ((((Game) this).f36k - ((Game) this).Object_Info[10]) % 20 == 0 && Game.f160o.length > (((Game) this).f36k - ((Game) this).Object_Info[10]) / 20) {
-                m216a(1, ((Game) this).Object_Info[8] + Game.f160o[(((Game) this).f36k - ((Game) this).Object_Info[10]) / 20], ((Game) this).Object_Info[9] + Game.f161p[(((Game) this).f36k - ((Game) this).Object_Info[10]) / 20], 0, 0, 0, 0);
+            if ((((Game) this).f227k - ((Game) this).Object_Info[10]) % 20 == 0 && Game.f198o.length > (((Game) this).f227k - ((Game) this).Object_Info[10]) / 20) {
+                m216a(1, ((Game) this).Object_Info[8] + Game.f198o[(((Game) this).f227k - ((Game) this).Object_Info[10]) / 20], ((Game) this).Object_Info[9] + Game.f199p[(((Game) this).f227k - ((Game) this).Object_Info[10]) / 20], 0, 0, 0, 0);
             }
-            if (((Game) this).f36k - ((Game) this).Object_Info[10] > 100) {
+            if (((Game) this).f227k - ((Game) this).Object_Info[10] > 100) {
                 ((Game) this).Object_Info[5] = 2;
-                ((Game) this).Object_Info[10] = ((Game) this).f36k;
+                ((Game) this).Object_Info[10] = ((Game) this).f227k;
                 m75g(((Game) this).Object_Info[8] + 4, ((Game) this).Object_Info[9] + 27 + 16, this.Game_ZoneID);
             }
-        } else if (((Game) this).Object_Info[5] == 2 && ((Game) this).f36k - ((Game) this).Object_Info[10] > 180) {
+        } else if (((Game) this).Object_Info[5] == 2 && ((Game) this).f227k - ((Game) this).Object_Info[10] > 180) {
             m39o();
             int[] iArr2 = ((Game) this).Object_Info;
             iArr2[5] = iArr2[5] + 1;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3786,15 +3786,15 @@ public final class Actor extends Game {
         char c2;
         int i2;
         if (Game.m115c(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 8, 8) >= 0) {
-            int abs = Math.abs(Game.m235a() - ((Game) this).Object_Info[2]);
-            int abs2 = Math.abs((Game.m146b() - 12) - ((Game) this).Object_Info[3]);
+            int abs = Math.abs(Game.Player_RoughXPos() - ((Game) this).Object_Info[2]);
+            int abs2 = Math.abs((Game.Player_RoughYPos() - 12) - ((Game) this).Object_Info[3]);
             if (((Game) this).Object_Info[10] < 10) {
                 m69h(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 10);
                 Score_Add(10, true);
                 int[] iArr3 = ((Game) this).Object_Info;
                 iArr3[10] = iArr3[10] + 1;
             }
-            if (Game.m235a() - ((Game) this).Object_Info[2] > 0) {
+            if (Game.Player_RoughXPos() - ((Game) this).Object_Info[2] > 0) {
                 iArr = Game.Player_Info;
                 c = 3;
                 i = 1792;
@@ -3804,7 +3804,7 @@ public final class Actor extends Game {
                 i = -1792;
             }
             iArr[c] = (i * abs) / (abs + abs2);
-            if ((Game.m146b() - 12) - ((Game) this).Object_Info[3] > 0) {
+            if ((Game.Player_RoughYPos() - 12) - ((Game) this).Object_Info[3] > 0) {
                 iArr2 = Game.Player_Info;
                 c2 = 5;
                 i2 = 2048;
@@ -3814,7 +3814,7 @@ public final class Actor extends Game {
                 i2 = -2048;
             }
             iArr2[c2] = (i2 * abs2) / (abs + abs2);
-            if (!Game.f125g) {
+            if (!Game.f72g) {
                 Game.Player_Info[3] = (Game.Player_Info[3] * 80) / 100;
                 int[] iArr4 = Game.Player_Info;
                 iArr4[5] = iArr4[5] - 1024;
@@ -3822,10 +3822,10 @@ public final class Actor extends Game {
             Game.Player_Info[10] = 0;
             Game.Player_Info[13] = 0;
             Game.Player_Info[14] = 0;
-            Game.f125g = true;
-            Game.f121d = false;
-            Game.f126h = true;
-            ((Game) this).f206s = false;
+            Game.f72g = true;
+            Game.f68d = false;
+            Game.f73h = true;
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3869,8 +3869,8 @@ public final class Actor extends Game {
                 iArr[c] = i;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m115c != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && m115c != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -3886,7 +3886,7 @@ public final class Actor extends Game {
         char c2;
         int i5;
         int i6;
-        int i7 = ((Game) this).f35j;
+        int i7 = ((Game) this).f226j;
         int i8 = 4;
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
@@ -3906,7 +3906,7 @@ public final class Actor extends Game {
             i8 = 2;
         }
         if (((Game) this).Object_Info[4] != 243 && ((Game) this).Object_Info[4] != 195 && ((Game) this).Object_Info[4] != 227 && ((Game) this).Object_Info[4] != 179) {
-            int i9 = ((Game) this).f35j;
+            int i9 = ((Game) this).f226j;
             if (((Game) this).Object_Info[4] == 2) {
                 if (((Game) this).Object_Info[19] != 0) {
                     if ((i9 % 96) * 2 < 96) {
@@ -3951,10 +3951,10 @@ public final class Actor extends Game {
                 }
             }
             i4 = 12;
-            if (!Game.f127i && !Game.f129k) {
+            if (!Game.f74i && !Game.f76k) {
                 i4 = 20;
             }
-            if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 16, 16) < 0 && (Math.abs(((Game) this).Object_Info[2] - Game.m235a()) >= 28 || Math.abs(((Game) this).Object_Info[3] - (Game.m146b() - i4)) >= i4 + 16)) {
+            if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 16, 16) < 0 && (Math.abs(((Game) this).Object_Info[2] - Game.Player_RoughXPos()) >= 28 || Math.abs(((Game) this).Object_Info[3] - (Game.Player_RoughYPos() - i4)) >= i4 + 16)) {
                 return;
             }
             Player_Hurt();
@@ -3966,10 +3966,10 @@ public final class Actor extends Game {
         i3 = ((Game) this).Object_Info[9] + ((((Game) this).Object_Info[17] * 80) / 10000);
         iArr[c] = i3;
         i4 = 12;
-        if (!Game.f127i) {
+        if (!Game.f74i) {
             i4 = 20;
         }
-        if (Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 16, 16) < 0) {
+        if (Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 16, 16) < 0) {
             return;
         }
         Player_Hurt();
@@ -3993,8 +3993,8 @@ public final class Actor extends Game {
         Actor actor;
         int i3;
         int i4;
-        int m235a;
-        int m146b;
+        int Player_RoughXPos;
+        int Player_RoughYPos;
         int i5;
         int i6;
         int i7;
@@ -4008,14 +4008,14 @@ public final class Actor extends Game {
         int i15 = 0;
         int i16 = 0;
         int i17 = 12;
-        if (!Game.f127i && !Game.f129k) {
+        if (!Game.f74i && !Game.f76k) {
             i17 = 20;
         }
         if (((Game) this).Object_Info[18] == 0) {
-            ((Game) this).Object_Info[5] = ((Game) this).f35j;
+            ((Game) this).Object_Info[5] = ((Game) this).f226j;
             ((Game) this).Object_Info[18] = 1;
         }
-        int i18 = ((Game) this).f35j - ((Game) this).Object_Info[5];
+        int i18 = ((Game) this).f226j - ((Game) this).Object_Info[5];
         int i19 = i18 - 1;
         if (((Game) this).Object_Info[4] == 213 || ((Game) this).Object_Info[4] == 181 || ((Game) this).Object_Info[4] == 197 || ((Game) this).Object_Info[4] == 101 || ((Game) this).Object_Info[4] == 69 || ((Game) this).Object_Info[4] == 53) {
             i = 5;
@@ -4061,16 +4061,16 @@ public final class Actor extends Game {
                     if (this.Game_ZoneID == 4) {
                         i20 = 8;
                         i21 = 8;
-                        if (Game.m213a(Game.m235a(), Game.m146b() - i17, Game.f98b[0], Game.f98b[1] - i17, 12, i17, ((Game) this).Object_Info[2] + ((i4 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i4 * (((Game) this).Object_Info[17] * 16)) / 10000), ((Game) this).Object_Info[2] + ((i4 * (((Game) this).Object_Info[14] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i4 * (((Game) this).Object_Info[15] * 16)) / 10000), 6, 6) >= 0) {
+                        if (Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - i17, Game.f184b[0], Game.f184b[1] - i17, 12, i17, ((Game) this).Object_Info[2] + ((i4 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i4 * (((Game) this).Object_Info[17] * 16)) / 10000), ((Game) this).Object_Info[2] + ((i4 * (((Game) this).Object_Info[14] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i4 * (((Game) this).Object_Info[15] * 16)) / 10000), 6, 6) >= 0) {
                             Player_Hurt();
                         }
                     }
                 }
                 if (this.Game_ZoneID == 4) {
-                    m235a = Game.m235a();
-                    m146b = Game.m146b() - i17;
-                    i5 = Game.f98b[0];
-                    i6 = Game.f98b[1] - i17;
+                    Player_RoughXPos = Game.Player_RoughXPos();
+                    Player_RoughYPos = Game.Player_RoughYPos() - i17;
+                    i5 = Game.f184b[0];
+                    i6 = Game.f184b[1] - i17;
                     i7 = 12;
                     i8 = i17;
                     i9 = ((Game) this).Object_Info[2] + ((i15 * (((Game) this).Object_Info[16] * (i20 << 1))) / 10000);
@@ -4080,10 +4080,10 @@ public final class Actor extends Game {
                     i13 = i20 - 2;
                     i14 = i21 - 2;
                 } else {
-                    m235a = Game.m235a();
-                    m146b = Game.m146b() - i17;
-                    i5 = Game.f98b[0];
-                    i6 = Game.f98b[1] - i17;
+                    Player_RoughXPos = Game.Player_RoughXPos();
+                    Player_RoughYPos = Game.Player_RoughYPos() - i17;
+                    i5 = Game.f184b[0];
+                    i6 = Game.f184b[1] - i17;
                     i7 = 12;
                     i8 = i17;
                     i9 = ((Game) this).Object_Info[2] + ((i15 * (((Game) this).Object_Info[16] * i20)) / 10000);
@@ -4093,7 +4093,7 @@ public final class Actor extends Game {
                     i13 = 6;
                     i14 = 6;
                 }
-                if (Game.m213a(m235a, m146b, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
+                if (Game.Actor_CheckCollision(Player_RoughXPos, Player_RoughYPos, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
                     Player_Hurt();
                     return;
                 }
@@ -4120,7 +4120,7 @@ public final class Actor extends Game {
             }
             if (this.Game_ZoneID == 4) {
             }
-            if (Game.m213a(m235a, m146b, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
+            if (Game.Actor_CheckCollision(Player_RoughXPos, Player_RoughYPos, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
             }
         }
         i15 = i;
@@ -4146,7 +4146,7 @@ public final class Actor extends Game {
         }
         if (this.Game_ZoneID == 4) {
         }
-        if (Game.m213a(m235a, m146b, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
+        if (Game.Actor_CheckCollision(Player_RoughXPos, Player_RoughYPos, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14) >= 0) {
         }
     }
 
@@ -4204,13 +4204,13 @@ public final class Actor extends Game {
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         if (((Game) this).Object_Info[4] == 248 && this.Game_ActID == 2) {
             i12 = 16;
-            if (Math.abs(Game.m235a() - ((Game) this).Object_Info[8]) <= 64 && Math.abs((Game.m146b() + 12) - ((((Game) this).Object_Info[9] - 32) + 8)) <= 32) {
-                ((Game) this).f155b[((Game) this).Object_Info[4] - 240] = true;
+            if (Math.abs(Game.Player_RoughXPos() - ((Game) this).Object_Info[8]) <= 64 && Math.abs((Game.Player_RoughYPos() + 12) - ((((Game) this).Object_Info[9] - 32) + 8)) <= 32) {
+                ((Game) this).f261b[((Game) this).Object_Info[4] - 240] = true;
             }
-            if (Math.abs(Game.m235a() - ((Game) this).Object_Info[8]) <= 64 && Math.abs((Game.m146b() + 12) - (((Game) this).Object_Info[9] + 48)) <= 32) {
-                ((Game) this).f155b[((Game) this).Object_Info[4] - 240] = false;
+            if (Math.abs(Game.Player_RoughXPos() - ((Game) this).Object_Info[8]) <= 64 && Math.abs((Game.Player_RoughYPos() + 12) - (((Game) this).Object_Info[9] + 48)) <= 32) {
+                ((Game) this).f261b[((Game) this).Object_Info[4] - 240] = false;
             }
-            if (!((Game) this).f155b[((Game) this).Object_Info[4] - 240] || ((Game) this).Object_Info[3] <= this.f211ah) {
+            if (!((Game) this).f261b[((Game) this).Object_Info[4] - 240] || ((Game) this).Object_Info[3] <= this.f270ah) {
                 ((Game) this).Object_Info[18] = 1;
                 iArr9 = ((Game) this).Object_Info;
                 c9 = 5;
@@ -4224,11 +4224,11 @@ public final class Actor extends Game {
             iArr9[c9] = i10;
             ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] + 128) - ((Game) this).Object_Info[5];
             i11 = 64 - 1;
-        } else if (((Game) this).Object_Info[4] != 241 || !((Game) this).f155b[128] || this.Game_ZoneID != 1 || this.Game_ActID != 3) {
+        } else if (((Game) this).Object_Info[4] != 241 || !((Game) this).f261b[128] || this.Game_ZoneID != 1 || this.Game_ActID != 3) {
             if (((Game) this).Object_Info[4] >= 240) {
                 i12 = 16;
                 if (((Game) this).Object_Info[19] == 0) {
-                    if (((Game) this).f155b[((Game) this).Object_Info[4] - 240] && ((Game) this).Object_Info[18] == 0) {
+                    if (((Game) this).f261b[((Game) this).Object_Info[4] - 240] && ((Game) this).Object_Info[18] == 0) {
                         ((Game) this).Object_Info[18] = 1;
                         ((Game) this).Object_Info[5] = 128;
                         ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] + 128) - ((Game) this).Object_Info[5];
@@ -4243,7 +4243,7 @@ public final class Actor extends Game {
                         iArr7 = ((Game) this).Object_Info;
                         c7 = 2;
                         i7 = (((Game) this).Object_Info[8] + 128) - ((Game) this).Object_Info[5];
-                    } else if (((Game) this).f155b[((Game) this).Object_Info[4] - 240]) {
+                    } else if (((Game) this).f261b[((Game) this).Object_Info[4] - 240]) {
                         iArr7 = ((Game) this).Object_Info;
                         c7 = 5;
                         i7 = 1;
@@ -4257,14 +4257,14 @@ public final class Actor extends Game {
                     iArr7[c7] = i7;
                     i11 = 64 - 1;
                 } else {
-                    if (((Game) this).f155b[((Game) this).Object_Info[4] - 240] && ((Game) this).Object_Info[18] == 0) {
+                    if (((Game) this).f261b[((Game) this).Object_Info[4] - 240] && ((Game) this).Object_Info[18] == 0) {
                         ((Game) this).Object_Info[18] = 1;
                         ((Game) this).Object_Info[5] = 128;
                         ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] + ((Game) this).Object_Info[5];
                     }
                     ((Game) this).Object_Info[18] = 1;
                     if (((Game) this).Object_Info[5] == 0) {
-                        if (((Game) this).f155b[((Game) this).Object_Info[4] - 240]) {
+                        if (((Game) this).f261b[((Game) this).Object_Info[4] - 240]) {
                             iArr7 = ((Game) this).Object_Info;
                             c7 = 5;
                             i7 = 1;
@@ -4293,7 +4293,7 @@ public final class Actor extends Game {
             } else if (((Game) this).Object_Info[4] != 229 || this.Game_ZoneID != 1 || this.Game_ActID != 0) {
                 if (((Game) this).Object_Info[4] >= 224) {
                     i12 = 32;
-                    if (((Game) this).f155b[((Game) this).Object_Info[4] - 224] && ((Game) this).Object_Info[18] == 0) {
+                    if (((Game) this).f261b[((Game) this).Object_Info[4] - 224] && ((Game) this).Object_Info[18] == 0) {
                         ((Game) this).Object_Info[18] = 1;
                         ((Game) this).Object_Info[5] = 64;
                         ((Game) this).Object_Info[3] = (((Game) this).Object_Info[9] + 64) - ((Game) this).Object_Info[5];
@@ -4308,7 +4308,7 @@ public final class Actor extends Game {
                         iArr6 = ((Game) this).Object_Info;
                         c6 = 3;
                         i4 = (((Game) this).Object_Info[9] + 64) - ((Game) this).Object_Info[5];
-                    } else if (((Game) this).f155b[((Game) this).Object_Info[4] - 224]) {
+                    } else if (((Game) this).f261b[((Game) this).Object_Info[4] - 224]) {
                         iArr6 = ((Game) this).Object_Info;
                         c6 = 5;
                         i4 = 1;
@@ -4324,15 +4324,15 @@ public final class Actor extends Game {
                     i12 = 32;
                     int[] iArr13 = ((Game) this).Object_Info;
                     iArr13[5] = iArr13[5] + 1;
-                    int i14 = (((Game) this).f36k % 360 <= 90 || ((Game) this).f36k % 360 >= 270) ? 32 : 33;
+                    int i14 = (((Game) this).f227k % 360 <= 90 || ((Game) this).f227k % 360 >= 270) ? 32 : 33;
                     if (((Game) this).Object_Info[19] == 0) {
                         iArr5 = ((Game) this).Object_Info;
                         c5 = 3;
-                        Math_CalcSine2 = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(((Game) this).f36k) * i14) / 100);
+                        Math_CalcSine2 = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(((Game) this).f227k) * i14) / 100);
                     } else {
                         iArr5 = ((Game) this).Object_Info;
                         c5 = 3;
-                        Math_CalcSine2 = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(((Game) this).f36k) * i14) / 100);
+                        Math_CalcSine2 = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(((Game) this).f227k) * i14) / 100);
                     }
                     iArr5[c5] = Math_CalcSine2 - i14;
                     z3 = true;
@@ -4347,11 +4347,11 @@ public final class Actor extends Game {
                         if (((Game) this).Object_Info[19] == 0) {
                             iArr4 = ((Game) this).Object_Info;
                             c4 = 2;
-                            Math_CalcSine = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(((Game) this).f36k) * i16) / 100);
+                            Math_CalcSine = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(((Game) this).f227k) * i16) / 100);
                         } else {
                             iArr4 = ((Game) this).Object_Info;
                             c4 = 2;
-                            Math_CalcSine = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(((Game) this).f36k) * i16) / 100);
+                            Math_CalcSine = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(((Game) this).f227k) * i16) / 100);
                         }
                         iArr4[c4] = Math_CalcSine - i16;
                     }
@@ -4362,37 +4362,37 @@ public final class Actor extends Game {
                     i12 = 16;
                     int i17 = ((Game) this).Object_Info[2];
                     int i18 = (32 * ((((Game) this).Object_Info[4] - 88) + 1)) - 16;
-                    if (((Game) this).f36k % 720 >= 180) {
-                        if (((Game) this).f36k % 720 < 360) {
+                    if (((Game) this).f227k % 720 >= 180) {
+                        if (((Game) this).f227k % 720 < 360) {
                             if (((Game) this).Object_Info[19] == 0) {
-                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(270 - ((((Game) this).f36k % 720) - 180)) * i18) / 100);
+                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(270 - ((((Game) this).f227k % 720) - 180)) * i18) / 100);
                                 iArr3 = ((Game) this).Object_Info;
                                 c3 = 3;
                                 i3 = (((Game) this).Object_Info[9] - 16) + (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                             } else {
-                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(270 - ((((Game) this).f36k % 720) - 180)) * i18) / 100);
+                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(270 - ((((Game) this).f227k % 720) - 180)) * i18) / 100);
                                 iArr3 = ((Game) this).Object_Info;
                                 c3 = 3;
                                 i3 = (((Game) this).Object_Info[9] + 16) - (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                             }
                             iArr3[c3] = i3;
                             z = true;
-                        } else if (((Game) this).f36k % 720 < 540) {
+                        } else if (((Game) this).f227k % 720 < 540) {
                             if (((Game) this).Object_Info[19] == 0) {
-                                ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(90 + ((((Game) this).f36k % 720) - 360)) * i18) / 100);
+                                ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(90 + ((((Game) this).f227k % 720) - 360)) * i18) / 100);
                                 ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] + 16) - (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                             } else {
-                                ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(90 + ((((Game) this).f36k % 720) - 360)) * i18) / 100);
+                                ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(90 + ((((Game) this).f227k % 720) - 360)) * i18) / 100);
                                 ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] - 16) + (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                             }
-                        } else if (((Game) this).f36k % 720 < 720) {
+                        } else if (((Game) this).f227k % 720 < 720) {
                             if (((Game) this).Object_Info[19] == 0) {
-                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(270 - ((((Game) this).f36k % 720) - 540)) * i18) / 100);
+                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] + ((Game.Math_CalcSine(270 - ((((Game) this).f227k % 720) - 540)) * i18) / 100);
                                 iArr2 = ((Game) this).Object_Info;
                                 c2 = 3;
                                 i2 = (((Game) this).Object_Info[9] + 16) - (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                             } else {
-                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(270 - ((((Game) this).f36k % 720) - 540)) * i18) / 100);
+                                ((Game) this).Object_Info[2] = ((Game) this).Object_Info[8] - ((Game.Math_CalcSine(270 - ((((Game) this).f227k % 720) - 540)) * i18) / 100);
                                 iArr2 = ((Game) this).Object_Info;
                                 c2 = 3;
                                 i2 = (((Game) this).Object_Info[9] - 16) + (32 * ((((Game) this).Object_Info[4] - 88) + 1));
@@ -4402,22 +4402,22 @@ public final class Actor extends Game {
                         }
                         z2 = z;
                     } else if (((Game) this).Object_Info[19] == 0) {
-                        ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(90 + (((Game) this).f36k % 720)) * i18) / 100);
+                        ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] - ((Game.Math_CalcSine(90 + (((Game) this).f227k % 720)) * i18) / 100);
                         ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] - 16) + (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                     } else {
-                        ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(90 + (((Game) this).f36k % 720)) * i18) / 100);
+                        ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9] + ((Game.Math_CalcSine(90 + (((Game) this).f227k % 720)) * i18) / 100);
                         ((Game) this).Object_Info[2] = (((Game) this).Object_Info[8] + 16) - (32 * ((((Game) this).Object_Info[4] - 88) + 1));
                     }
                     i13 = i17 - ((Game) this).Object_Info[2];
                 } else if (((Game) this).Object_Info[4] == 160) {
                     i11 = 16;
                     i12 = 32;
-                    if (((Game) this).f155b[0] && ((Game) this).Object_Info[18] == 0) {
+                    if (((Game) this).f261b[0] && ((Game) this).Object_Info[18] == 0) {
                         ((Game) this).Object_Info[18] = 1;
                         ((Game) this).Object_Info[3] = ((Game) this).Object_Info[9];
                     }
                     ((Game) this).Object_Info[18] = 1;
-                    if (((Game) this).f155b[0]) {
+                    if (((Game) this).f261b[0]) {
                         int[] iArr15 = ((Game) this).Object_Info;
                         iArr15[3] = iArr15[3] - 1;
                         if (((Game) this).Object_Info[3] < ((Game) this).Object_Info[9]) {
@@ -4438,12 +4438,12 @@ public final class Actor extends Game {
                 } else if (((Game) this).Object_Info[4] == 55) {
                     i11 = 32;
                     i12 = 25;
-                    if (((Game) this).f155b[((Game) this).Object_Info[4] - 40] && ((Game) this).Object_Info[18] == 0) {
+                    if (((Game) this).f261b[((Game) this).Object_Info[4] - 40] && ((Game) this).Object_Info[18] == 0) {
                         ((Game) this).Object_Info[18] = 1;
                         ((Game) this).Object_Info[2] = 7992;
                     }
                     ((Game) this).Object_Info[18] = 1;
-                    if ((((Game) this).Object_Info[8] != 7992 || ((Game) this).Object_Info[9] != 1353) && ((Game) this).f155b[((Game) this).Object_Info[4] - 40]) {
+                    if ((((Game) this).Object_Info[8] != 7992 || ((Game) this).Object_Info[9] != 1353) && ((Game) this).f261b[((Game) this).Object_Info[4] - 40]) {
                         int[] iArr16 = ((Game) this).Object_Info;
                         iArr16[2] = iArr16[2] + 1;
                         if (((Game) this).Object_Info[2] > 7992) {
@@ -4457,14 +4457,14 @@ public final class Actor extends Game {
             }
         }
         int i19 = 12;
-        if (!Game.f127i && !Game.f129k) {
+        if (!Game.f74i && !Game.f76k) {
             i19 = 16;
         }
         int i20 = -1;
         if (((Game) this).Object_Info[4] != 55 || ((Game) this).Object_Info[8] != 7992 || ((Game) this).Object_Info[9] != 1353) {
-            int m213a = Game.m213a(Game.m235a(), Game.m146b() - i19, Game.f98b[0], Game.f98b[1] - i19, 12, i19, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], i11, i12);
-            i20 = m213a;
-            if (m213a >= 0) {
+            int Actor_CheckCollision = Game.Actor_CheckCollision(Game.Player_RoughXPos(), Game.Player_RoughYPos() - i19, Game.f184b[0], Game.f184b[1] - i19, 12, i19, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3], ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], i11, i12);
+            i20 = Actor_CheckCollision;
+            if (Actor_CheckCollision >= 0) {
                 if (i20 == 0) {
                     Game.Player_Info[1] = (((Game) this).Object_Info[3] - i12) << 8;
                     m140b(((Game) this).Object_Info[2], i11);
@@ -4472,7 +4472,7 @@ public final class Actor extends Game {
                     int[] iArr17 = Game.Player_Info;
                     iArr17[0] = iArr17[0] - (i13 << 8);
                 } else if (i20 == 1) {
-                    if (!Game.f123e || ((Game) this).Object_Info[4] != 227) {
+                    if (!Game.f70e || ((Game) this).Object_Info[4] != 227) {
                         Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i11) - 12) << 8;
                         Game.Player_Info[10] = 0;
                         if (((Game) this).Input_Array[4]) {
@@ -4493,16 +4493,16 @@ public final class Actor extends Game {
                         i9 = 1;
                     } else if (i20 == 4) {
                         if (z2) {
-                            if (((Game) this).Object_Info[2] <= Game.m235a()) {
+                            if (((Game) this).Object_Info[2] <= Game.Player_RoughXPos()) {
                                 Game.Player_Info[0] = (((((Game) this).Object_Info[2] + i11) + 12) + 1) << 8;
                                 Game.Player_Info[10] = 0;
-                            } else if (!Game.f123e || ((Game) this).Object_Info[4] != 227) {
+                            } else if (!Game.f70e || ((Game) this).Object_Info[4] != 227) {
                                 Game.Player_Info[0] = ((((Game) this).Object_Info[2] - i11) - 12) << 8;
                                 Game.Player_Info[10] = 0;
                             }
                         }
                         if (z3) {
-                            if (((Game) this).Object_Info[3] > Game.m146b() - i19) {
+                            if (((Game) this).Object_Info[3] > Game.Player_RoughYPos() - i19) {
                                 Game.Player_Info[1] = (((Game) this).Object_Info[3] - i12) << 8;
                                 m140b(((Game) this).Object_Info[2], i11);
                                 m230a(((Game) this).Object_Info[22]);
@@ -4522,8 +4522,8 @@ public final class Actor extends Game {
                 }
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && i20 != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && i20 != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -4540,10 +4540,10 @@ public final class Actor extends Game {
         int i8 = 0;
         int i9 = ((Game) this).Object_Info[4] / 16;
         if (((Game) this).Object_Info[18] == 0) {
-            ((Game) this).Object_Info[10] = ((Game) this).f36k;
+            ((Game) this).Object_Info[10] = ((Game) this).f227k;
             ((Game) this).Object_Info[18] = 1;
         }
-        if ((((Game) this).f36k - ((Game) this).Object_Info[10]) % (i9 * 50) != 0 || ((Game) this).Object_Info[2] - Game.f228y[0] < -16 || ((Game) this).Object_Info[2] - Game.f228y[0] > 256 || ((Game) this).Object_Info[3] - Game.f228y[1] < -16 || ((Game) this).Object_Info[3] - Game.f228y[1] > 184) {
+        if ((((Game) this).f227k - ((Game) this).Object_Info[10]) % (i9 * 50) != 0 || ((Game) this).Object_Info[2] - Game.f214y[0] < -16 || ((Game) this).Object_Info[2] - Game.f214y[0] > 256 || ((Game) this).Object_Info[3] - Game.f214y[1] < -16 || ((Game) this).Object_Info[3] - Game.f214y[1] > 184) {
             return;
         }
         if (((Game) this).Object_Info[4] == 48 || ((Game) this).Object_Info[4] == 66 || ((Game) this).Object_Info[4] == 65 || ((Game) this).Object_Info[4] == 49 || ((Game) this).Object_Info[4] == 80 || ((Game) this).Object_Info[4] == 64 || ((Game) this).Object_Info[4] == 81) {
@@ -4628,7 +4628,7 @@ public final class Actor extends Game {
                 } else if (Math.abs(((((Game) this).Object_Info[2] + 32) - (64 * i4)) - m225a[i5][2]) < 2) {
                     if (((Game) this).Object_Info[5] == 0) {
                         ((Game) this).Object_Info[5] = 1;
-                        ((Game) this).Object_Info[10] = ((Game) this).f36k;
+                        ((Game) this).Object_Info[10] = ((Game) this).f227k;
                     }
                     ((Game) this).Object_Info[7] = m225a[i5][20];
                 } else {
@@ -4649,7 +4649,7 @@ public final class Actor extends Game {
                 }
             }
             if (((Game) this).Object_Info[10] != 0) {
-                ((Game) this).Object_Info[5] = ((Game) this).f36k - ((Game) this).Object_Info[10];
+                ((Game) this).Object_Info[5] = ((Game) this).f227k - ((Game) this).Object_Info[10];
             }
             if (((Game) this).Object_Info[5] > 0 && ((Game) this).Object_Info[7] > 0) {
                 if (((Game) this).Object_Info[5] / 4 > 44) {
@@ -4681,7 +4681,7 @@ public final class Actor extends Game {
                 int[] iArr22 = ((Game) this).Object_Info;
                 iArr22[5] = iArr22[5] + 1;
             }
-            if (((Game) this).Object_Info[4] != 16 || ((Game) this).Object_Info[5] / 4 <= 0 || (((Game) this).Object_Info[2] - 20) - 32 > Game.m235a() || ((((Game) this).Object_Info[2] - 20) - 32) + 112 < Game.m235a() || ((Game) this).Object_Info[3] > Game.m146b() || ((Game) this).Object_Info[9] < Game.m146b()) {
+            if (((Game) this).Object_Info[4] != 16 || ((Game) this).Object_Info[5] / 4 <= 0 || (((Game) this).Object_Info[2] - 20) - 32 > Game.Player_RoughXPos() || ((((Game) this).Object_Info[2] - 20) - 32) + 112 < Game.Player_RoughXPos() || ((Game) this).Object_Info[3] > Game.Player_RoughYPos() || ((Game) this).Object_Info[9] < Game.Player_RoughYPos()) {
                 return;
             }
             Player_Hurt();
@@ -4701,7 +4701,7 @@ public final class Actor extends Game {
         int[] iArr2;
         char c2;
         int i3;
-        int m218a;
+        int Actor_CheckPlayerCollide;
         Actor actor;
         int i4 = 72;
         int i5 = 0;
@@ -4710,19 +4710,19 @@ public final class Actor extends Game {
             ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3];
         }
         if (((Game) this).Object_Info[4] == 1) {
-            ((Game) this).Object_Info[5] = ((Game) this).f36k;
+            ((Game) this).Object_Info[5] = ((Game) this).f227k;
             i2 = ((((Game.Math_CalcSine(((Game) this).Object_Info[5]) * 16) / 100) - 16) << 1) + 2;
         } else if (((Game) this).Object_Info[4] == 2) {
-            ((Game) this).Object_Info[5] = ((Game) this).f36k;
+            ((Game) this).Object_Info[5] = ((Game) this).f227k;
             i2 = ((((Game.Math_CalcSine(((Game) this).Object_Info[5]) * (-16)) / 100) - 16) << 1) + 2;
         } else if (((Game) this).Object_Info[4] != 20) {
             if (((Game) this).Object_Info[4] == 4) {
                 i4 = 56;
-                if (((Game) this).f207e[0] || ((Game) this).Object_Info[5] != 0) {
-                    if (((Game) this).f207e[0] && ((Game) this).Object_Info[5] == 0) {
-                        ((Game) this).Object_Info[10] = ((Game) this).f36k;
+                if (((Game) this).f269e[0] || ((Game) this).Object_Info[5] != 0) {
+                    if (((Game) this).f269e[0] && ((Game) this).Object_Info[5] == 0) {
+                        ((Game) this).Object_Info[10] = ((Game) this).f227k;
                     }
-                    ((Game) this).Object_Info[5] = ((Game) this).f36k - (((Game) this).Object_Info[10] - 1);
+                    ((Game) this).Object_Info[5] = ((Game) this).f227k - (((Game) this).Object_Info[10] - 1);
                     if (((Game) this).Object_Info[5] > 72) {
                         ((Game) this).Object_Info[5] = 72;
                     }
@@ -4737,25 +4737,25 @@ public final class Actor extends Game {
                 iArr[c] = i;
                 i2 = 16;
             }
-            m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i5, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 32, i4);
-            if (m218a >= 0) {
-                if (m218a == 0) {
+            Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i5, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 32, i4);
+            if (Actor_CheckPlayerCollide >= 0) {
+                if (Actor_CheckPlayerCollide == 0) {
                     Game.Player_Info[1] = ((((Game) this).Object_Info[3] + i5) - i4) << 8;
                     m140b(((Game) this).Object_Info[2], 32);
                     m230a(((Game) this).Object_Info[22]);
-                } else if (m218a == 1) {
+                } else if (Actor_CheckPlayerCollide == 1) {
                     Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 32) - 12) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[4]) {
                         m26s();
                     }
-                } else if (m218a == 2) {
+                } else if (Actor_CheckPlayerCollide == 2) {
                     Game.Player_Info[0] = (((((Game) this).Object_Info[2] + 32) + 12) + 1) << 8;
                     Game.Player_Info[10] = 0;
                     if (((Game) this).Input_Array[3]) {
                         m26s();
                     }
-                } else if (m218a == 3) {
+                } else if (Actor_CheckPlayerCollide == 3) {
                     Game.Player_Info[1] = (((((((Game) this).Object_Info[3] + i5) + i4) + 12) + 12) + 1) << 8;
                     if (((Game) this).Object_Info[4] == 1 && (((Game) this).Object_Info[5] % 360 < 90 || ((Game) this).Object_Info[5] % 360 > 270)) {
                         actor = this;
@@ -4765,26 +4765,26 @@ public final class Actor extends Game {
                     actor.m269B();
                 }
             }
-            if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m218a != 0) {
-                ((Game) this).f206s = false;
+            if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && Actor_CheckPlayerCollide != 0) {
+                ((Game) this).f115s = false;
             }
             ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3] + i5;
             ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
         } else {
             i4 = 56;
             if (((Game) this).Object_Info[5] != 0) {
-                ((Game) this).Object_Info[5] = ((Game) this).f36k - (((Game) this).Object_Info[10] - 1);
+                ((Game) this).Object_Info[5] = ((Game) this).f227k - (((Game) this).Object_Info[10] - 1);
                 if (((Game) this).Object_Info[5] > 72) {
                     ((Game) this).Object_Info[5] = 72;
                 }
                 iArr2 = ((Game) this).Object_Info;
                 c2 = 3;
                 i3 = (((Game) this).Object_Info[9] - 160) + (((Game) this).Object_Info[5] * 2);
-            } else if (((Game) this).f207e[1]) {
+            } else if (((Game) this).f269e[1]) {
                 ((Game) this).Object_Info[5] = 1;
                 iArr2 = ((Game) this).Object_Info;
                 c2 = '\n';
-                i3 = ((Game) this).f36k;
+                i3 = ((Game) this).f227k;
             } else {
                 iArr2 = ((Game) this).Object_Info;
                 c2 = 3;
@@ -4794,11 +4794,11 @@ public final class Actor extends Game {
             i2 = 16;
         }
         i5 = i2;
-        m218a = Game.m218a(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i5, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 32, i4);
-        if (m218a >= 0) {
+        Actor_CheckPlayerCollide = Game.Actor_CheckPlayerCollide(((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i5, ((Game) this).Object_Info[6], ((Game) this).Object_Info[7], 32, i4);
+        if (Actor_CheckPlayerCollide >= 0) {
         }
-        if (((Game) this).f206s) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s) {
+            ((Game) this).f115s = false;
         }
         ((Game) this).Object_Info[7] = ((Game) this).Object_Info[3] + i5;
         ((Game) this).Object_Info[6] = ((Game) this).Object_Info[2];
@@ -4826,8 +4826,8 @@ public final class Actor extends Game {
         int[] iArr2;
         char c2;
         char c3 = 0;
-        int i11 = ((((Game) this).f35j >> 2) % 4) * 16;
-        if ((((Game) this).f35j >> 2) % 4 == 3) {
+        int i11 = ((((Game) this).f226j >> 2) % 4) * 16;
+        if ((((Game) this).f226j >> 2) % 4 == 3) {
             c3 = 4;
             i11 = 16;
         }
@@ -4837,15 +4837,15 @@ public final class Actor extends Game {
             i3 = i11;
             i4 = 16;
             i5 = 16;
-            iArr = Game.f38a;
+            iArr = Game.f179a;
             c = c3;
         } else {
             i = 0;
             i2 = 16;
-            i3 = (((((Game) this).f36k - ((Game) this).Object_Info[10]) / 5) % 4) * 16;
+            i3 = (((((Game) this).f227k - ((Game) this).Object_Info[10]) / 5) % 4) * 16;
             i4 = 16;
             i5 = 16;
-            iArr = Game.f38a;
+            iArr = Game.f179a;
             c = 0;
         }
         Game.m133b(i, i2, i3, i4, i5, iArr[c], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
@@ -4856,15 +4856,15 @@ public final class Actor extends Game {
                 i8 = i11;
                 i9 = 16;
                 i10 = 16;
-                iArr2 = Game.f38a;
+                iArr2 = Game.f179a;
                 c2 = c3;
             } else {
                 i6 = 0;
                 i7 = 16;
-                i8 = (((((Game) this).f36k - ((Game) this).Object_Info[10]) / 5) % 4) * 16;
+                i8 = (((((Game) this).f227k - ((Game) this).Object_Info[10]) / 5) % 4) * 16;
                 i9 = 16;
                 i10 = 16;
-                iArr2 = Game.f38a;
+                iArr2 = Game.f179a;
                 c2 = 0;
             }
             Game.m133b(i6, i7, i8, i9, i10, iArr2[c2], ((Game) this).Object_Info[2], ((Game) this).Object_Info[12]);
@@ -4876,7 +4876,7 @@ public final class Actor extends Game {
         int i;
         int i2;
         int i3;
-        int Math_CalcSine = Game.Math_CalcSine(((Game) this).f35j * 3) * 87;
+        int Math_CalcSine = Game.Math_CalcSine(((Game) this).f226j * 3) * 87;
         int i4 = ((Game) this).Object_Info[4] + 1;
         if (((Game) this).Object_Info[4] == 5 || ((Game) this).Object_Info[19] == 1) {
             Math_CalcSine = -Math_CalcSine;
@@ -4892,17 +4892,17 @@ public final class Actor extends Game {
                     i2 = 0;
                     i3 = 96;
                 }
-                Game.m133b(i, i2, i3, 16, 16, Game.f38a[0], ((Game) this).Object_Info[2] + ((i5 * (Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * 16)) / 100), ((Game) this).Object_Info[3] + ((i5 * (Game.m143b(180 + (Math_CalcSine / 100)) * 16)) / 100));
+                Game.m133b(i, i2, i3, 16, 16, Game.f179a[0], ((Game) this).Object_Info[2] + ((i5 * (Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * 16)) / 100), ((Game) this).Object_Info[3] + ((i5 * (Game.Math_CalcCosine(180 + (Math_CalcSine / 100)) * 16)) / 100));
             }
         }
         if (this.Game_ZoneID != 3 && this.Game_ZoneID != 5) {
-            Game.m133b(3, 16, 16, 16, 16, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+            Game.m133b(3, 16, 16, 16, 16, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
         }
         if (this.Game_ZoneID == 3 || this.Game_ZoneID == 5) {
             return;
         }
         int i6 = (i4 * 16) - 8;
-        Game.m133b(3, 0, 0, 48, 16, Game.f38a[0], ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i6) / 100), ((Game) this).Object_Info[3] + ((Game.m143b(180 + (Math_CalcSine / 100)) * i6) / 100));
+        Game.m133b(3, 0, 0, 48, 16, Game.f179a[0], ((Game) this).Object_Info[2] + ((Game.Math_CalcSine(180 + (Math_CalcSine / 100)) * i6) / 100), ((Game) this).Object_Info[3] + ((Game.Math_CalcCosine(180 + (Math_CalcSine / 100)) * i6) / 100));
     }
 
     /* renamed from: aU */
@@ -4921,7 +4921,7 @@ public final class Actor extends Game {
             if (i == 0 || i == 11) {
                 i2 = 0;
             }
-            Game.m133b(5, width * 2, 0, width, height, Game.f38a[0], (((Game) this).Object_Info[2] - 96) + (i * 16), ((Game) this).Object_Info[3] + i2);
+            Game.m133b(5, width * 2, 0, width, height, Game.f179a[0], (((Game) this).Object_Info[2] - 96) + (i * 16), ((Game) this).Object_Info[3] + i2);
         }
     }
 
@@ -4929,18 +4929,18 @@ public final class Actor extends Game {
     private void m362aV() {
         int[] iArr = {-4, 4};
         for (int i = 0; i < 12; i++) {
-            int i2 = ((((Game) this).f35j / 10) + (12 - i)) % 7;
-            Game.m133b(4, 0, i2 * 24, 16, 24, Game.f38a[0], (((Game) this).Object_Info[2] - 96) + (i * 16), ((Game) this).Object_Info[3] + iArr[i2 / 4]);
+            int i2 = ((((Game) this).f226j / 10) + (12 - i)) % 7;
+            Game.m133b(4, 0, i2 * 24, 16, 24, Game.f179a[0], (((Game) this).Object_Info[2] - 96) + (i * 16), ((Game) this).Object_Info[3] + iArr[i2 / 4]);
         }
     }
 
     /* renamed from: aW */
     private void m361aW() {
-        int i = Game.f38a[0];
+        int i = Game.f179a[0];
         if (((Game) this).Object_Info[4] != 0) {
-            i = Game.f38a[4];
+            i = Game.f179a[4];
         }
-        int i2 = ((Game) this).Object_Info[5] != 0 ? (((Game) this).f36k / 2) - ((Game) this).Object_Info[10] : 0;
+        int i2 = ((Game) this).Object_Info[5] != 0 ? (((Game) this).f227k / 2) - ((Game) this).Object_Info[10] : 0;
         for (int i3 = 0; i3 < 36; i3++) {
             int i4 = i2 - (i3 * 3);
             Game.m133b(6, (i3 / 6) * 16, 96 - (((i3 % 6) + 1) * 16), 16, 16, i, (((Game) this).Object_Info[2] + (((Game) this).Object_Info[4] != 0 ? (96 - ((i3 / 6) * 16)) - 16 : (i3 / 6) * 16)) - 40, (((((Game) this).Object_Info[3] + 96) - (((i3 % 6) + 1) * 16)) - 48) + (i4 < 0 ? 0 : i4 * (i2 / 6)) + 0);
@@ -4953,22 +4953,22 @@ public final class Actor extends Game {
         char c2 = c;
         if (c != 2) {
             if (c2 == 0) {
-                Game.m214a(7, 0, 96, 128, 80, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, 3);
+                Game.m214a(7, 0, 96, 128, 80, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, 3);
                 return;
             }
             for (int i = 0; i < 4; i++) {
-                Game.m214a(7, 0, 0, 16, 96, Game.f38a[0], (((Game) this).Object_Info[2] + (i * 16)) - 32, ((Game) this).Object_Info[3] - 48, 20);
+                Game.m214a(7, 0, 0, 16, 96, Game.f179a[0], (((Game) this).Object_Info[2] + (i * 16)) - 32, ((Game) this).Object_Info[3] - 48, 20);
             }
             return;
         }
-        Game.m214a(7, 16, 0, 128, 96, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, 3);
+        Game.m214a(7, 16, 0, 128, 96, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16, 3);
         if (((Game) this).Object_Info[16] >= 60) {
             for (int i2 = 0; i2 < 8; i2++) {
-                int i3 = ((Game) this).f35j - ((Game) this).Object_Info[15];
+                int i3 = ((Game) this).f226j - ((Game) this).Object_Info[15];
                 if ((i2 << 3) < i3) {
                     i3 = i2 << 3;
                 }
-                Game.m214a(101, 0, ((((Game) this).f35j + (i2 << 1)) % 4) * 32, 24, 32, Game.f38a[0], (((Game) this).Object_Info[2] + (i3 << 1)) - 56, ((Game) this).Object_Info[3] - Game.f168d[c2][i3], 3);
+                Game.m214a(101, 0, ((((Game) this).f226j + (i2 << 1)) % 4) * 32, 24, 32, Game.f179a[0], (((Game) this).Object_Info[2] + (i3 << 1)) - 56, ((Game) this).Object_Info[3] - Game.f206d[c2][i3], 3);
             }
         }
     }
@@ -4983,17 +4983,17 @@ public final class Actor extends Game {
         int i6;
         int i7;
         int i8;
-        int i9 = Game.f38a[0];
+        int i9 = Game.f179a[0];
         int i10 = (((Game) this).Object_Info[3] - ((Game) this).Object_Info[9]) % 16;
         for (int i11 = 0; i11 <= (((Game) this).Object_Info[3] - ((Game) this).Object_Info[9]) / 16; i11++) {
             int i12 = (((Game) this).Object_Info[9] - 24) + (i11 * 16) + i10;
             if (i11 == 0) {
                 int max = Math.max(Game.m107d(((((Game) this).Object_Info[9] - 24) - Game.Camera_Pos[1]) + 4), 0);
-                Game.GFX_Painter.clipRect(0, Game.f26i + max, Game.f24g, Game.f25h - max);
+                Game.GFX_Painter.clipRect(0, Game.f13i + max, Game.f174g, Game.f175h - max);
             }
             Game.m133b(94, 0, 8, 32, 16, i9, ((Game) this).Object_Info[8], i12);
             if (i11 == 0) {
-                Game.GFX_Painter.setClip(0, Game.f26i, Game.f24g, Game.f25h);
+                Game.GFX_Painter.setClip(0, Game.f13i, Game.f174g, Game.f175h);
             }
         }
         Game.m133b(94, 0, 0, 32, 8, i9, ((Game) this).Object_Info[8], ((Game) this).Object_Info[9] - 24);
@@ -5053,14 +5053,14 @@ public final class Actor extends Game {
         int height = Game.GFX_GameArray[9].getHeight();
         if (((Game) this).Object_Info[4] == 48) {
             for (int i10 = 0; i10 < 3; i10++) {
-                Game.m133b(9, 0, 0, i9, height, Game.f38a[c], (((Game) this).Object_Info[2] - 24) + (i10 * 24), ((Game) this).Object_Info[3]);
+                Game.m133b(9, 0, 0, i9, height, Game.f179a[c], (((Game) this).Object_Info[2] - 24) + (i10 * 24), ((Game) this).Object_Info[3]);
             }
         } else if (((Game) this).Object_Info[4] == 64) {
             if (this.Game_ZoneID == 1 && this.Game_ActID == 0 && ((Game) this).Object_Info[4] == 64 && ((Game) this).Object_Info[19] != 0) {
                 return;
             }
             for (int i11 = 0; i11 < 6; i11++) {
-                Game.m133b(9, height >> 1, 0, i9, height, Game.f38a[c], (((Game) this).Object_Info[2] - 60) + (i11 * 24), ((Game) this).Object_Info[3]);
+                Game.m133b(9, height >> 1, 0, i9, height, Game.f179a[c], (((Game) this).Object_Info[2] - 60) + (i11 * 24), ((Game) this).Object_Info[3]);
             }
         } else {
             if (((Game) this).Object_Info[4] == 18 || ((Game) this).Object_Info[4] == 16) {
@@ -5069,7 +5069,7 @@ public final class Actor extends Game {
                 i3 = 0;
                 i4 = width;
                 i5 = height;
-                i6 = Game.f38a[((Game) this).Object_Info[19] == 0 ? (char) 3 : (char) 1];
+                i6 = Game.f179a[((Game) this).Object_Info[19] == 0 ? (char) 3 : (char) 1];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((Game) this).Object_Info[3];
             } else if (((Game) this).Object_Info[4] == 82) {
@@ -5079,7 +5079,7 @@ public final class Actor extends Game {
                     i3 = 0;
                     i4 = i9;
                     i5 = height;
-                    i6 = Game.f38a[7];
+                    i6 = Game.f179a[7];
                     i7 = ((Game) this).Object_Info[2];
                     i8 = ((Game) this).Object_Info[3];
                 } else {
@@ -5088,7 +5088,7 @@ public final class Actor extends Game {
                     i3 = 0;
                     i4 = i9;
                     i5 = height;
-                    i6 = Game.f38a[1];
+                    i6 = Game.f179a[1];
                     i7 = ((Game) this).Object_Info[2];
                     i8 = ((Game) this).Object_Info[3];
                 }
@@ -5098,7 +5098,7 @@ public final class Actor extends Game {
                 i3 = 0;
                 i4 = i9;
                 i5 = height;
-                i6 = Game.f38a[c];
+                i6 = Game.f179a[c];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((Game) this).Object_Info[3];
             } else {
@@ -5107,7 +5107,7 @@ public final class Actor extends Game {
                 i3 = 0;
                 i4 = width;
                 i5 = height;
-                i6 = Game.f38a[c];
+                i6 = Game.f179a[c];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((Game) this).Object_Info[3] - 4;
             }
@@ -5118,7 +5118,7 @@ public final class Actor extends Game {
     /* renamed from: ba */
     private void m311ba() {
         if (((Game) this).Object_Info[4] != 129) {
-            Game.m133b(54, 0, 0, Game.GFX_GameArray[54].getWidth(), Game.GFX_GameArray[54].getHeight(), Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+            Game.m133b(54, 0, 0, Game.GFX_GameArray[54].getWidth(), Game.GFX_GameArray[54].getHeight(), Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
             return;
         }
         for (int i = 0; i < 4; i++) {
@@ -5128,7 +5128,7 @@ public final class Actor extends Game {
 
     /* renamed from: bb */
     private void m310bb() {
-        Game.m133b(11, 0, 0, Game.GFX_GameArray[11].getWidth(), Game.GFX_GameArray[11].getHeight(), Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+        Game.m133b(11, 0, 0, Game.GFX_GameArray[11].getWidth(), Game.GFX_GameArray[11].getHeight(), Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
     }
 
     /* renamed from: bc */
@@ -5142,31 +5142,31 @@ public final class Actor extends Game {
         int i7;
         int i8;
         if (((Game) this).Object_Info[4] == 2 || ((Game) this).Object_Info[4] == 1) {
-            Game.m133b(54, 0, 0, 31, 32, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+            Game.m133b(54, 0, 0, 31, 32, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
             if (((Game) this).Object_Info[4] == 2) {
                 m221a((((Game) this).Object_Info[2] >> 4) - 1, (((Game) this).Object_Info[3] >> 4) - 1, 4, 4);
             }
         } else if (((Game) this).Object_Info[4] == 65) {
             for (int i9 = 0; i9 < 3; i9++) {
-                Game.m133b(54, 0, 0, 31, 32, Game.f38a[0], ((Game) this).Object_Info[2] + (i9 << 5), ((Game) this).Object_Info[3]);
+                Game.m133b(54, 0, 0, 31, 32, Game.f179a[0], ((Game) this).Object_Info[2] + (i9 << 5), ((Game) this).Object_Info[3]);
             }
         } else {
             if (((Game) this).Object_Info[4] == 57) {
                 for (int i10 = 1; i10 < 15; i10++) {
-                    Game.m133b(12, 0, 24, 8, 24, Game.f38a[0], (((Game) this).Object_Info[2] - 64) + (i10 << 3), ((Game) this).Object_Info[3] - 8);
+                    Game.m133b(12, 0, 24, 8, 24, Game.f179a[0], (((Game) this).Object_Info[2] - 64) + (i10 << 3), ((Game) this).Object_Info[3] - 8);
                 }
-                Game.m133b(12, 0, 0, 8, 24, Game.f38a[0], ((Game) this).Object_Info[2] - 64, ((Game) this).Object_Info[3] - 8);
+                Game.m133b(12, 0, 0, 8, 24, Game.f179a[0], ((Game) this).Object_Info[2] - 64, ((Game) this).Object_Info[3] - 8);
                 i = 12;
                 i2 = 0;
                 i3 = 0;
                 i4 = 8;
                 i5 = 24;
-                i6 = Game.f38a[4];
+                i6 = Game.f179a[4];
                 i7 = ((Game) this).Object_Info[2] + 56;
                 i8 = ((Game) this).Object_Info[3] - 8;
             } else if (((Game) this).Object_Info[4] == 40) {
                 for (int i11 = 0; i11 < 8; i11++) {
-                    Game.m133b(12, 8, (i11 % 2) * 24, 8, 24, Game.f38a[0], (((Game) this).Object_Info[2] - 32) + (i11 << 3), ((Game) this).Object_Info[3] - 8);
+                    Game.m133b(12, 8, (i11 % 2) * 24, 8, 24, Game.f179a[0], (((Game) this).Object_Info[2] - 32) + (i11 << 3), ((Game) this).Object_Info[3] - 8);
                 }
                 return;
             } else if (!(((Game) this).Object_Info[4] == 7 || ((Game) this).Object_Info[4] == 4) || ((Game) this).Object_Info[5] == 0) {
@@ -5177,7 +5177,7 @@ public final class Actor extends Game {
                 i3 = 0;
                 i4 = 32;
                 i5 = 16;
-                i6 = Game.f38a[4];
+                i6 = Game.f179a[4];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((Game) this).Object_Info[3];
             }
@@ -5188,12 +5188,12 @@ public final class Actor extends Game {
     /* renamed from: bd */
     private void m308bd() {
         for (int i = 0; i < 2; i++) {
-            Game.m133b(13, 0, ((((Game) this).f35j + i) % 3) * 32, 32, 32, Game.f38a[0], ((Game) this).Object_Info[2] + (i * 32) + 48, (((Game) this).Object_Info[3] + (i * 32)) - 16);
+            Game.m133b(13, 0, ((((Game) this).f226j + i) % 3) * 32, 32, 32, Game.f179a[0], ((Game) this).Object_Info[2] + (i * 32) + 48, (((Game) this).Object_Info[3] + (i * 32)) - 16);
         }
         for (int i2 = 0; i2 < 4; i2++) {
             int i3 = (((Game) this).Object_Info[2] - Game.Camera_Pos[0]) + ((i2 >> 1) * 32) + 16;
             for (int i4 = 0; i4 < (i3 / 32) + 2; i4++) {
-                Game.m133b(99, 0, ((((Game) this).f35j + i2) % 3) * 16, 32, 16, Game.f38a[0], ((((Game) this).Object_Info[2] + ((i2 >> 1) * 32)) + 16) - (i4 * 32), (((Game) this).Object_Info[3] + (i2 * 16)) - 24);
+                Game.m133b(99, 0, ((((Game) this).f226j + i2) % 3) * 16, 32, 16, Game.f179a[0], ((((Game) this).Object_Info[2] + ((i2 >> 1) * 32)) + 16) - (i4 * 32), (((Game) this).Object_Info[3] + (i2 * 16)) - 24);
             }
         }
     }
@@ -5208,7 +5208,7 @@ public final class Actor extends Game {
         int i6 = ((Game) this).Object_Info[5] / 4;
         int i7 = i6;
         if (i6 != 0 && ((Game) this).Object_Info[3] - 32 < ((Game) this).Object_Info[9]) {
-            Game.m114c(98, 0, 32 * (((Game) this).f35j % 2), 64, 32, Game.f38a[0], ((Game) this).Object_Info[2] - 32, ((Game) this).Object_Info[3] - 32);
+            Game.m114c(98, 0, 32 * (((Game) this).f226j % 2), 64, 32, Game.f179a[0], ((Game) this).Object_Info[2] - 32, ((Game) this).Object_Info[3] - 32);
         }
         if (i7 > 6) {
             i7 = 6;
@@ -5230,16 +5230,16 @@ public final class Actor extends Game {
             } else {
                 i8++;
             }
-            Game.m114c(i, i2, i3, i4, i5, Game.f38a[0], ((Game) this).Object_Info[2] - 32, (((Game) this).Object_Info[3] - (i8 * 32)) - 32);
+            Game.m114c(i, i2, i3, i4, i5, Game.f179a[0], ((Game) this).Object_Info[2] - 32, (((Game) this).Object_Info[3] - (i8 * 32)) - 32);
             i8++;
         }
         if (((Game) this).Object_Info[5] / 4 != 0 && (((Game) this).Object_Info[3] - (i8 * 32)) - 32 < ((Game) this).Object_Info[9]) {
-            Game.m114c(98, 0, 64 + (32 * (((Game) this).f35j % 2)), 64, 32, Game.f38a[0], ((Game) this).Object_Info[2] - 32, (((Game) this).Object_Info[3] - (i8 * 32)) - 32);
+            Game.m114c(98, 0, 64 + (32 * (((Game) this).f226j % 2)), 64, 32, Game.f179a[0], ((Game) this).Object_Info[2] - 32, (((Game) this).Object_Info[3] - (i8 * 32)) - 32);
         }
-        if (((Game) this).Object_Info[10] <= 0 || Game.f162q.length <= ((Game) this).Object_Info[10] / 3) {
+        if (((Game) this).Object_Info[10] <= 0 || Game.f200q.length <= ((Game) this).Object_Info[10] / 3) {
             return;
         }
-        Game.m214a(77, 0, 32 * Game.f162q[((Game) this).Object_Info[10] / 3], 112, 32, Game.f38a[0], ((Game) this).Object_Info[8], ((Game) this).Object_Info[9], 17);
+        Game.m214a(77, 0, 32 * Game.f200q[((Game) this).Object_Info[10] / 3], 112, 32, Game.f179a[0], ((Game) this).Object_Info[8], ((Game) this).Object_Info[9], 17);
     }
 
     /* renamed from: bf */
@@ -5255,13 +5255,13 @@ public final class Actor extends Game {
         int i9;
         int width = Game.GFX_GameArray[15].getWidth();
         Game.GFX_GameArray[15].getHeight();
-        if (((Game) this).f207e[((Game) this).Object_Info[4]]) {
+        if (((Game) this).f269e[((Game) this).Object_Info[4]]) {
             i = 15;
             i2 = 0;
             i3 = 16;
             i4 = width;
             i5 = 8;
-            i6 = Game.f38a[0];
+            i6 = Game.f179a[0];
             i7 = ((Game) this).Object_Info[2];
             i8 = ((Game) this).Object_Info[3];
             i9 = 1;
@@ -5271,13 +5271,13 @@ public final class Actor extends Game {
             i3 = 0;
             i4 = width;
             i5 = 11;
-            i6 = Game.f38a[0];
+            i6 = Game.f179a[0];
             i7 = ((Game) this).Object_Info[2];
             i8 = ((Game) this).Object_Info[3];
             i9 = 3;
         }
         Game.m133b(i, i2, i3, i4, i5, i6, i7, i8 - i9);
-        Game.m133b(15, 0, 11, width, 5, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + 5);
+        Game.m133b(15, 0, 11, width, 5, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + 5);
     }
 
     /* renamed from: bg */
@@ -5320,26 +5320,26 @@ public final class Actor extends Game {
         int i = 0;
         if (((Game) this).Object_Info[5] < 129) {
             for (int i2 = 0; i2 < 8; i2++) {
-                int i3 = Game.f156l[i2];
-                if (Game.f156l[i2] % 4 >= 2) {
+                int i3 = Game.f195l[i2];
+                if (Game.f195l[i2] % 4 >= 2) {
                     i3 -= 2;
                 }
                 if (((Game) this).Object_Info[15] != 0) {
-                    int i4 = (((Game) this).f36k - ((Game) this).Object_Info[16]) - Game.f157m[i2];
+                    int i4 = (((Game) this).f227k - ((Game) this).Object_Info[16]) - Game.f196m[i2];
                     i = i4;
                     if (i4 < 0) {
                         i = 0;
                     }
                 }
                 int width = Game.GFX_GameArray[27].getWidth() / 4;
-                Game.m133b(27, (i3 % 4) * width, (i3 / 4) * width, width, width, 0, ((((Game) this).Object_Info[2] + ((Game.f156l[i2] % 4) * 16)) - 16) - 8, ((Game) this).Object_Info[3] + ((Game.f156l[i2] / 4) * 16) + (i * (i / 5)));
+                Game.m133b(27, (i3 % 4) * width, (i3 / 4) * width, width, width, 0, ((((Game) this).Object_Info[2] + ((Game.f195l[i2] % 4) * 16)) - 16) - 8, ((Game) this).Object_Info[3] + ((Game.f195l[i2] / 4) * 16) + (i * (i / 5)));
             }
         }
     }
 
     /* renamed from: bk */
     private void m301bk() {
-        Game.m133b(27, 0, 0, 32, 32, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+        Game.m133b(27, 0, 0, 32, 32, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
     }
 
     /* renamed from: bl */
@@ -5351,8 +5351,8 @@ public final class Actor extends Game {
         int i5;
         int i6;
         int Math_CalcSine;
-        int m143b;
-        if (((Game) this).f243t || ((Game) this).f244u) {
+        int Math_CalcCosine;
+        if (((Game) this).f286t || ((Game) this).f287u) {
             return;
         }
         if (((Game) this).Object_Info[5] == 0) {
@@ -5361,21 +5361,21 @@ public final class Actor extends Game {
             i3 = 16;
             i4 = 16;
             i5 = 16;
-            i6 = Game.f38a[4];
+            i6 = Game.f179a[4];
             Math_CalcSine = ((Game) this).Object_Info[2];
-            m143b = ((Game) this).Object_Info[3] - 32;
+            Math_CalcCosine = ((Game) this).Object_Info[3] - 32;
         } else {
             i = 36;
             i2 = 0;
             i3 = 0;
             i4 = 16;
             i5 = 16;
-            i6 = Game.f38a[4];
+            i6 = Game.f179a[4];
             Math_CalcSine = ((Game) this).Object_Info[2] - ((Game.Math_CalcSine((90 * ((Game) this).Object_Info[5]) / 4) * 8) / 100);
-            m143b = (((Game) this).Object_Info[3] - 24) + ((Game.m143b((90 * ((Game) this).Object_Info[5]) / 4) * 8) / 100);
+            Math_CalcCosine = (((Game) this).Object_Info[3] - 24) + ((Game.Math_CalcCosine((90 * ((Game) this).Object_Info[5]) / 4) * 8) / 100);
         }
-        Game.m133b(i, i2, i3, i4, i5, i6, Math_CalcSine, m143b - 4);
-        Game.m133b(36, 0, 32, 16, 48, Game.f38a[4], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 4);
+        Game.m133b(i, i2, i3, i4, i5, i6, Math_CalcSine, Math_CalcCosine - 4);
+        Game.m133b(36, 0, 32, 16, 48, Game.f179a[4], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 4);
     }
 
     /* renamed from: bm */
@@ -5412,7 +5412,7 @@ public final class Actor extends Game {
         if (((Game) this).Object_Info[4] >= 7) {
             return;
         }
-        if (Game.f163r[((Game) this).Object_Info[4]] == 8) {
+        if (Game.f201r[((Game) this).Object_Info[4]] == 8) {
             i2 = 16;
             i3 = 8;
         }
@@ -5425,15 +5425,15 @@ public final class Actor extends Game {
             if (i4 >= 48) {
                 i5 = 48;
             }
-            Game.m133b(42, 8, (Game.f163r[((Game) this).Object_Info[5]] * i2) + 7, 16, 14, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - i5);
+            Game.m133b(42, 8, (Game.f201r[((Game) this).Object_Info[5]] * i2) + 7, 16, 14, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - i5);
         }
-        if (Game.f163r[((Game) this).Object_Info[4]] != 8) {
-            i = ((Game) this).f35j % 2 == 0 ? Game.f163r[((Game) this).Object_Info[4]] * i2 : (((((Game) this).f35j % 6) / 2) + 5) * i2;
+        if (Game.f201r[((Game) this).Object_Info[4]] != 8) {
+            i = ((Game) this).f226j % 2 == 0 ? Game.f201r[((Game) this).Object_Info[4]] * i2 : (((((Game) this).f226j % 6) / 2) + 5) * i2;
         } else {
             i = 256;
             i2 = 16;
         }
-        Game.m133b(42, 0, i, width, i2, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i3);
+        Game.m133b(42, 0, i, width, i2, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + i3);
     }
 
     /* renamed from: bo */
@@ -5461,7 +5461,7 @@ public final class Actor extends Game {
         }
         Game.m133b(i, i2, i3, 48, 48, 0, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] + 10);
         if (((Game) this).Object_Info[5] == 1) {
-            Game.m133b(0, 16, ((((Game) this).Object_Info[10] / 4) % 4) * 16, 16, 16, Game.f164s[(((Game) this).Object_Info[10] / 2) % 4], (((Game) this).Object_Info[2] + Game.f165t[(((Game) this).Object_Info[10] / 4) % 10]) - 32, ((((Game) this).Object_Info[3] + 10) + Game.f166u[(((Game) this).Object_Info[10] / 4) % 10]) - 32);
+            Game.m133b(0, 16, ((((Game) this).Object_Info[10] / 4) % 4) * 16, 16, 16, Game.f202s[(((Game) this).Object_Info[10] / 2) % 4], (((Game) this).Object_Info[2] + Game.f203t[(((Game) this).Object_Info[10] / 4) % 10]) - 32, ((((Game) this).Object_Info[3] + 10) + Game.f204u[(((Game) this).Object_Info[10] / 4) % 10]) - 32);
         }
     }
 
@@ -5491,13 +5491,13 @@ public final class Actor extends Game {
         int i8;
         if (((Game) this).Object_Info[4] == 1) {
             if (((Game) this).Object_Info[5] < 2) {
-                Game.m133b(55, (((Game) this).f35j % 2) * 24, 96, 24, 16, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+                Game.m133b(55, (((Game) this).f226j % 2) * 24, 96, 24, 16, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
                 i = 55;
                 i2 = 0;
                 i3 = 0;
                 i4 = 64;
                 i5 = 64;
-                i6 = Game.f38a[0];
+                i6 = Game.f179a[0];
                 i7 = ((Game) this).Object_Info[8];
                 i8 = ((Game) this).Object_Info[9];
             } else {
@@ -5506,7 +5506,7 @@ public final class Actor extends Game {
                 i3 = 64;
                 i4 = 64;
                 i5 = 32;
-                i6 = Game.f38a[0];
+                i6 = Game.f179a[0];
                 i7 = ((Game) this).Object_Info[8];
                 i8 = ((Game) this).Object_Info[9] + 16;
             }
@@ -5516,7 +5516,7 @@ public final class Actor extends Game {
 
     /* renamed from: bt */
     private void m292bt() {
-        Game.m133b(56, 0, 32, 32, 32, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+        Game.m133b(56, 0, 32, 32, 32, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
     }
 
     /* renamed from: bu */
@@ -5526,7 +5526,7 @@ public final class Actor extends Game {
 
     /* renamed from: bv */
     private void m290bv() {
-        Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 0, Game.f38a[0]);
+        Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 0, Game.f179a[0]);
     }
 
     /* renamed from: n */
@@ -5538,22 +5538,22 @@ public final class Actor extends Game {
             i -= (i / 360) * 360;
         }
         if (i <= 90) {
-            ((Game) this).Object_Info[i2] = Game.f306A[90 - i];
-            ((Game) this).Object_Info[i3] = Game.f306A[i];
+            ((Game) this).Object_Info[i2] = Game.Sine_ResultTable[90 - i];
+            ((Game) this).Object_Info[i3] = Game.Sine_ResultTable[i];
         }
         if (i > 90 && i <= 180) {
-            ((Game) this).Object_Info[i2] = -Game.f306A[90 - (180 - i)];
-            ((Game) this).Object_Info[i3] = Game.f306A[180 - i];
+            ((Game) this).Object_Info[i2] = -Game.Sine_ResultTable[90 - (180 - i)];
+            ((Game) this).Object_Info[i3] = Game.Sine_ResultTable[180 - i];
         }
         if (i > 180 && i <= 270) {
-            ((Game) this).Object_Info[i2] = -Game.f306A[90 - (i - 180)];
-            ((Game) this).Object_Info[i3] = -Game.f306A[i - 180];
+            ((Game) this).Object_Info[i2] = -Game.Sine_ResultTable[90 - (i - 180)];
+            ((Game) this).Object_Info[i3] = -Game.Sine_ResultTable[i - 180];
         }
         if (i <= 270 || i >= 360) {
             return;
         }
-        ((Game) this).Object_Info[i2] = Game.f306A[90 - (360 - i)];
-        ((Game) this).Object_Info[i3] = -Game.f306A[360 - i];
+        ((Game) this).Object_Info[i2] = Game.Sine_ResultTable[90 - (360 - i)];
+        ((Game) this).Object_Info[i3] = -Game.Sine_ResultTable[360 - i];
     }
 
     /* JADX WARN: Removed duplicated region for block: B:67:0x016e  */
@@ -5575,7 +5575,7 @@ public final class Actor extends Game {
         int i7;
         int i8 = 0;
         int i9 = 0;
-        int i10 = ((Game) this).f35j - ((Game) this).Object_Info[5];
+        int i10 = ((Game) this).f226j - ((Game) this).Object_Info[5];
         if (((Game) this).Object_Info[4] == 213 || ((Game) this).Object_Info[4] == 181 || ((Game) this).Object_Info[4] == 197 || ((Game) this).Object_Info[4] == 101 || ((Game) this).Object_Info[4] == 69 || ((Game) this).Object_Info[4] == 53) {
             i = 5;
         } else if (((Game) this).Object_Info[4] == 212 || ((Game) this).Object_Info[4] == 196 || ((Game) this).Object_Info[4] == 84 || ((Game) this).Object_Info[4] == 68 || ((Game) this).Object_Info[4] == 52) {
@@ -5608,10 +5608,10 @@ public final class Actor extends Game {
                 if (this.Game_ZoneID != 4) {
                     int i11 = 1;
                     while (i11 < i8) {
-                        Game.m136b(((Game) this).Object_Info[2] + ((i11 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i11 * (((Game) this).Object_Info[17] * 16)) / 10000), 60, 2, Game.f38a[0]);
+                        Game.m136b(((Game) this).Object_Info[2] + ((i11 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i11 * (((Game) this).Object_Info[17] * 16)) / 10000), 60, 2, Game.f179a[0]);
                         i11++;
                     }
-                    Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 4, Game.f38a[0]);
+                    Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 4, Game.f179a[0]);
                     i4 = ((Game) this).Object_Info[2] + ((i11 * (((Game) this).Object_Info[16] * 16)) / 10000);
                     i5 = ((Game) this).Object_Info[3] + ((i11 * (((Game) this).Object_Info[17] * 16)) / 10000);
                     i6 = 60;
@@ -5619,16 +5619,16 @@ public final class Actor extends Game {
                 } else {
                     int i12 = 1;
                     while (i12 < i8) {
-                        Game.m136b(((Game) this).Object_Info[2] + ((i12 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i12 * (((Game) this).Object_Info[17] * 16)) / 10000), 60, 1, Game.f38a[0]);
+                        Game.m136b(((Game) this).Object_Info[2] + ((i12 * (((Game) this).Object_Info[16] * 16)) / 10000), ((Game) this).Object_Info[3] + ((i12 * (((Game) this).Object_Info[17] * 16)) / 10000), 60, 1, Game.f179a[0]);
                         i12++;
                     }
-                    Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 1, Game.f38a[0]);
+                    Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], 60, 1, Game.f179a[0]);
                     i4 = ((Game) this).Object_Info[2] + ((i12 * (((Game) this).Object_Info[16] * 16)) / 10000);
                     i5 = ((Game) this).Object_Info[3] + ((i12 * (((Game) this).Object_Info[17] * 16)) / 10000);
                     i6 = 60;
                     i7 = 1;
                 }
-                Game.m136b(i4, i5, i6, i7, Game.f38a[0]);
+                Game.m136b(i4, i5, i6, i7, Game.f179a[0]);
             } else {
                 i2 = 6;
             }
@@ -5643,7 +5643,7 @@ public final class Actor extends Game {
             m272n((i10 % (360 / i9)) * i9, 16, 17);
             if (this.Game_ZoneID != 4) {
             }
-            Game.m136b(i4, i5, i6, i7, Game.f38a[0]);
+            Game.m136b(i4, i5, i6, i7, Game.f179a[0]);
         } else {
             i = 6;
         }
@@ -5662,7 +5662,7 @@ public final class Actor extends Game {
         m272n((i10 % (360 / i9)) * i9, 16, 17);
         if (this.Game_ZoneID != 4) {
         }
-        Game.m136b(i4, i5, i6, i7, Game.f38a[0]);
+        Game.m136b(i4, i5, i6, i7, Game.f179a[0]);
     }
 
     /* renamed from: bx */
@@ -5735,7 +5735,7 @@ public final class Actor extends Game {
                 b = 4;
                 i = 25;
             }
-            Game.m133b(75, 0, 0, 16, 32, Game.f38a[b == 1 ? 1 : 0], ((Game) this).Object_Info[2] + i, ((Game) this).Object_Info[3]);
+            Game.m133b(75, 0, 0, 16, 32, Game.f179a[b == 1 ? 1 : 0], ((Game) this).Object_Info[2] + i, ((Game) this).Object_Info[3]);
         }
     }
 
@@ -5749,16 +5749,16 @@ public final class Actor extends Game {
         int width = Game.GFX_GameArray[14].getWidth();
         int i3 = 0;
         while (i3 < (((Game) this).Object_Info[9] - ((Game) this).Object_Info[3]) / 32) {
-            Game.m114c(14, 0, (width / 2) * (i3 % 2), width, width / 2, Game.f38a[0], ((((Game) this).Object_Info[2] - 20) + 24) - 32, (((Game) this).Object_Info[3] - 48) + (i3 * 32) + 16);
+            Game.m114c(14, 0, (width / 2) * (i3 % 2), width, width / 2, Game.f179a[0], ((((Game) this).Object_Info[2] - 20) + 24) - 32, (((Game) this).Object_Info[3] - 48) + (i3 * 32) + 16);
             i3++;
         }
         int i4 = (((Game) this).Object_Info[9] - ((Game) this).Object_Info[3]) % (width / 2);
         if (i4 > 0) {
-            Game.m114c(14, 0, (width / 2) * (i3 % 2), width, i4, Game.f38a[0], ((((Game) this).Object_Info[2] - 20) + 24) - 32, (((Game) this).Object_Info[3] - 48) + (i3 * 32) + 16);
+            Game.m114c(14, 0, (width / 2) * (i3 % 2), width, i4, Game.f179a[0], ((((Game) this).Object_Info[2] - 20) + 24) - 32, (((Game) this).Object_Info[3] - 48) + (i3 * 32) + 16);
         }
         int width2 = Game.GFX_GameArray[77].getWidth();
-        Game.m114c(77, 0, Game.f167v[i2], width2, Game.f167v[i2 + 1] - Game.f167v[i2], Game.f38a[0], (((Game) this).Object_Info[8] - 20) - 32, ((Game) this).Object_Info[9] - 48);
-        Game.m114c(77, 0, Game.f167v[i2 + 2], width2, Game.f167v[(i2 + 1) + 2] - Game.f167v[i2 + 2], Game.f38a[0], (((Game) this).Object_Info[2] - 20) - 32, ((Game) this).Object_Info[3] - 48);
+        Game.m114c(77, 0, Game.f205v[i2], width2, Game.f205v[i2 + 1] - Game.f205v[i2], Game.f179a[0], (((Game) this).Object_Info[8] - 20) - 32, ((Game) this).Object_Info[9] - 48);
+        Game.m114c(77, 0, Game.f205v[i2 + 2], width2, Game.f205v[(i2 + 1) + 2] - Game.f205v[i2 + 2], Game.f179a[0], (((Game) this).Object_Info[2] - 20) - 32, ((Game) this).Object_Info[3] - 48);
     }
 
     /* renamed from: bA */
@@ -5781,30 +5781,30 @@ public final class Actor extends Game {
                 Math_CalcSine2 = ((Game.Math_CalcSine(((Game) this).Object_Info[5]) * 9) / 100) - 9;
             }
             if (((Game) this).Object_Info[4] != 20 || ((Game) this).Object_Info[4] == 4) {
-                int Math_CalcSine3 = ((Game.Math_CalcSine(((Game) this).f36k) * 28) / 100) - 28;
-                Game.m133b(79, 0, 0, 32, 56, Game.f38a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] - 28) + 16);
-                Game.m133b(79, 0, 0, 32, 56, Game.f38a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] - 28) + 16);
-                Game.m133b(79, 0, 0, 32, 56, Game.f38a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + 28 + 16);
-                Game.m133b(79, 0, 0, 32, 56, Game.f38a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + 28 + 16);
+                int Math_CalcSine3 = ((Game.Math_CalcSine(((Game) this).f227k) * 28) / 100) - 28;
+                Game.m133b(79, 0, 0, 32, 56, Game.f179a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] - 28) + 16);
+                Game.m133b(79, 0, 0, 32, 56, Game.f179a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] - 28) + 16);
+                Game.m133b(79, 0, 0, 32, 56, Game.f179a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + 28 + 16);
+                Game.m133b(79, 0, 0, 32, 56, Game.f179a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + 28 + 16);
                 i = 79;
                 i2 = 0;
                 i3 = 72;
                 i4 = 32;
                 i5 = 32;
-                i6 = Game.f38a[2];
+                i6 = Game.f179a[2];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((Game) this).Object_Info[3] + Math_CalcSine3 + 28 + 1;
             } else {
-                Game.m133b(79, 0, 0, 32, 72, Game.f38a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] + i9) - 36);
-                Game.m133b(79, 0, 0, 32, 72, Game.f38a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] + i9) - 36);
-                Game.m133b(79, 0, 0, 32, 72, Game.f38a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + i9 + 36);
-                Game.m133b(79, 0, 0, 32, 72, Game.f38a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + i9 + 36);
+                Game.m133b(79, 0, 0, 32, 72, Game.f179a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] + i9) - 36);
+                Game.m133b(79, 0, 0, 32, 72, Game.f179a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] + i9) - 36);
+                Game.m133b(79, 0, 0, 32, 72, Game.f179a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + i9 + 36);
+                Game.m133b(79, 0, 0, 32, 72, Game.f179a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + i9 + 36);
                 i = 79;
                 i2 = 0;
                 i3 = 72;
                 i4 = 32;
                 i5 = 32;
-                i6 = Game.f38a[2];
+                i6 = Game.f179a[2];
                 i7 = ((Game) this).Object_Info[2];
                 i8 = ((((Game) this).Object_Info[3] + i10) - 8) - 6;
             }
@@ -5816,17 +5816,17 @@ public final class Actor extends Game {
         i10 = (Math_CalcSine2 * 2) + 2;
         if (((Game) this).Object_Info[4] != 20) {
         }
-        int Math_CalcSine32 = ((Game.Math_CalcSine(((Game) this).f36k) * 28) / 100) - 28;
-        Game.m133b(79, 0, 0, 32, 56, Game.f38a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] - 28) + 16);
-        Game.m133b(79, 0, 0, 32, 56, Game.f38a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] - 28) + 16);
-        Game.m133b(79, 0, 0, 32, 56, Game.f38a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + 28 + 16);
-        Game.m133b(79, 0, 0, 32, 56, Game.f38a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + 28 + 16);
+        int Math_CalcSine32 = ((Game.Math_CalcSine(((Game) this).f227k) * 28) / 100) - 28;
+        Game.m133b(79, 0, 0, 32, 56, Game.f179a[0], ((Game) this).Object_Info[2] - 16, (((Game) this).Object_Info[3] - 28) + 16);
+        Game.m133b(79, 0, 0, 32, 56, Game.f179a[4], ((Game) this).Object_Info[2] + 16, (((Game) this).Object_Info[3] - 28) + 16);
+        Game.m133b(79, 0, 0, 32, 56, Game.f179a[6], ((Game) this).Object_Info[2] - 16, ((Game) this).Object_Info[3] + 28 + 16);
+        Game.m133b(79, 0, 0, 32, 56, Game.f179a[2], ((Game) this).Object_Info[2] + 16, ((Game) this).Object_Info[3] + 28 + 16);
         i = 79;
         i2 = 0;
         i3 = 72;
         i4 = 32;
         i5 = 32;
-        i6 = Game.f38a[2];
+        i6 = Game.f179a[2];
         i7 = ((Game) this).Object_Info[2];
         i8 = ((Game) this).Object_Info[3] + Math_CalcSine32 + 28 + 1;
         Game.m133b(i, i2, i3, i4, i5, i6, i7, i8 + 8);
@@ -5872,12 +5872,12 @@ public final class Actor extends Game {
                 if (i5 == 0) {
                     if (((Game) this).Object_Info[5] == 4) {
                         Game.Player_Info[1] = (((Game) this).Object_Info[3] - 8) << 8;
-                        Game.f125g = true;
-                        Game.f121d = false;
-                        Game.f120c = true;
-                        Game.f127i = false;
-                        this.f300aw = 0;
-                        Game.Player_Info[5] = (Game.m143b(0) * i4) / 100;
+                        Game.f72g = true;
+                        Game.f68d = false;
+                        Game.f67c = true;
+                        Game.f74i = false;
+                        this.f314aw = 0;
+                        Game.Player_Info[5] = (Game.Math_CalcCosine(0) * i4) / 100;
                     }
                     iArr = ((Game) this).Object_Info;
                     c = 5;
@@ -5892,7 +5892,7 @@ public final class Actor extends Game {
                 Game.Player_Info[13] = 0;
                 Game.Player_Info[14] = 0;
                 if (i5 == 1 && ((Game) this).Object_Info[19] == 1) {
-                    this.f297av = 15;
+                    this.f312av = 15;
                     Game.Player_Info[10] = -i4;
                     Game.Player_Info[12] = 1;
                     Game.Player_Info[13] = 1;
@@ -5908,7 +5908,7 @@ public final class Actor extends Game {
                 Game.Player_Info[13] = 0;
                 Game.Player_Info[14] = 0;
                 if (i5 == 1 && ((Game) this).Object_Info[19] == 0) {
-                    this.f297av = 15;
+                    this.f312av = 15;
                     Game.Player_Info[10] = i4;
                     Game.Player_Info[12] = 0;
                     Game.Player_Info[13] = 2;
@@ -5922,8 +5922,8 @@ public final class Actor extends Game {
                 if (i5 == 2) {
                     if (((Game) this).Object_Info[19] == 2) {
                         Game.Player_Info[5] = i4;
-                        Game.f125g = true;
-                        this.f297av = 30;
+                        Game.f72g = true;
+                        this.f312av = 30;
                     }
                     int[] iArr3 = ((Game) this).Object_Info;
                     iArr3[5] = iArr3[5] + 1;
@@ -5934,8 +5934,8 @@ public final class Actor extends Game {
                 iArr[c] = i;
             }
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m115c != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && m115c != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -5955,7 +5955,7 @@ public final class Actor extends Game {
         }
         switch (iArr3[14]) {
             case 1:
-                if (Math.abs(Game.m235a() - iArr3[2]) < 50) {
+                if (Math.abs(Game.Player_RoughXPos() - iArr3[2]) < 50) {
                     iArr3[5] = 30;
                     iArr3[15] = 0;
                     iArr = iArr3;
@@ -5966,7 +5966,7 @@ public final class Actor extends Game {
                 }
                 break;
             case 2:
-                if (Game.m235a() > iArr3[2]) {
+                if (Game.Player_RoughXPos() > iArr3[2]) {
                     iArr2 = iArr3;
                     c2 = 19;
                     i2 = 1;
@@ -6021,7 +6021,7 @@ public final class Actor extends Game {
                 m189a(iArr3);
                 iArr = iArr3;
                 c = 15;
-                i = 4 + (((Game) this).f35j & 1);
+                i = 4 + (((Game) this).f226j & 1);
                 iArr[c] = i;
                 break;
             case 6:
@@ -6110,12 +6110,12 @@ public final class Actor extends Game {
                 iArr4[2] = iArr4[2] + i5;
                 iArr = iArr4;
                 c = 15;
-                i = ((Game) this).f35j & 1;
+                i = ((Game) this).f226j & 1;
                 iArr[c] = i;
                 break;
             case 3:
                 iArr4[6] = iArr4[6] - 1;
-                iArr4[15] = 2 + (((Game) this).f35j & 1);
+                iArr4[15] = 2 + (((Game) this).f226j & 1);
                 if (iArr4[5] <= 0) {
                     iArr4[5] = 90;
                     iArr4[14] = iArr4[14] + 1;
@@ -6123,7 +6123,7 @@ public final class Actor extends Game {
                 break;
             case 4:
                 iArr4[6] = iArr4[6] - 1;
-                iArr4[15] = 4 + (((Game) this).f35j & 1);
+                iArr4[15] = 4 + (((Game) this).f226j & 1);
                 if (iArr4[5] == 16) {
                     iArr2 = iArr4;
                     c2 = 18;
@@ -6153,7 +6153,7 @@ public final class Actor extends Game {
                 break;
             case 6:
                 iArr4[2] = iArr4[2] + i5;
-                iArr4[15] = ((Game) this).f35j & 1;
+                iArr4[15] = ((Game) this).f226j & 1;
                 if (iArr4[6] > 480) {
                     iArr = iArr4;
                     c = 14;
@@ -6182,29 +6182,29 @@ public final class Actor extends Game {
     private void m327bF() {
         int[] iArr = ((Game) this).Object_Info;
         int i = iArr[19] == 0 ? -1 : 1;
-        if ((Math.abs(iArr[2] - Game.m235a()) <= 240 || Math.abs(iArr[3] - Game.m146b()) <= 168) && !Game.m127b(iArr)) {
+        if ((Math.abs(iArr[2] - Game.Player_RoughXPos()) <= 240 || Math.abs(iArr[3] - Game.Player_RoughYPos()) <= 168) && !Game.m127b(iArr)) {
             switch (iArr[14]) {
                 case 1:
                     iArr[14] = iArr[14] + 1;
-                    iArr[15] = (((Game) this).f35j >> 1) % 3;
+                    iArr[15] = (((Game) this).f226j >> 1) % 3;
                     iArr[2] = iArr[2] + i;
                     m189a(iArr);
                     if (m111c(iArr)) {
                         iArr[5] = 60;
                         iArr[14] = iArr[14] + 1;
                     }
-                    if ((((Game) this).f35j & 7) == 0) {
+                    if ((((Game) this).f226j & 7) == 0) {
                         m216a(15, iArr[2] - (i * 20), iArr[3] - 2, 0, 0, 0, 0);
                         break;
                     }
                     break;
                 case 2:
-                    iArr[15] = (((Game) this).f35j >> 1) % 3;
+                    iArr[15] = (((Game) this).f226j >> 1) % 3;
                     iArr[2] = iArr[2] + i;
                     m189a(iArr);
                     if (m111c(iArr)) {
                     }
-                    if ((((Game) this).f35j & 7) == 0) {
+                    if ((((Game) this).f226j & 7) == 0) {
                     }
                     break;
                 case 3:
@@ -6218,12 +6218,12 @@ public final class Actor extends Game {
                 default:
                     iArr[14] = 1;
                     iArr[14] = iArr[14] + 1;
-                    iArr[15] = (((Game) this).f35j >> 1) % 3;
+                    iArr[15] = (((Game) this).f226j >> 1) % 3;
                     iArr[2] = iArr[2] + i;
                     m189a(iArr);
                     if (m111c(iArr)) {
                     }
-                    if ((((Game) this).f35j & 7) == 0) {
+                    if ((((Game) this).f226j & 7) == 0) {
                     }
                     break;
             }
@@ -6243,7 +6243,7 @@ public final class Actor extends Game {
         int i;
         int[] iArr2 = ((Game) this).Object_Info;
         int i2 = iArr2[19] == 0 ? -1 : 1;
-        if (Math.abs(iArr2[2] - Game.m235a()) <= 240 || Math.abs(iArr2[3] - Game.m146b()) <= 168) {
+        if (Math.abs(iArr2[2] - Game.Player_RoughXPos()) <= 240 || Math.abs(iArr2[3] - Game.Player_RoughYPos()) <= 168) {
             iArr2[5] = iArr2[5] + 1;
             if (Game.m119c(iArr2[2], iArr2[3])) {
                 iArr2[18] = 0;
@@ -6399,14 +6399,14 @@ public final class Actor extends Game {
         int i;
         int[] iArr2 = ((Game) this).Object_Info;
         int i2 = iArr2[19] == 0 ? -1 : 1;
-        if ((Math.abs(iArr2[2] - Game.m235a()) <= 240 || Math.abs(iArr2[3] - Game.m146b()) <= 168) && !Game.m127b(iArr2)) {
+        if ((Math.abs(iArr2[2] - Game.Player_RoughXPos()) <= 240 || Math.abs(iArr2[3] - Game.Player_RoughYPos()) <= 168) && !Game.m127b(iArr2)) {
             switch (iArr2[14]) {
                 case 1:
                     iArr2[10] = 0;
                     iArr2[11] = 0;
                     iArr2[5] = 360;
                     iArr2[14] = iArr2[14] + 1;
-                    iArr2[15] = (((Game) this).f35j >> 2) % 3;
+                    iArr2[15] = (((Game) this).f226j >> 2) % 3;
                     iArr2[10] = i2 * 20;
                     iArr2[12] = iArr2[12] + iArr2[10];
                     iArr2[13] = iArr2[13] + iArr2[11];
@@ -6438,7 +6438,7 @@ public final class Actor extends Game {
                     }
                     break;
                 case 2:
-                    iArr2[15] = (((Game) this).f35j >> 2) % 3;
+                    iArr2[15] = (((Game) this).f226j >> 2) % 3;
                     iArr2[10] = i2 * 20;
                     iArr2[12] = iArr2[12] + iArr2[10];
                     iArr2[13] = iArr2[13] + iArr2[11];
@@ -6476,7 +6476,7 @@ public final class Actor extends Game {
                     iArr2[11] = 0;
                     iArr2[5] = 360;
                     iArr2[14] = iArr2[14] + 1;
-                    iArr2[15] = (((Game) this).f35j >> 2) % 3;
+                    iArr2[15] = (((Game) this).f226j >> 2) % 3;
                     iArr2[10] = i2 * 20;
                     iArr2[12] = iArr2[12] + iArr2[10];
                     iArr2[13] = iArr2[13] + iArr2[11];
@@ -6521,14 +6521,14 @@ public final class Actor extends Game {
                 iArr[10] = 0;
                 iArr[11] = 400;
                 iArr[14] = iArr[14] + 1;
-                if (Game.m235a() - 160 >= iArr[2]) {
+                if (Game.Player_RoughXPos() - 160 >= iArr[2]) {
                     iArr[14] = iArr[14] + 1;
                     iArr[10] = 500;
                     iArr[11] = 400;
                     iArr[15] = 0;
                     iArr[5] = 94;
                     iArr[14] = iArr[14] + 1;
-                    iArr[15] = ((Game) this).f35j & 1;
+                    iArr[15] = ((Game) this).f226j & 1;
                     iArr[10] = 400;
                     if (iArr[9] == 0 && m219a(iArr[2], iArr[3], 20, 20, 1)) {
                         iArr[9] = 1;
@@ -6572,7 +6572,7 @@ public final class Actor extends Game {
                 }
                 break;
             case 2:
-                if (Game.m235a() - 160 >= iArr[2]) {
+                if (Game.Player_RoughXPos() - 160 >= iArr[2]) {
                 }
                 break;
             case 3:
@@ -6581,7 +6581,7 @@ public final class Actor extends Game {
                 iArr[15] = 0;
                 iArr[5] = 94;
                 iArr[14] = iArr[14] + 1;
-                iArr[15] = ((Game) this).f35j & 1;
+                iArr[15] = ((Game) this).f226j & 1;
                 iArr[10] = 400;
                 if (iArr[9] == 0) {
                     iArr[9] = 1;
@@ -6593,7 +6593,7 @@ public final class Actor extends Game {
                 }
                 break;
             case 4:
-                iArr[15] = ((Game) this).f35j & 1;
+                iArr[15] = ((Game) this).f226j & 1;
                 iArr[10] = 400;
                 if (iArr[9] == 0) {
                 }
@@ -6637,7 +6637,7 @@ public final class Actor extends Game {
                 iArr[10] = 0;
                 iArr[11] = 400;
                 iArr[14] = iArr[14] + 1;
-                if (Game.m235a() - 160 >= iArr[2]) {
+                if (Game.Player_RoughXPos() - 160 >= iArr[2]) {
                 }
                 break;
         }
@@ -6669,7 +6669,7 @@ public final class Actor extends Game {
     private void m323bJ() {
         int[] iArr = ((Game) this).Object_Info;
         int i = iArr[19] == 0 ? -1 : 1;
-        if ((Math.abs(iArr[2] - Game.m235a()) <= 240 || Math.abs(iArr[3] - Game.m146b()) <= 168) && !Game.m127b(iArr)) {
+        if ((Math.abs(iArr[2] - Game.Player_RoughXPos()) <= 240 || Math.abs(iArr[3] - Game.Player_RoughYPos()) <= 168) && !Game.m127b(iArr)) {
             switch (iArr[14]) {
                 case 1:
                     iArr[10] = 0;
@@ -6687,7 +6687,7 @@ public final class Actor extends Game {
                     iArr[14] = iArr[14] + 1;
                     break;
             }
-            iArr[15] = (((Game) this).f35j >> 2) % 3;
+            iArr[15] = (((Game) this).f226j >> 2) % 3;
             iArr[10] = i * 25;
             iArr[12] = iArr[12] + iArr[10];
             iArr[13] = iArr[13] + iArr[11];
@@ -6725,11 +6725,11 @@ public final class Actor extends Game {
         if (Game.m127b(iArr3)) {
             return;
         }
-        int i4 = ((Game) this).f35j >> 2;
+        int i4 = ((Game) this).f226j >> 2;
         switch (iArr3[14]) {
             case 1:
                 iArr3[15] = 0;
-                if (Game.m235a() <= iArr3[2]) {
+                if (Game.Player_RoughXPos() <= iArr3[2]) {
                     iArr2 = iArr3;
                     c2 = 19;
                     i2 = 1;
@@ -6739,8 +6739,8 @@ public final class Actor extends Game {
                     i2 = 0;
                 }
                 iArr2[c2] = i2;
-                if (iArr3[3] + 40 <= Game.m146b() && iArr3[3] + 100 >= Game.m146b() && Math.abs(iArr3[2] - Game.m235a()) < 100) {
-                    iArr3[9] = Game.m146b() - 16;
+                if (iArr3[3] + 40 <= Game.Player_RoughYPos() && iArr3[3] + 100 >= Game.Player_RoughYPos() && Math.abs(iArr3[2] - Game.Player_RoughXPos()) < 100) {
+                    iArr3[9] = Game.Player_RoughYPos() - 16;
                     iArr = iArr3;
                     c = 14;
                     i = iArr[14] + 1;
@@ -6761,9 +6761,9 @@ public final class Actor extends Game {
                 }
                 break;
             case 3:
-                iArr3[15] = Game.f143a[i4 & 3];
+                iArr3[15] = Game.f187a[i4 & 3];
                 iArr3[2] = iArr3[2] + i3;
-                if (Math.abs(iArr3[2] - Game.m235a()) > 80) {
+                if (Math.abs(iArr3[2] - Game.Player_RoughXPos()) > 80) {
                     iArr = iArr3;
                     c = 14;
                     i = iArr[14] + 1;
@@ -6772,7 +6772,7 @@ public final class Actor extends Game {
                 }
                 break;
             case 4:
-                iArr3[15] = Game.f143a[i4 & 3];
+                iArr3[15] = Game.f187a[i4 & 3];
                 iArr3[2] = iArr3[2] + i3;
                 iArr3[3] = iArr3[3] - 2;
                 if (m139b(iArr3[2], iArr3[3] - 16)) {
@@ -6786,11 +6786,11 @@ public final class Actor extends Game {
             default:
                 iArr3[14] = 1;
                 iArr3[15] = 0;
-                if (Game.m235a() <= iArr3[2]) {
+                if (Game.Player_RoughXPos() <= iArr3[2]) {
                 }
                 iArr2[c2] = i2;
-                if (iArr3[3] + 40 <= Game.m146b()) {
-                    iArr3[9] = Game.m146b() - 16;
+                if (iArr3[3] + 40 <= Game.Player_RoughYPos()) {
+                    iArr3[9] = Game.Player_RoughYPos() - 16;
                     iArr = iArr3;
                     c = 14;
                     i = iArr[14] + 1;
@@ -6808,16 +6808,16 @@ public final class Actor extends Game {
         if (Game.m127b(iArr)) {
             return;
         }
-        iArr[15] = (((Game) this).f35j >> 2) & 1;
-        iArr[3] = iArr[17] - ((Math.abs(Game.m143b(iArr[6] % 180)) * 268) / 100);
+        iArr[15] = (((Game) this).f226j >> 2) & 1;
+        iArr[3] = iArr[17] - ((Math.abs(Game.Math_CalcCosine(iArr[6] % 180)) * 268) / 100);
         m99d(iArr);
     }
 
     /* renamed from: bM */
     private void m320bM() {
-        if (((Game) this).f35j % 60 < 30) {
-            if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20]) {
-                ((Game) this).f206s = false;
+        if (((Game) this).f226j % 60 < 30) {
+            if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20]) {
+                ((Game) this).f115s = false;
                 return;
             }
             return;
@@ -6829,8 +6829,8 @@ public final class Actor extends Game {
         if (m115c >= 0 && m115c == 1) {
             Game.Player_Info[0] = ((((Game) this).Object_Info[2] - 8) - 12) << 8;
         }
-        if (((Game) this).f206s && this.f208ag == ((Game) this).Object_Info[20] && m115c != 0) {
-            ((Game) this).f206s = false;
+        if (((Game) this).f115s && this.f116ag == ((Game) this).Object_Info[20] && m115c != 0) {
+            ((Game) this).f115s = false;
         }
     }
 
@@ -6859,20 +6859,20 @@ public final class Actor extends Game {
         int i5 = 0;
         if (((Game) this).Object_Info[5] <= 4) {
             i2 = ((Game) this).Object_Info[5] > 0 ? 1 : 1;
-            int i6 = Game.f38a[0];
+            int i6 = Game.f179a[0];
             switch (i4) {
                 case 1:
                     if (((Game) this).Object_Info[19] == 0) {
-                        iArr = Game.f38a;
+                        iArr = Game.f179a;
                         c = 1;
                     } else {
-                        iArr = Game.f38a;
+                        iArr = Game.f179a;
                         c = 7;
                     }
                     i6 = iArr[c];
                     break;
                 case 2:
-                    i6 = Game.f38a[6];
+                    i6 = Game.f179a[6];
                     break;
             }
             int i7 = 0;
@@ -6901,7 +6901,7 @@ public final class Actor extends Game {
         }
         i2 = 2;
         i5 = i2;
-        int i62 = Game.f38a[0];
+        int i62 = Game.f179a[0];
         switch (i4) {
             case 1:
                 break;
@@ -6920,9 +6920,9 @@ public final class Actor extends Game {
         if (this.Game_ZoneID == 0 && Game.GFX_GameArray[5] != null) {
             int height = Game.GFX_GameArray[5].getHeight();
             int width = (Game.GFX_GameArray[5].getWidth() / 3) * 2;
-            int i = Game.f38a[0];
+            int i = Game.f179a[0];
             if (((Game) this).Object_Info[19] == 0) {
-                i = Game.f38a[4];
+                i = Game.f179a[4];
             }
             Game.m133b(5, 0, 0, width, height, i, ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
         }
@@ -6945,7 +6945,7 @@ public final class Actor extends Game {
             i3 = 184;
             i4 = 16;
             i5 = 16;
-            i6 = ((Game) this).Object_Info[19] == 0 ? 0 : Game.f38a[4];
+            i6 = ((Game) this).Object_Info[19] == 0 ? 0 : Game.f179a[4];
             actor = this;
         } else if (((Game) this).Object_Info[18] != 2) {
             return;
@@ -6955,7 +6955,7 @@ public final class Actor extends Game {
             i3 = 184;
             i4 = 16;
             i5 = 16;
-            i6 = ((Game) this).Object_Info[19] == 0 ? 0 : Game.f38a[4];
+            i6 = ((Game) this).Object_Info[19] == 0 ? 0 : Game.f179a[4];
             actor = this;
         }
         Game.m133b(i, i2, i3, i4, i5, i6, ((Game) actor).Object_Info[2] + (i7 * 18), ((Game) this).Object_Info[3] + 28);
@@ -6963,7 +6963,7 @@ public final class Actor extends Game {
 
     /* renamed from: bR */
     private void m315bR() {
-        Game.m133b(61, 0, 16 * ((((Game) this).f35j >> 1) % 6), 32, 16, Game.f38a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
+        Game.m133b(61, 0, 16 * ((((Game) this).f226j >> 1) % 6), 32, 16, Game.f179a[0], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3]);
     }
 
     /* renamed from: bS */
@@ -6982,10 +6982,10 @@ public final class Actor extends Game {
             int i4 = ((Game) this).Object_Info[i3] >> 8;
             int i5 = (((Game) this).Object_Info[i3 + 1] >> 8) - (i2 == 1 ? i : 0);
             if (((Game) this).Object_Info[i3 + 2] == 1) {
-                iArr2 = Game.f38a;
+                iArr2 = Game.f179a;
                 c2 = 4;
             } else {
-                iArr2 = Game.f38a;
+                iArr2 = Game.f179a;
                 c2 = 0;
             }
             Game.m136b(i4, i5, 49, 2, iArr2[c2]);
@@ -6995,10 +6995,10 @@ public final class Actor extends Game {
         int i7 = (((Game) this).Object_Info[7] >> 8) - i;
         int i8 = ((Game) this).Object_Info[18] > 3 ? 1 : 0;
         if (((Game) this).Object_Info[8] == 1) {
-            iArr = Game.f38a;
+            iArr = Game.f179a;
             c = 4;
         } else {
-            iArr = Game.f38a;
+            iArr = Game.f179a;
             c = 0;
         }
         Game.m136b(i6, i7, 49, i8, iArr[c]);
@@ -7011,22 +7011,22 @@ public final class Actor extends Game {
         if (((Game) this).Object_Info[15] < 0) {
             return;
         }
-        int i2 = Game.f38a[0];
+        int i2 = Game.f179a[0];
         switch (((Game) this).Object_Info[19]) {
             case 1:
-                iArr = Game.f38a;
+                iArr = Game.f179a;
                 c = 4;
                 i2 = iArr[c];
                 Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], i, ((Game) this).Object_Info[15], i2);
                 return;
             case 2:
-                iArr = Game.f38a;
+                iArr = Game.f179a;
                 c = 6;
                 i2 = iArr[c];
                 Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], i, ((Game) this).Object_Info[15], i2);
                 return;
             case 3:
-                iArr = Game.f38a;
+                iArr = Game.f179a;
                 c = 2;
                 i2 = iArr[c];
                 Game.m136b(((Game) this).Object_Info[2], ((Game) this).Object_Info[3], i, ((Game) this).Object_Info[15], i2);
@@ -7048,25 +7048,25 @@ public final class Actor extends Game {
         int i7;
         int i8;
         int i9;
-        if (((Game) this).f35j % 60 < 30) {
-            Game.m133b(92, 0, 0, 32, 16, Game.f38a[0], ((Game) this).Object_Info[2] + 8, ((Game) this).Object_Info[3] - 32);
+        if (((Game) this).f226j % 60 < 30) {
+            Game.m133b(92, 0, 0, 32, 16, Game.f179a[0], ((Game) this).Object_Info[2] + 8, ((Game) this).Object_Info[3] - 32);
             i = 92;
             i2 = 0;
             i3 = 0;
             i4 = 32;
             i5 = 16;
-            i6 = Game.f38a[6];
+            i6 = Game.f179a[6];
             i7 = ((Game) this).Object_Info[2] + 8;
             i8 = ((Game) this).Object_Info[3];
             i9 = 32;
         } else {
-            Game.m133b(92, 0, 0, 32, 16, Game.f38a[1], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16);
+            Game.m133b(92, 0, 0, 32, 16, Game.f179a[1], ((Game) this).Object_Info[2], ((Game) this).Object_Info[3] - 16);
             i = 92;
             i2 = 0;
             i3 = 0;
             i4 = 32;
             i5 = 16;
-            i6 = Game.f38a[5];
+            i6 = Game.f179a[5];
             i7 = ((Game) this).Object_Info[2];
             i8 = ((Game) this).Object_Info[3];
             i9 = 16;

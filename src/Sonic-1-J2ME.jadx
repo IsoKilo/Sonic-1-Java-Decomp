@@ -23,6 +23,54 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "b",
+          "shortId": "aF()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 32
+        },
+        "comment": "Check if the hidden bonus has been collected."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b",
+          "shortId": "aF()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 70
+        },
+        "comment": "Check if Sonic has collided with this object."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b",
+          "shortId": "aF()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 79
+        },
+        "comment": "Set bonus as collected."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b",
+          "shortId": "aF()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 100
+        },
+        "comment": "Apply score bonus."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "c",
           "shortId": "D()V"
         },
@@ -55,6 +103,162 @@
           "index": 9
         },
         "comment": "If the path is invalid, just return a null image to prevent errors."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 18
+        },
+        "comment": "Draw outline on left side"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 31
+        },
+        "comment": "Right side"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 44
+        },
+        "comment": "Top"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 57
+        },
+        "comment": "Bottom"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 75
+        },
+        "comment": "Now draw the text itself"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 33
+        },
+        "comment": "Load language file."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 49
+        },
+        "comment": "Not exactly sure why this exists?"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 97
+        },
+        "comment": "Copy language text to main text array."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 121
+        },
+        "comment": "Clean up our mess."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 155
+        },
+        "comment": "Load manual file"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 216
+        },
+        "comment": "Copy manual file text to manual text array."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 240
+        },
+        "comment": "Clean up our mess."
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "INSN",
+          "index": 279
+        },
+        "comment": "If the text file can\u0027t be found, print an error."
       },
       {
         "nodeRef": {
@@ -358,6 +562,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "c",
+          "shortId": "A:[I"
+        },
+        "newName": "Sine_ResultTable"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
           "shortId": "C:[I"
         },
         "newName": "HighScore_DefaultScores"
@@ -401,6 +613,14 @@
           "shortId": "a:Ld;"
         },
         "newName": "Music_MainPlayer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "a:Ljava/io/InputStream;"
+        },
+        "newName": "CurrentResource"
       },
       {
         "nodeRef": {
@@ -486,6 +706,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "c",
+          "shortId": "b:[Ljava/lang/String;"
+        },
+        "newName": "Text_Main"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
           "shortId": "b:[Ljavax/microedition/lcdui/Image;"
         },
         "newName": "GFX_GameArray"
@@ -566,6 +794,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "c",
+          "shortId": "f:[Ljava/lang/String;"
+        },
+        "newName": "Text_Manual"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
           "shortId": "f:[Z"
         },
         "newName": "Cheats_Active"
@@ -609,6 +845,14 @@
           "shortId": "n:I"
         },
         "newName": "Player_TopSpeed"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "n:[I"
+        },
+        "newName": "Score_HiddenBonuses"
       },
       {
         "nodeRef": {
@@ -810,9 +1054,41 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "a()I"
+        },
+        "newName": "Player_RoughXPos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "a(I)I"
         },
         "newName": "Math_CalcSine"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(I)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "output"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(I)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "input"
       },
       {
         "nodeRef": {
@@ -886,6 +1162,22 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "a(IIIIII)I"
+        },
+        "newName": "Actor_CheckPlayerCollide"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(IIIIIIIIIIII)I"
+        },
+        "newName": "Actor_CheckCollision"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "a(IZ)V"
         },
         "newName": "Score_Add"
@@ -926,6 +1218,26 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljava/io/InputStream;"
+        },
+        "newName": "SetCurrentResource"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;)Ljava/io/InputStream;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;"
         },
         "newName": "GFX_Load"
@@ -941,6 +1253,206 @@
           "index": 196608
         },
         "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "xpos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "ypos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 720896
+        },
+        "newName": "innercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 786432
+        },
+        "newName": "outercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "newName": "UI_DrawOutlinedString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458752
+        },
+        "newName": "xpos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "ypos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "innercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 655360
+        },
+        "newName": "outercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;IIIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 720896
+        },
+        "newName": "anchor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 4
+        },
+        "newName": "outstr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65542
+        },
+        "newName": "xpos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131075
+        },
+        "newName": "ypos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "innercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "outercolor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "anchor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "a(Ljava/lang/String;Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "instr"
       },
       {
         "nodeRef": {
@@ -994,6 +1506,78 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 7
+        },
+        "newName": "langpath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 8
+        },
+        "newName": "langout"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 10
+        },
+        "newName": "textindex"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 19
+        },
+        "newName": "manualpath"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 20
+        },
+        "newName": "manualout"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "aA()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "line"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "aB()V"
         },
         "newName": "GFX_LoadHUD"
@@ -1026,6 +1610,34 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "ab()V"
+        },
+        "newName": "Record_Load_Settings"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "ac()V"
+        },
+        "newName": "Record_Save_Game"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "ac()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "savedata"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "ae()V"
         },
         "newName": "HighScore_ResetValues"
@@ -1049,6 +1661,102 @@
           "shortId": "am()V"
         },
         "newName": "Level_LoadData"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b()I"
+        },
+        "newName": "Player_RoughYPos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(I)I"
+        },
+        "newName": "Math_CalcCosine"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(I)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "output"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(I)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "input"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(IIII)V"
+        },
+        "newName": "UI_DrawBorderLines"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 14
+        },
+        "newName": "lineypos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "startxpos"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "width"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "b(IIII)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589824
+        },
+        "newName": "height"
       },
       {
         "nodeRef": {
@@ -1186,9 +1894,49 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "c",
+          "shortId": "d(Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 16
+        },
+        "newName": "musicplayer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "d(Z)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65545
+        },
+        "newName": "musicid"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "h()V"
+        },
+        "newName": "Record_Save_Settings"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
           "shortId": "i()V"
         },
         "newName": "Game_Pause"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "q()V"
+        },
+        "newName": "CloseCurrentResource"
       },
       {
         "nodeRef": {
@@ -1297,10 +2045,10 @@
       "type": "class",
       "tabPath": "c",
       "subPath": "java",
-      "caret": 44872,
+      "caret": 183807,
       "view": {
         "x": 0,
-        "y": 23886
+        "y": 83486
       }
     },
     {
@@ -1317,10 +2065,10 @@
       "type": "class",
       "tabPath": "b",
       "subPath": "java",
-      "caret": 151752,
+      "caret": 190563,
       "view": {
         "x": 0,
-        "y": 58082
+        "y": 0
       }
     }
   ],
@@ -1328,6 +2076,7 @@
   "cacheDir": "Sonic.class.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "UI_DrawOut",
     "Game_ZoneID",
     "28, 40",
     "fram",
