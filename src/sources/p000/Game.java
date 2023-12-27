@@ -91,7 +91,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
     public byte f35b;
 
     /* renamed from: e */
-    private byte f36e;
+    private byte Menu_CurrentSelection;
 
     /* renamed from: L */
     private boolean f37L;
@@ -517,7 +517,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
     public static Image[] GFX_GameArray = new Image[160];
 
     /* renamed from: a */
-    private static final Random f178a = new Random();
+    private static final Random Math_Random = new Random();
 
     /* renamed from: a */
     public static final int[] f179a = {0, 5, 3, 6, 2, 7, 1, 4};
@@ -949,7 +949,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
     public int f321aB = 0;
 
     /* renamed from: aC */
-    public int f322aC = Integer.MIN_VALUE;
+    public int Math_Minimum = Integer.MIN_VALUE;
 
     /* renamed from: B */
     public int[] f323B = new int[6];
@@ -982,7 +982,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
     private int f332bS = 0;
 
     /* renamed from: b */
-    private String f333b = "";
+    private String Text_ProgressElements = "";
 
     /* renamed from: K */
     public boolean f334K = false;
@@ -1568,7 +1568,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
         m169ad();
         m167af();
         this.Music_MainPlayer = new Audio_Player(this);
-        this.Music_MainPlayer.f336a = Music_Paths;
+        this.Music_MainPlayer.Music_PlayerPaths = Music_Paths;
         this.Music_MainPlayer.m5a((int) this.Game_Settings[1]);
         this.f267q = true;
         m101d(true);
@@ -1587,7 +1587,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
 
     /* renamed from: g */
     public final void m79g() {
-        this.f322aC = Integer.MIN_VALUE;
+        this.Math_Minimum = Integer.MIN_VALUE;
         this.f320aA = (int) ((System.currentTimeMillis() - this.f155b) / 18);
     }
 
@@ -1858,8 +1858,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         return true;
                     }
                     m106d(4);
-                    this.f36e = (byte) 1;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 1;
+                    m41n(11 + this.Menu_CurrentSelection);
                     m37o(2);
                     return true;
                 } else if (this.f225a[c].equals(this.Text_Main[60])) {
@@ -1867,7 +1867,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     this.f131v = true;
                     this.f132ao = 10;
                     this.f289an = 0;
-                    this.Music_MainPlayer.m7a();
+                    this.Music_MainPlayer.Music_DestroyPlayer();
                     return true;
                 } else if (this.f225a[c].equals(this.Text_Main[61])) {
                     Record_Save_Settings();
@@ -1903,7 +1903,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     return true;
                 } else if (this.f225a[c].equals(this.Text_Main[57])) {
                     this.Menu_ID = (byte) 14;
-                    this.f36e = (byte) 1;
+                    this.Menu_CurrentSelection = (byte) 1;
                     m37o(3);
                     return true;
                 } else if (this.f225a[c].equals("OK")) {
@@ -1928,7 +1928,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
         this.f132ao = 10;
         this.f289an = 0;
         this.f42b = false;
-        this.Music_MainPlayer.m7a();
+        this.Music_MainPlayer.Music_DestroyPlayer();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:25:0x0079 A[LOOP:0: B:3:0x0002->B:25:0x0079, LOOP_END] */
@@ -2995,7 +2995,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
 
     /* renamed from: c */
     public static int m123c(int i) {
-        return Math.abs(f178a.nextInt()) % i;
+        return Math.abs(Math_Random.nextInt()) % i;
     }
 
     /* renamed from: d */
@@ -6605,15 +6605,15 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         if (this.Input_Array[i8]) {
                             this.Menu_ID = (byte) 4;
                             m79g();
-                            this.f36e = (byte) 0;
-                            m41n(11 + this.f36e);
+                            this.Menu_CurrentSelection = (byte) 0;
+                            m41n(11 + this.Menu_CurrentSelection);
                             m37o(2);
                         }
                     }
                 }
                 if (this.Input_Array[6]) {
                     this.Menu_ID = (byte) 14;
-                    this.f36e = (byte) 1;
+                    this.Menu_CurrentSelection = (byte) 1;
                     break;
                 }
                 break;
@@ -6622,15 +6622,15 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     this.f152bP = (byte) ((this.f152bP + 1) % 5);
                 }
                 if (this.Input_Array[4]) {
-                    this.f36e = (byte) (this.f36e + 1);
-                    if ((this.f316G && this.f36e == 9) || (!this.f316G && this.f36e == 8)) {
-                        this.f36e = (byte) 0;
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection + 1);
+                    if ((this.f316G && this.Menu_CurrentSelection == 9) || (!this.f316G && this.Menu_CurrentSelection == 8)) {
+                        this.Menu_CurrentSelection = (byte) 0;
                     }
-                    m41n(11 + this.f36e);
+                    m41n(11 + this.Menu_CurrentSelection);
                 }
                 if (this.Input_Array[3]) {
-                    this.f36e = (byte) (this.f36e - 1);
-                    if (this.f36e < 0) {
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection - 1);
+                    if (this.Menu_CurrentSelection < 0) {
                         if (this.f316G) {
                             game5 = this;
                             b = 8;
@@ -6638,17 +6638,17 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                             game5 = this;
                             b = 7;
                         }
-                        game5.f36e = b;
+                        game5.Menu_CurrentSelection = b;
                     }
-                    m41n(11 + this.f36e);
+                    m41n(11 + this.Menu_CurrentSelection);
                 }
                 if (this.Input_Array[0]) {
-                    if (this.f36e == 0) {
+                    if (this.Menu_CurrentSelection == 0) {
                         m169ad();
                         if (this.f127g != 0 || this.f288h != 9) {
                             m37o(1);
-                            this.f36e = (byte) 1;
-                            m41n(50 + this.f36e);
+                            this.Menu_CurrentSelection = (byte) 1;
+                            m41n(50 + this.Menu_CurrentSelection);
                             this.Menu_ID = (byte) 9;
                             return;
                         }
@@ -6674,8 +6674,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         this.f268r = true;
                         m35p();
                         return;
-                    } else if (this.f36e == 1) {
-                        this.f36e = (byte) 1;
+                    } else if (this.Menu_CurrentSelection == 1) {
+                        this.Menu_CurrentSelection = (byte) 1;
                         m97e();
                         this.f277al = 0;
                         this.f278am = 0;
@@ -6688,8 +6688,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         GFX_UnloadArray(GFX_MenuArray);
                         return;
                     } else {
-                        if (this.f36e == 2) {
-                            this.f36e = (byte) 0;
+                        if (this.Menu_CurrentSelection == 2) {
+                            this.Menu_CurrentSelection = (byte) 0;
                             this.f39f = (byte) 0;
                             this.Menu_ID = (byte) 10;
                             GFX_GameArray[36] = GFX_Load("/save.png");
@@ -6698,37 +6698,37 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                             this.f37L = true;
                             this.f40N = false;
                             f41b = Font.getFont(64, 0, 0);
-                        } else if (this.f36e == 3) {
+                        } else if (this.Menu_CurrentSelection == 3) {
                             this.Menu_ID = (byte) 5;
                             m37o(1);
                             this.f39f = (byte) 0;
-                        } else if (this.f36e == 4) {
-                            this.f36e = (byte) 0;
+                        } else if (this.Menu_CurrentSelection == 4) {
+                            this.Menu_CurrentSelection = (byte) 0;
                             this.Menu_ID = (byte) 8;
-                            m41n(52 + this.f36e);
+                            m41n(52 + this.Menu_CurrentSelection);
                             m37o(1);
                             this.f37L = true;
                         } else {
-                            if (this.f36e == 5) {
-                                this.f36e = (byte) 0;
+                            if (this.Menu_CurrentSelection == 5) {
+                                this.Menu_CurrentSelection = (byte) 0;
                                 this.f39f = (byte) 0;
                                 this.f40N = false;
                                 this.Menu_ID = (byte) 12;
-                            } else if (this.f36e == 6) {
-                                this.f36e = (byte) 0;
+                            } else if (this.Menu_CurrentSelection == 6) {
+                                this.Menu_CurrentSelection = (byte) 0;
                                 this.Menu_ID = (byte) 16;
-                                m41n(52 + this.f36e);
+                                m41n(52 + this.Menu_CurrentSelection);
                                 m37o(1);
                                 this.f37L = true;
-                            } else if (this.f36e == 7) {
-                                this.f36e = (byte) 0;
+                            } else if (this.Menu_CurrentSelection == 7) {
+                                this.Menu_CurrentSelection = (byte) 0;
                                 this.Menu_ID = (byte) 17;
-                                this.f333b = "";
-                                m41n(52 + this.f36e);
+                                this.Text_ProgressElements = "";
+                                m41n(52 + this.Menu_CurrentSelection);
                                 m37o(4);
                                 this.f37L = true;
-                            } else if (this.f36e == 8) {
-                                this.f36e = (byte) 0;
+                            } else if (this.Menu_CurrentSelection == 8) {
+                                this.Menu_CurrentSelection = (byte) 0;
                                 this.Menu_ID = (byte) 13;
                                 this.f318ay = this.Player_Emeralds;
                             }
@@ -6747,12 +6747,12 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 break;
             case 5:
                 if (this.Input_Array[6]) {
-                    this.f36e = (byte) 3;
+                    this.Menu_CurrentSelection = (byte) 3;
                     this.Menu_ID = (byte) 4;
                     m37o(2);
-                    m41n(11 + this.f36e);
+                    m41n(11 + this.Menu_CurrentSelection);
                 } else if (this.Input_Array[9]) {
-                    this.f36e = (byte) 1;
+                    this.Menu_CurrentSelection = (byte) 1;
                     this.Menu_ID = (byte) 6;
                 }
                 if (this.Input_Array[2] && this.f39f > 0) {
@@ -6772,7 +6772,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 } else if (!this.Input_Array[2] && !this.Input_Array[1]) {
                     if (this.Input_Array[0]) {
                         this.Menu_ID = (byte) 5;
-                        if (this.f36e == 0) {
+                        if (this.Menu_CurrentSelection == 0) {
                             HighScore_DefaultScores = new int[5];
                             HighScore_DefaultDifficulties = new int[5];
                             HighScore_DefaultNames = new String[]{"   ", "   ", "   ", "   ", "   "};
@@ -6782,7 +6782,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         }
                     }
                 } else {
-                    this.f36e = (byte) ((this.f36e + 1) % 2);
+                    this.Menu_CurrentSelection = (byte) ((this.Menu_CurrentSelection + 1) % 2);
                     break;
                 }
                 break;
@@ -6796,42 +6796,42 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 if (this.Input_Array[6] || this.Input_Array[0]) {
                     this.Menu_ID = (byte) 4;
                     m37o(2);
-                    this.f36e = (byte) 4;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 4;
+                    m41n(11 + this.Menu_CurrentSelection);
                     Record_Save_Settings();
                 } else {
                     if (this.Input_Array[2]) {
-                        this.f36e = (byte) (this.f36e - 1);
-                        if (this.f36e < 0) {
-                            this.f36e = (byte) 2;
+                        this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection - 1);
+                        if (this.Menu_CurrentSelection < 0) {
+                            this.Menu_CurrentSelection = (byte) 2;
                         }
-                        m41n(52 + this.f36e);
+                        m41n(52 + this.Menu_CurrentSelection);
                     } else if (this.Input_Array[1]) {
-                        this.f36e = (byte) ((this.f36e + 1) % 3);
-                        m41n(52 + this.f36e);
+                        this.Menu_CurrentSelection = (byte) ((this.Menu_CurrentSelection + 1) % 3);
+                        m41n(52 + this.Menu_CurrentSelection);
                     } else if (this.Input_Array[4]) {
-                        if (this.f36e == 0) {
+                        if (this.Menu_CurrentSelection == 0) {
                             this.Game_Settings[0] = (byte) ((this.Game_Settings[0] + 1) % 3);
-                        } else if (this.f36e == 1) {
+                        } else if (this.Menu_CurrentSelection == 1) {
                             this.Game_Settings[1] = (byte) ((this.Game_Settings[1] + 1) % 2);
                             this.Music_MainPlayer.m5a((int) this.Game_Settings[1]);
                         }
-                        if (this.f36e == 2) {
+                        if (this.Menu_CurrentSelection == 2) {
                             this.Game_Settings[2] = (byte) ((this.Game_Settings[2] + 1) % 5);
                             Text_LoadLang();
-                            m41n(52 + this.f36e);
+                            m41n(52 + this.Menu_CurrentSelection);
                             this.f225a[1] = this.Text_Main[59];
                         }
                         game3 = this;
                         game3.f37L = true;
                     } else if (this.Input_Array[3]) {
                         byte[] bArr3 = this.Game_Settings;
-                        byte b2 = this.f36e;
+                        byte b2 = this.Menu_CurrentSelection;
                         bArr3[b2] = (byte) (bArr3[b2] - 1);
-                        if (this.Game_Settings[this.f36e] < 0) {
-                            if (this.f36e == 0) {
+                        if (this.Game_Settings[this.Menu_CurrentSelection] < 0) {
+                            if (this.Menu_CurrentSelection == 0) {
                                 this.Game_Settings[0] = 2;
-                            } else if (this.f36e == 1) {
+                            } else if (this.Menu_CurrentSelection == 1) {
                                 this.Game_Settings[1] = 1;
                                 audio_Player = this.Music_MainPlayer;
                                 i4 = 1;
@@ -6839,18 +6839,18 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                             } else {
                                 this.Game_Settings[2] = 4;
                             }
-                            if (this.f36e == 2) {
+                            if (this.Menu_CurrentSelection == 2) {
                                 Text_LoadLang();
-                                m41n(52 + this.f36e);
+                                m41n(52 + this.Menu_CurrentSelection);
                                 this.f225a[1] = this.Text_Main[59];
                             }
                         } else {
-                            if (this.f36e == 1) {
+                            if (this.Menu_CurrentSelection == 1) {
                                 audio_Player = this.Music_MainPlayer;
                                 i4 = 0;
                                 audio_Player.m5a(i4);
                             }
-                            if (this.f36e == 2) {
+                            if (this.Menu_CurrentSelection == 2) {
                             }
                         }
                     }
@@ -6862,14 +6862,14 @@ public class Game extends Canvas implements Runnable, PlayerListener {
             case 9:
                 if (this.Input_Array[6]) {
                     this.Menu_ID = (byte) 4;
-                    this.f36e = (byte) 0;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 0;
+                    m41n(11 + this.Menu_CurrentSelection);
                     m37o(2);
                 } else if (this.Input_Array[2] || this.Input_Array[1]) {
-                    this.f36e = (byte) ((this.f36e + 1) % 2);
-                    m41n(50 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) ((this.Menu_CurrentSelection + 1) % 2);
+                    m41n(50 + this.Menu_CurrentSelection);
                 } else if (this.Input_Array[0]) {
-                    if (this.f36e == 0) {
+                    if (this.Menu_CurrentSelection == 0) {
                         m97e();
                         this.f267q = true;
                         GFX_UnloadArray(GFX_MenuArray);
@@ -6887,7 +6887,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         this.f277al = 0;
                         game = this;
                         i2 = 0;
-                    } else if (this.f36e == 1) {
+                    } else if (this.Menu_CurrentSelection == 1) {
                         m97e();
                         this.f267q = true;
                         GFX_UnloadArray(GFX_MenuArray);
@@ -6906,18 +6906,18 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 m148ay();
                 break;
             case 10:
-                if (this.Input_Array[4] && this.f36e < 25) {
-                    this.f36e = (byte) (this.f36e + 1);
-                    if (this.f36e == 23 || this.f36e == 24) {
-                        this.f36e = (byte) 25;
+                if (this.Input_Array[4] && this.Menu_CurrentSelection < 25) {
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection + 1);
+                    if (this.Menu_CurrentSelection == 23 || this.Menu_CurrentSelection == 24) {
+                        this.Menu_CurrentSelection = (byte) 25;
                     }
                     this.f39f = (byte) 0;
                     this.f37L = true;
                 }
-                if (this.Input_Array[3] && this.f36e > 0) {
-                    this.f36e = (byte) (this.f36e - 1);
-                    if (this.f36e == 23 || this.f36e == 24) {
-                        this.f36e = (byte) 22;
+                if (this.Input_Array[3] && this.Menu_CurrentSelection > 0) {
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection - 1);
+                    if (this.Menu_CurrentSelection == 23 || this.Menu_CurrentSelection == 24) {
+                        this.Menu_CurrentSelection = (byte) 22;
                     }
                     this.f39f = (byte) 0;
                     this.f37L = true;
@@ -6931,13 +6931,13 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     this.f37L = true;
                 }
                 if (this.Input_Array[6]) {
-                    this.f36e = (byte) 2;
+                    this.Menu_CurrentSelection = (byte) 2;
                     this.Menu_ID = (byte) 4;
                     GFX_GameArray[36] = null;
                     GFX_GameArray[42] = null;
                     m37o(2);
                 }
-                this.f38a = m205a(this.Text_Manual[1 + (this.f36e * 2)]);
+                this.f38a = m205a(this.Text_Manual[1 + (this.Menu_CurrentSelection * 2)]);
                 break;
             case 11:
                 this.f152bP++;
@@ -6949,14 +6949,14 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 }
                 break;
             case 12:
-                if (this.Input_Array[4] && this.f36e < 5) {
+                if (this.Input_Array[4] && this.Menu_CurrentSelection < 5) {
                     this.f39f = (byte) 0;
-                    this.f36e = (byte) (this.f36e + 1);
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection + 1);
                     this.f37L = true;
                 }
-                if (this.Input_Array[3] && this.f36e > 0) {
+                if (this.Input_Array[3] && this.Menu_CurrentSelection > 0) {
                     this.f39f = (byte) 0;
-                    this.f36e = (byte) (this.f36e - 1);
+                    this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection - 1);
                     this.f37L = true;
                 }
                 if (this.Input_Array[2] && this.f39f > 0) {
@@ -6968,7 +6968,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     this.f37L = true;
                 }
                 if (this.Input_Array[6]) {
-                    this.f36e = (byte) 5;
+                    this.Menu_CurrentSelection = (byte) 5;
                     this.Menu_ID = (byte) 4;
                     m37o(2);
                     break;
@@ -6977,34 +6977,34 @@ public class Game extends Canvas implements Runnable, PlayerListener {
             case 13:
                 if (!this.Input_Array[6] && !this.Input_Array[0]) {
                     if (this.Input_Array[2]) {
-                        this.f36e = (byte) (this.f36e - 1);
-                        if (this.f36e < 0) {
-                            this.f36e = (byte) 6;
+                        this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection - 1);
+                        if (this.Menu_CurrentSelection < 0) {
+                            this.Menu_CurrentSelection = (byte) 6;
                         }
                         this.f37L = true;
                         break;
                     } else if (this.Input_Array[1]) {
-                        this.f36e = (byte) ((this.f36e + 1) % 7);
+                        this.Menu_CurrentSelection = (byte) ((this.Menu_CurrentSelection + 1) % 7);
                         this.f37L = true;
                         break;
                     } else if (this.Input_Array[4]) {
-                        if (this.f36e == 0) {
+                        if (this.Menu_CurrentSelection == 0) {
                             this.Cheats_Active[0] = !this.Cheats_Active[0];
-                        } else if (this.f36e == 1) {
+                        } else if (this.Menu_CurrentSelection == 1) {
                             this.Cheats_Active[2] = !this.Cheats_Active[2];
-                        } else if (this.f36e == 2) {
+                        } else if (this.Menu_CurrentSelection == 2) {
                             this.f318ay++;
                             if (this.f318ay > 6) {
                                 this.f318ay = 0;
                             }
                             this.Player_Emeralds = this.f318ay;
-                        } else if (this.f36e == 3) {
+                        } else if (this.Menu_CurrentSelection == 3) {
                             this.Cheats_Active[1] = !this.Cheats_Active[1];
-                        } else if (this.f36e == 4) {
+                        } else if (this.Menu_CurrentSelection == 4) {
                             this.Cheats_Active[3] = !this.Cheats_Active[3];
-                        } else if (this.f36e == 5) {
+                        } else if (this.Menu_CurrentSelection == 5) {
                             this.Cheats_Active[4] = !this.Cheats_Active[4];
-                        } else if (this.f36e == 6) {
+                        } else if (this.Menu_CurrentSelection == 6) {
                             this.f121ai = 8;
                             this.f21aL = 0;
                             m79g();
@@ -7012,23 +7012,23 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         this.f37L = true;
                         break;
                     } else if (this.Input_Array[3]) {
-                        if (this.f36e == 0) {
+                        if (this.Menu_CurrentSelection == 0) {
                             this.Cheats_Active[0] = !this.Cheats_Active[0];
-                        } else if (this.f36e == 1) {
+                        } else if (this.Menu_CurrentSelection == 1) {
                             this.Cheats_Active[2] = !this.Cheats_Active[2];
-                        } else if (this.f36e == 2) {
+                        } else if (this.Menu_CurrentSelection == 2) {
                             this.f318ay--;
                             if (this.f318ay < 0) {
                                 this.f318ay = 6;
                             }
                             this.Player_Emeralds = this.f318ay;
-                        } else if (this.f36e == 3) {
+                        } else if (this.Menu_CurrentSelection == 3) {
                             this.Cheats_Active[1] = !this.Cheats_Active[1];
-                        } else if (this.f36e == 4) {
+                        } else if (this.Menu_CurrentSelection == 4) {
                             this.Cheats_Active[3] = !this.Cheats_Active[3];
-                        } else if (this.f36e == 5) {
+                        } else if (this.Menu_CurrentSelection == 5) {
                             this.Cheats_Active[4] = !this.Cheats_Active[4];
-                        } else if (this.f36e == 6) {
+                        } else if (this.Menu_CurrentSelection == 6) {
                             this.f121ai = 8;
                             this.f21aL = 0;
                             m79g();
@@ -7039,17 +7039,17 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 } else {
                     this.Menu_ID = (byte) 4;
                     m37o(2);
-                    this.f36e = (byte) 8;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 8;
+                    m41n(11 + this.Menu_CurrentSelection);
                     break;
                 }
                 break;
             case 14:
                 this.f131v = true;
-                this.f36e = (byte) (this.f36e % 2);
+                this.Menu_CurrentSelection = (byte) (this.Menu_CurrentSelection % 2);
                 if (!this.Input_Array[2] && !this.Input_Array[1]) {
                     if (this.Input_Array[0]) {
-                        if (this.f36e == 0) {
+                        if (this.Menu_CurrentSelection == 0) {
                             this.f153a.notifyDestroyed();
                             break;
                         } else {
@@ -7063,7 +7063,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         break;
                     }
                 } else {
-                    this.f36e = (byte) ((this.f36e + 1) % 2);
+                    this.Menu_CurrentSelection = (byte) ((this.Menu_CurrentSelection + 1) % 2);
                     break;
                 }
                 break;
@@ -7071,8 +7071,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 if (this.Input_Array[6] || this.Input_Array[0]) {
                     this.Menu_ID = (byte) 4;
                     m37o(2);
-                    this.f36e = (byte) 6;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 6;
+                    m41n(11 + this.Menu_CurrentSelection);
                     break;
                 }
                 break;
@@ -7080,8 +7080,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 if (this.Input_Array[6] || this.Input_Array[0]) {
                     this.Menu_ID = (byte) 4;
                     m37o(2);
-                    this.f36e = (byte) 7;
-                    m41n(11 + this.f36e);
+                    this.Menu_CurrentSelection = (byte) 7;
+                    m41n(11 + this.Menu_CurrentSelection);
                     break;
                 } else if (this.Input_Array[5]) {
                     StringBuffer stringBuffer = new StringBuffer(8);
@@ -7089,10 +7089,10 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         stringBuffer.append(HighScore_ValidChars[this.f331M[i9]]);
                     }
                     if (m203a(stringBuffer.toString())) {
-                        this.f333b = this.Text_Main[89];
+                        this.Text_ProgressElements = this.Text_Main[89];
                         break;
                     } else {
-                        this.f333b = this.Text_Main[88];
+                        this.Text_ProgressElements = this.Text_Main[88];
                         break;
                     }
                 } else if (this.Input_Array[3]) {
@@ -7154,7 +7154,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m265D() {
+    public final void Menu_Draw() {
         Graphics graphics;
         Image image;
         int i;
@@ -7229,7 +7229,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 if (this.f154az > 0) {
                     this.Text_Main[2] = this.Text_Main[70];
                 }
-                m200a(this.Text_Main[2 + this.f36e], GFX_MenuWidth >> 1, i18, 16777215, 16386570);
+                m200a(this.Text_Main[2 + this.Menu_CurrentSelection], GFX_MenuWidth >> 1, i18, 16777215, 16386570);
                 GFX_Painter.drawImage(GFX_MenuArray[1], GFX_MenuWidth - 5, i18 + (f169a >> 1), 6);
                 GFX_Painter.drawImage(GFX_MenuArray[2], 2, i18 + (f169a >> 1), 6);
                 m196a(this.f32a, true);
@@ -7263,8 +7263,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 m261F();
                 GFX_Painter.setColor(16777215);
                 m196a(this.Text_Main[21], false);
-                m197a(this.Text_Main[24], 2, 0, this.f36e == 0);
-                m197a(this.Text_Main[25], 2, 1, this.f36e == 1);
+                m197a(this.Text_Main[24], 2, 0, this.Menu_CurrentSelection == 0);
+                m197a(this.Text_Main[25], 2, 1, this.Menu_CurrentSelection == 1);
                 return;
             case 7:
                 m191a(true, true);
@@ -7288,9 +7288,9 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     GFX_Painter.drawString(this.Text_Main[28 + i22], 11, f13i + 4 + (i22 * 22), 20);
                     GFX_Painter.drawString(this.Text_Main[this.f229a[i22][this.Game_Settings[i22]]], i21, f13i + 4 + (i22 * 22), 24);
                 }
-                GFX_Painter.drawImage(GFX_MenuArray[1], i21 + width, f13i + (this.f36e * 22) + (f169a >> 1), 10);
-                GFX_Painter.getFont().stringWidth(this.Text_Main[this.f229a[this.f36e][this.Game_Settings[this.f36e]]]);
-                GFX_Painter.drawImage(GFX_MenuArray[2], i21 - iArr[this.f36e], f13i + (this.f36e * 22) + (f169a >> 1), 10);
+                GFX_Painter.drawImage(GFX_MenuArray[1], i21 + width, f13i + (this.Menu_CurrentSelection * 22) + (f169a >> 1), 10);
+                GFX_Painter.getFont().stringWidth(this.Text_Main[this.f229a[this.Menu_CurrentSelection][this.Game_Settings[this.Menu_CurrentSelection]]]);
+                GFX_Painter.drawImage(GFX_MenuArray[2], i21 - iArr[this.Menu_CurrentSelection], f13i + (this.Menu_CurrentSelection * 22) + (f169a >> 1), 10);
                 m261F();
                 m147az();
                 m196a(this.Text_Main[6], false);
@@ -7299,9 +7299,9 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 m191a(true, true);
                 m261F();
                 GFX_Painter.setColor(16777215);
-                m197a(this.Text_Main[47], 2, 0, this.f36e == 0);
-                m197a(this.Text_Main[48], 2, 1, this.f36e == 1);
-                f168a.stringWidth(this.Text_Main[47 + this.f36e]);
+                m197a(this.Text_Main[47], 2, 0, this.Menu_CurrentSelection == 0);
+                m197a(this.Text_Main[48], 2, 1, this.Menu_CurrentSelection == 1);
+                f168a.stringWidth(this.Text_Main[47 + this.Menu_CurrentSelection]);
                 m147az();
                 return;
             case 10:
@@ -7310,12 +7310,12 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 m191a(true, true);
                 m261F();
                 int[] iArr2 = {5, 0, 3, 2, 1, 4};
-                if (this.f36e != 25) {
-                    if (this.f36e > 10 && this.f36e < 17) {
+                if (this.Menu_CurrentSelection != 25) {
+                    if (this.Menu_CurrentSelection > 10 && this.Menu_CurrentSelection < 17) {
                         graphics = GFX_Painter;
                         image = GFX_GameArray[42];
                         i = 0;
-                        i2 = iArr2[this.f36e - 11] * 16 * 2;
+                        i2 = iArr2[this.Menu_CurrentSelection - 11] * 16 * 2;
                         i3 = 32;
                         i4 = 32;
                         i5 = f179a[0];
@@ -7340,7 +7340,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                     if (this.f39f > 0) {
                         m195a(GFX_Painter, GFX_MenuArray[1], 0, 0, GFX_MenuArray[1].getWidth(), GFX_MenuArray[1].getHeight(), f179a[3], GFX_MenuWidth >> 1, 0, 17, true);
                     }
-                    m196a(this.Text_Manual[this.f36e * 2], false);
+                    m196a(this.Text_Manual[this.Menu_CurrentSelection * 2], false);
                     m45m(24);
                     return;
                 }
@@ -7367,7 +7367,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 }
                 if (this.f39f > 0) {
                 }
-                m196a(this.Text_Manual[this.f36e * 2], false);
+                m196a(this.Text_Manual[this.Menu_CurrentSelection * 2], false);
                 m45m(24);
                 return;
             case 11:
@@ -7399,11 +7399,11 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         int i26 = f13i + 5;
                         int i27 = (f175h + f13i) - i25;
                         i11 = this.f39f;
-                        i12 = (this.f36e * 7) + 52;
+                        i12 = (this.Menu_CurrentSelection * 7) + 52;
                         if (i12 + 6 >= this.Text_Manual.length) {
-                            this.f36e = (byte) 1;
+                            this.Menu_CurrentSelection = (byte) 1;
                         }
-                        if (this.f36e >= 0) {
+                        if (this.Menu_CurrentSelection >= 0) {
                             GFX_Painter.setColor(16777215);
                             while (i26 < i27 && i11 < 5) {
                                 if (this.Text_Manual[1 + i12 + i11] != null) {
@@ -7433,10 +7433,10 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         int i262 = f13i + 5;
                         int i272 = (f175h + f13i) - i25;
                         i11 = this.f39f;
-                        i12 = (this.f36e * 7) + 52;
+                        i12 = (this.Menu_CurrentSelection * 7) + 52;
                         if (i12 + 6 >= this.Text_Manual.length) {
                         }
-                        if (this.f36e >= 0) {
+                        if (this.Menu_CurrentSelection >= 0) {
                         }
                         if (i11 >= 5) {
                         }
@@ -7453,10 +7453,10 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         int i2622 = f13i + 5;
                         int i2722 = (f175h + f13i) - i25;
                         i11 = this.f39f;
-                        i12 = (this.f36e * 7) + 52;
+                        i12 = (this.Menu_CurrentSelection * 7) + 52;
                         if (i12 + 6 >= this.Text_Manual.length) {
                         }
-                        if (this.f36e >= 0) {
+                        if (this.Menu_CurrentSelection >= 0) {
                         }
                         if (i11 >= 5) {
                         }
@@ -7469,10 +7469,10 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                         int i26222 = f13i + 5;
                         int i27222 = (f175h + f13i) - i25;
                         i11 = this.f39f;
-                        i12 = (this.f36e * 7) + 52;
+                        i12 = (this.Menu_CurrentSelection * 7) + 52;
                         if (i12 + 6 >= this.Text_Manual.length) {
                         }
-                        if (this.f36e >= 0) {
+                        if (this.Menu_CurrentSelection >= 0) {
                         }
                         if (i11 >= 5) {
                         }
@@ -7487,8 +7487,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 GFX_Painter.setColor(16777215);
                 int i28 = (f175h - 4) / 22;
                 byte b = 0;
-                if (i28 < 7 && this.f36e + 2 > i28) {
-                    b = (this.f36e - i28) + 1;
+                if (i28 < 7 && this.Menu_CurrentSelection + 2 > i28) {
+                    b = (this.Menu_CurrentSelection - i28) + 1;
                 }
                 int i29 = f13i + 4 + ((0 - b) * 22);
                 GFX_Painter.drawString(this.Text_Main[81], 11, i29, 20);
@@ -7509,8 +7509,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 GFX_Painter.drawString("CAMERA", 11, i34, 20);
                 GFX_Painter.drawString(this.Text_Main[this.Cheats_Active[4] ? '\"' : '#'], GFX_MenuWidth - 10, i34, 24);
                 GFX_Painter.drawString("PLAY ENDING", 11, i34 + 22, 20);
-                GFX_Painter.drawImage(GFX_MenuArray[1], GFX_MenuWidth - 8, f13i + ((this.f36e - b) * 22) + 8, 20);
-                GFX_Painter.drawImage(GFX_MenuArray[2], (GFX_MenuWidth - f168a.stringWidth(this.Text_Main[35])) - 12, f13i + ((this.f36e - b) * 22) + 8, 24);
+                GFX_Painter.drawImage(GFX_MenuArray[1], GFX_MenuWidth - 8, f13i + ((this.Menu_CurrentSelection - b) * 22) + 8, 20);
+                GFX_Painter.drawImage(GFX_MenuArray[2], (GFX_MenuWidth - f168a.stringWidth(this.Text_Main[35])) - 12, f13i + ((this.Menu_CurrentSelection - b) * 22) + 8, 24);
                 m261F();
                 m196a("CHEATS", false);
                 return;
@@ -7518,8 +7518,8 @@ public class Game extends Canvas implements Runnable, PlayerListener {
                 m191a(true, true);
                 m261F();
                 m196a(this.Text_Main[85], false);
-                m197a(this.Text_Main[24], 2, 0, this.f36e == 0);
-                m197a(this.Text_Main[25], 2, 1, this.f36e == 1);
+                m197a(this.Text_Main[24], 2, 0, this.Menu_CurrentSelection == 0);
+                m197a(this.Text_Main[25], 2, 1, this.Menu_CurrentSelection == 1);
                 return;
             case 15:
             default:
@@ -7573,15 +7573,15 @@ public class Game extends Canvas implements Runnable, PlayerListener {
         GFX_Painter.setColor(410260);
         GFX_Painter.drawRect(14, i4, i6 + 1, 7);
         GFX_Painter.setColor(8506866);
-        if (this.f36e > 22) {
-            int i8 = this.f36e - 2;
+        if (this.Menu_CurrentSelection > 22) {
+            int i8 = this.Menu_CurrentSelection - 2;
             graphics = GFX_Painter;
             i2 = 15;
             i3 = i8;
         } else {
             graphics = GFX_Painter;
             i2 = 15;
-            i3 = this.f36e;
+            i3 = this.Menu_CurrentSelection;
         }
         graphics.fillRect(i2 + ((i3 * i6) / i), i5, i7, 5);
         GFX_Painter.drawImage(GFX_MenuArray[1], 15 + i6 + 5, i4, 20);
@@ -12046,7 +12046,7 @@ public class Game extends Canvas implements Runnable, PlayerListener {
         GFX_Painter.setColor(16386570);
         GFX_Painter.drawRect((f171c >> 1) + ((this.f332bS - 4) * charWidth), (f13i + (f175h >> 1)) - f169a, charWidth, f169a);
         GFX_Painter.setColor(16777215);
-        GFX_Painter.drawString(this.f333b, f171c >> 1, f13i, 17);
+        GFX_Painter.drawString(this.Text_ProgressElements, f171c >> 1, f13i, 17);
     }
 
     /* renamed from: e */

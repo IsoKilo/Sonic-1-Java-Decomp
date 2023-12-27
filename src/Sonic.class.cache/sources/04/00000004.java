@@ -14,7 +14,7 @@ public final class Audio_Player {
     private static int f335b = 0;
 
     /* renamed from: a */
-    public String[] f336a;
+    public String[] Music_PlayerPaths;
 
     /* renamed from: b */
     private String[] f337b;
@@ -41,11 +41,11 @@ public final class Audio_Player {
             case 0:
                 return true;
             case 1:
-                return this.f336a != null;
+                return this.Music_PlayerPaths != null;
             case 2:
                 return this.f337b != null;
             case 3:
-                return (this.f337b == null || this.f336a == null) ? false : true;
+                return (this.f337b == null || this.Music_PlayerPaths == null) ? false : true;
             default:
                 return false;
         }
@@ -77,7 +77,7 @@ public final class Audio_Player {
                 Audio_DestroyPlayer(this.Music_Player);
             }
             if ((f335b & 1) == 1) {
-                this.Music_Player = m2a(this.f336a[trackID], "audio/midi");
+                this.Music_Player = Music_CreatePlayer(this.Music_PlayerPaths[trackID], "audio/midi");
                 VolumeControl control = this.Music_Player.getControl("VolumeControl");
                 if (control != null) {
                     control.setLevel(50);
@@ -93,7 +93,7 @@ public final class Audio_Player {
     }
 
     /* renamed from: a */
-    public final void m7a() {
+    public final void Music_DestroyPlayer() {
         Audio_DestroyPlayer(this.Music_Player);
     }
 
@@ -116,17 +116,17 @@ public final class Audio_Player {
     }
 
     /* renamed from: a */
-    private Player m2a(String path, String extension) {
-        String stringBuffer;
+    private Player Music_CreatePlayer(String path, String extension) {
+        String fullpath;
         Player player = null;
-        if (path == this.f336a[20]) {
-            stringBuffer = new StringBuffer().append(path).append(".amr").toString();
+        if (path == this.Music_PlayerPaths[20]) {
+            fullpath = new StringBuffer().append(path).append(".amr").toString();
             extension = "audio/amr";
         } else {
-            stringBuffer = new StringBuffer().append(path).append(".mid").toString();
+            fullpath = new StringBuffer().append(path).append(".mid").toString();
         }
         try {
-            InputStream resourceAsStream = getClass().getResourceAsStream(stringBuffer);
+            InputStream resourceAsStream = getClass().getResourceAsStream(fullpath);
             Player createPlayer = Manager.createPlayer(resourceAsStream, extension);
             player = createPlayer;
             createPlayer.addPlayerListener(this.Music_Listener);

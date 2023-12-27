@@ -71,7 +71,7 @@ public final class Actor extends Game {
         int i8;
         switch (this.f121ai) {
             case 1:
-                m265D();
+                Menu_Draw();
                 break;
             case 2:
                 if (((Game) this).f267q || this.f262p) {
@@ -497,7 +497,7 @@ public final class Actor extends Game {
                 this.f320aA++;
                 ((Game) this).f157d = this.f320aA * 18;
                 ((Game) this).f158e = System.currentTimeMillis() - ((Game) this).f155b;
-                if (this.f322aC < ((Game) this).f157d - ((Game) this).f158e || i > 7) {
+                if (this.Math_Minimum < ((Game) this).f157d - ((Game) this).f158e || i > 7) {
                     long currentTimeMillis = System.currentTimeMillis();
                     i = 0;
                     m61j();
@@ -511,11 +511,11 @@ public final class Actor extends Game {
                     if (this.f324aD == ((Game) this).f323B.length) {
                         this.f324aD = 0;
                     }
-                    this.f322aC = 0;
+                    this.Math_Minimum = 0;
                     for (int i3 = 0; i3 < ((Game) this).f323B.length; i3++) {
-                        this.f322aC += ((Game) this).f323B[i3];
+                        this.Math_Minimum += ((Game) this).f323B[i3];
                     }
-                    this.f322aC /= ((Game) this).f323B.length;
+                    this.Math_Minimum /= ((Game) this).f323B.length;
                     Thread.yield();
                     long currentTimeMillis2 = System.currentTimeMillis();
                     if (currentTimeMillis2 - ((Game) this).f156c < 18) {

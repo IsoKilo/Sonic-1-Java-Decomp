@@ -500,7 +500,7 @@
           "declClass": "Sonic",
           "shortId": "a:Lc;"
         },
-        "newName": "app_Instance"
+        "newName": "App_Instance"
       },
       {
         "nodeRef": {
@@ -508,7 +508,7 @@
           "declClass": "Sonic",
           "shortId": "a:Ljavax/microedition/lcdui/Display;"
         },
-        "newName": "app_Display"
+        "newName": "App_Display"
       },
       {
         "nodeRef": {
@@ -626,6 +626,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "c",
+          "shortId": "a:Ljava/util/Random;"
+        },
+        "newName": "Math_Random"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
           "shortId": "a:Ljavax/microedition/lcdui/Graphics;"
         },
         "newName": "GFX_Painter"
@@ -666,6 +674,14 @@
         "nodeRef": {
           "refType": "FIELD",
           "declClass": "c",
+          "shortId": "aC:I"
+        },
+        "newName": "Math_Minimum"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
           "shortId": "aY:I"
         },
         "newName": "Continue_Timer"
@@ -693,6 +709,14 @@
           "shortId": "b:I"
         },
         "newName": "GFX_MenuHeight"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "b:Ljava/lang/String;"
+        },
+        "newName": "Text_ProgressElements"
       },
       {
         "nodeRef": {
@@ -781,6 +805,14 @@
           "shortId": "d:[Ljava/lang/String;"
         },
         "newName": "HighScore_DefaultNames"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c",
+          "shortId": "e:B"
+        },
+        "newName": "Menu_CurrentSelection"
       },
       {
         "nodeRef": {
@@ -960,6 +992,14 @@
       },
       {
         "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "d",
+          "shortId": "a:[Ljava/lang/String;"
+        },
+        "newName": "Music_PlayerPaths"
+      },
+      {
+        "nodeRef": {
           "refType": "METHOD",
           "declClass": "a",
           "shortId": "a()V"
@@ -1029,6 +1069,14 @@
           "index": 655360
         },
         "newName": "tileX"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "c",
+          "shortId": "D()V"
+        },
+        "newName": "Menu_Draw"
       },
       {
         "nodeRef": {
@@ -1958,6 +2006,14 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "d",
+          "shortId": "a()V"
+        },
+        "newName": "Music_DestroyPlayer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
           "shortId": "a(IIZ)V"
         },
         "newName": "Music_Play"
@@ -1992,11 +2048,31 @@
           "declClass": "d",
           "shortId": "a(Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;"
         },
+        "newName": "Music_CreatePlayer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;"
+        },
         "codeRef": {
           "attachType": "VAR",
           "index": 327680
         },
         "newName": "path"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "d",
+          "shortId": "a(Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327681
+        },
+        "newName": "fullpath"
       },
       {
         "nodeRef": {
@@ -2025,17 +2101,17 @@
       "type": "class",
       "tabPath": "a",
       "subPath": "java",
-      "caret": 172,
+      "caret": 10146,
       "view": {
         "x": 0,
-        "y": 114
+        "y": 1628
       }
     },
     {
       "type": "class",
       "tabPath": "Sonic",
       "subPath": "java",
-      "caret": 0,
+      "caret": 266,
       "view": {
         "x": 0,
         "y": 0
@@ -2045,37 +2121,39 @@
       "type": "class",
       "tabPath": "c",
       "subPath": "java",
-      "caret": 183807,
+      "caret": 61509,
       "view": {
         "x": 0,
-        "y": 83486
+        "y": 8064
       }
     },
     {
       "type": "class",
       "tabPath": "d",
       "subPath": "java",
-      "caret": 3368,
+      "caret": 3476,
       "view": {
         "x": 0,
-        "y": 1330
+        "y": 96
       }
     },
     {
       "type": "class",
       "tabPath": "b",
       "subPath": "java",
-      "caret": 190563,
+      "caret": 80885,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 32414
       }
     }
   ],
-  "activeTab": 4,
+  "activeTab": 2,
   "cacheDir": "Sonic.class.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "f184b",
+    "Actor_Ch",
     "UI_DrawOut",
     "Game_ZoneID",
     "28, 40",
